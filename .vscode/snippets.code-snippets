@@ -1,0 +1,34 @@
+{
+  "React component": {
+    "prefix": "react-component",
+    "body": [
+      "import * as React from \"react\";",
+      "import styled from \"styled-components\";",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}Container = styled.div`",
+      "`;",
+      "",
+      "export default function ${TM_FILENAME_BASE}Component({}: ${TM_FILENAME_BASE}Props){",
+      "  return (",
+      "    <${TM_FILENAME_BASE}Container>",
+      "    </${TM_FILENAME_BASE}Container>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "React component"
+  },
+  "React index (single)": {
+    "prefix": "react-index",
+    "body": ["export { default } from \"./$1\";", ""],
+    "description": "React index (single)"
+  },
+  "Styled (Media)": {
+    "prefix": "styled-media",
+    "body": ["@media ${media.mobile} {", "}", "@media ${media.desktop} {", "}"],
+    "description": "Sass stylesheet (simple)"
+  }
+}
