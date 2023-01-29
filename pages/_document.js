@@ -1,7 +1,6 @@
 import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import { Html, Head, Main, NextScript } from 'next/document'
-import {color} from "@/styles/color"
 
 export default class MyDocument extends Document {
   // Support for styled-components in nextjs

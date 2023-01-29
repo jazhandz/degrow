@@ -1,5 +1,4 @@
 import { Constants } from "@/constants";
-import StrapiImage from "@/types/Strapi/StrapiImage";
 import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
@@ -9,7 +8,7 @@ export interface BlockImageQuote {
   component: "image-quote";
   id: number;
   RichText: string;
-  Image: StrapiImage;
+  Image: any;
 }
 
 export default function ImageQuoteComponent({
