@@ -44,7 +44,7 @@ const NavContainer = styled.nav(
     overflow: hidden;
     flex-direction: column;
     position: fixed;
-    ${isOpen && "height: 100vh;"}
+    ${isOpen ? "height: 100vh;" : ""}
   }
 
   @media ${media.desktop} {
@@ -52,7 +52,7 @@ const NavContainer = styled.nav(
     padding: 0px 0px;
     max-width: ${NAV_DESKTOP_WIDTH};
     left: calc(50vw - (${NAV_DESKTOP_WIDTH} / 2));
-    box-sizing: border;
+    box-sizing: border-box;
     border-radius: 6px;
   }
 `
@@ -200,7 +200,7 @@ export default function NavigationComponent({ data }: NavigationProps) {
               className={`nav__menu-burger ${isOpen ? "-open" : ""}`}
               onClick={handleOnToggleMenu}
             >
-              <img src={`/icons/${isOpen ? "close" : "menu"}.svg`} />
+              <img alt={isOpen ? "close icon" : "menu icon"} src={`icons/${isOpen ? "close" : "menu"}.svg`} />
             </NavHamburger>
           </NavMobileBar>
     <NavTitleStyled>
