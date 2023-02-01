@@ -9,7 +9,7 @@ const MAX_WIDTH = "1000px"
 const HeadingStyled = styled.h1`
     text-align: center;
     font-weight: ${fontWeight.light};
-    max-width: ${MAX_WIDTH};
+    width: 55%;
 
     @media ${media.mobile} {
         padding: 0 ${spacing.xl}

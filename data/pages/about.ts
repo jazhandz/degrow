@@ -5,7 +5,7 @@ export const ABOUT_PAGE_DATA : PageType = {
         {
             type: "heading",
             data: {
-                title: `About page title`,
+                title: `We're a small team and we're obsessed with brewing craft kombucha.`,
                 varient: "h1"
             }
         },
@@ -15,6 +15,13 @@ export const ABOUT_PAGE_DATA : PageType = {
                 alt:"large illustration",
                 src: "/images/large_illustration",
                 supportedTypes: ["webp", "png"]
+            }
+        },
+        {
+            type: "chapter-heading",
+            data: {
+                title: `Chapter heading! - still trying to fix <hr> lines`,
+                varient: "h1"
             }
         }
     ]
