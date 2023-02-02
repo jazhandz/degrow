@@ -1,24 +1,18 @@
+import { fontSize } from "@/styles/fontSize";
 import { fontWeight } from "@/styles/fontWeight";
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
 import { HeadingBlockType } from "@/types/CMS/Blocks/HeadingBlock";
 import styled from "styled-components";
-
-const MAX_WIDTH = "1000px"
+import { Container } from "../Container";
 
 const HeadingStyled = styled.h1`
     text-align: center;
     font-weight: ${fontWeight.light};
-    width: 55%;
-
-    @media ${media.mobile} {
-        padding: 0 ${spacing.xl}
-    }
-    @media ${media.desktop} {
-        padding: 0 ${spacing.xl}
-    }
+    font-size: ${fontSize.h1};
+    width: 100%;
 `
 
 export function HeadingBlock({title, varient}:HeadingBlockType) {
-return <HeadingStyled as={varient}>{title}</HeadingStyled>
+return <Container><HeadingStyled as={varient}>{title}</HeadingStyled></Container>
 }

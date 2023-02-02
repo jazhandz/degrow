@@ -7,7 +7,7 @@ interface ContainerProps {
   margin?: string;
 }
 
-const ContainerComponent = styled.div(
+export const Container = styled.div(
   ({
     padding = Theme.spacing.l,
     maxWidth = [SCREEN_SIZES.tablet, SCREEN_SIZES.laptop],
@@ -27,4 +27,3 @@ const ContainerComponent = styled.div(
 `
 );
 
-export default ContainerComponent;

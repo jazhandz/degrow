@@ -1,8 +1,11 @@
+import { color } from "@/styles/color";
+import { fontSize } from "@/styles/fontSize";
 import { fontWeight } from "@/styles/fontWeight";
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
 import * as React from "react";
 import styled from "styled-components";
+import { Container } from "../Container";
 
 // Block Type
 export type ChapterHeadingBlockType = {
@@ -11,36 +14,30 @@ export type ChapterHeadingBlockType = {
 };
 
 // Styling
-const MAX_WIDTH = "1000px";
-const ChapterHeadingStyled = styled.h1`
+const ChapterHeadingStyled = styled(Container)`
   text-align: center;
   font-weight: ${fontWeight.light};
-  max-width: ${MAX_WIDTH};
-
-  @media ${media.mobile} {
-    padding: 0 ${spacing.xl};
-  }
-  @media ${media.desktop} {
-    padding: 0 ${spacing.xl};
-  }
+  font-size:${fontSize.h1};
+  text-transform: uppercase;
+  margin-top: ${spacing.m};
+  margin-bottom: ${spacing.m};
 `;
 
-const LineStyled = styled.hr`
-  border: solid darkblue;
-  border-width: thin;
-`;
+const BorderWrapperStyled = styled.div`
+  width: 100%;
+  border-top: 1px solid ${color.black};
+  border-bottom: 1px solid ${color.black};
+`
 
 export function ChapterHeadingBlock({
   title,
   varient,
 }: ChapterHeadingBlockType) {
   return (
-    <>
-      <LineStyled />
+    <BorderWrapperStyled>
       <ChapterHeadingStyled as={varient}>
         {title}
-        <LineStyled />
       </ChapterHeadingStyled>
-    </>
+    </BorderWrapperStyled>
   );
 }

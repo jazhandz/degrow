@@ -20,7 +20,7 @@ export const ABOUT_PAGE_DATA : PageType = {
         {
             type: "chapter-heading",
             data: {
-                title: `Chapter heading! - still trying to fix <hr> lines`,
+                title: `Chapter heading!`,
                 varient: "h1"
             }
         }
