@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "@/components/Button";
 import CardPost from "./Card";
 import { Constants, Theme } from "@/constants";
-import Container from "../Container";
+import {Container} from "../Container";
 
 export interface CardPostCategory {
   key: string;
