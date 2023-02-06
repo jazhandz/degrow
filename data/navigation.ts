@@ -1,7 +1,7 @@
 import { NavigationType } from "@/types/CMS/Navigation";
 
 export const NAVIGATION_DATA : NavigationType= {
-    "title": "DEGROW LAB",
+    "title": "DEGRØW LAB",
     homePath: "/",
     options: [
         {label: "Flavours", path: "/flavours"},

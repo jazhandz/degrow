@@ -18,4 +18,12 @@ export const color = {
   lightOrange: "#FDBEB0",
   purple: "#635CCC",
   lightPurple: "#D4D1FF",
+  // House styles
+  deepBlue: "rgb(0,3,45)",
+  softGrey: "rgb(245,245,245)",
+  warmGrey: "rgb(240,240,227)",
+  softGreen: "rgb(226,255,205)",
+  softBlue: "rgb(223,236,255)",
+  softOrange: "rgb(255,214,158)",
+  softPing: "rgb(250,227,232)"
 };

@@ -8,8 +8,8 @@ ${normalize}
 /** Fonts **/
 
 @font-face {
-  font-family: "Open Sans";
-  src: local("Open Sans"), url("/fonts/OpenSans.ttf") format("ttf");
+  font-family: "Untitled Sans";
+  src: local("Untitled Sans"), url("/fonts/UntitledSans.woff2") format("woff2");
 }
 
 /* @font-face {
@@ -20,7 +20,7 @@ ${normalize}
 /** Defaults **/
 
 html,body, #root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Untitled Sans', sans-serif;
   font-weight: 400;
   background-color:${color.grey1};
   // transition: all .1s ease-out; // Option for faded intro?
@@ -44,6 +44,10 @@ html {
 /** Input Fields **/
 input:focus, textarea:focus, select:focus{
         outline: none;
+    }
+
+    a{
+      color: inherit;
     }
 `;
 

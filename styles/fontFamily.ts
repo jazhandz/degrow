@@ -1,4 +1,4 @@
 export const fontFamily = {
-  primary: "'Open Sans', sans-serif",
+  primary: "'Untitled Sans', sans-serif",
   secondary: "'Lato', sans-serif",
 };

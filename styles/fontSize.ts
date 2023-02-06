@@ -7,4 +7,5 @@ export const fontSize = {
   p: "16px",
   button: "16px",
   small: "14px",
+  display: "20px"
 };

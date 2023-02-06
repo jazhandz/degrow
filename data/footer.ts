@@ -1,16 +1,16 @@
 import { FooterType } from "@/types/CMS/Footer";
 
 export const FOOTER_DATA : FooterType = {
-    "title": "DEGROW LAB",
+    "title": "DEGRØW LAB",
     homePath: "/",
     contact: {
         title: "Contact",
-        body: "Saffierlaan 10,n/3523RC Utrecht/nThe Netherlands"
+        body: "Saffierlaan 10,<br/>3523RC Utrecht<br/>The Netherlands"
     },
     links: [
-        {label: "Email", path: "example@degrowlab.nl"},
-        {label: "Instagram", path: "degrowlab.instragram.com"},
-        {label: "Linkedin", path: "example.linkedin.com"},
+        {label: "Email", path: "mailto: example@degrowlab.nl"},
+        {label: "Instagram", path: "https://www.instagram.com/degrowlab/"},
+        {label: "Linkedin", path: "https://www.linkedin.com/company/de-grow-lab"},
     ],
     navigation: {
         title: "Other",
