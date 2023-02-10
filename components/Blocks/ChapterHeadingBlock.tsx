@@ -6,11 +6,13 @@ import { spacing } from "@/styles/spacing";
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
+import {color as colors} from "@/styles/color"
 
 // Block Type
 export type ChapterHeadingBlockType = {
   title: string;
   varient: "h1" | "h2" | "h3" | "h4";
+  color?: "softGreen" | "softBlue" | "softOrange" | "softPink";
 };
 
 // Styling
@@ -19,8 +21,8 @@ const ChapterHeadingStyled = styled(Container)`
   font-weight: ${fontWeight.light};
   font-size:${fontSize.h1};
   text-transform: uppercase;
-  margin-top: ${spacing.m};
-  margin-bottom: ${spacing.m};
+  margin: ${spacing.m} 0 ;
+  min-width: 100%;
 `;
 
 const BorderWrapperStyled = styled.div`
@@ -29,15 +31,25 @@ const BorderWrapperStyled = styled.div`
   border-bottom: 1px solid ${color.black};
 `
 
+const ColorContainerStyled = styled.div`
+  width: 100%;
+  padding: ${spacing.m} ${spacing.m} ;
+  ${({$color} : {$color?: string}) => $color !== undefined ? `background-color: ${$color};` : ""}
+`
+
+
 export function ChapterHeadingBlock({
   title,
   varient,
+  color,
 }: ChapterHeadingBlockType) {
   return (
-    <BorderWrapperStyled>
+    <ColorContainerStyled $color={color !== undefined ? colors[color] : undefined}>
+    <BorderWrapperStyled >
       <ChapterHeadingStyled as={varient}>
         {title}
       </ChapterHeadingStyled>
     </BorderWrapperStyled>
+    </ColorContainerStyled>
   );
 }

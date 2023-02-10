@@ -1,5 +1,4 @@
 import { BlockImageQuote } from "@/components/Blocks/ImageQuote";
-import { BlockRichText } from "@/components/Blocks/RichText";
 
 export default interface Project {
   id: number;
@@ -10,5 +9,5 @@ export default interface Project {
   body: string;
   subtitle: string;
   images: string[];
-  blocks: Array<BlockRichText | BlockImageQuote>;
+  blocks: Array<BlockImageQuote>;
 }

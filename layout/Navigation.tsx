@@ -174,6 +174,7 @@ const NavTitleStyled = styled.span`
   & a {
    text-decoration : none;
    color: ${color.black};
+   font-variant-numeric: slashed-zero;
   }
 `
 
@@ -209,7 +210,7 @@ export default function NavigationComponent({ data }: NavigationProps) {
           <NavMainList className="nav__main">
             {data.options.map((option) => (
               <NavMainItem key={`nav_${option.path}`}>
-                <Link href={option.path}>
+                <Link href={option.path} legacyBehavior>
                   <a onClick={isOpen ? handleOnToggleMenu : undefined}>
                     {option.label}
                   </a>

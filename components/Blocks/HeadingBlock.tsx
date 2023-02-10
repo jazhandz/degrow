@@ -11,6 +11,7 @@ const HeadingStyled = styled.h1`
     font-weight: ${fontWeight.light};
     font-size: ${fontSize.h1};
     width: 100%;
+    font-variant-numeric: slashed-zero;
 `
 
 export function HeadingBlock({title, varient}:HeadingBlockType) {

@@ -1,12 +1,17 @@
-import { LargeImageBlockType } from "@/types/CMS/Blocks/LargeImageBlock";
 import * as React from "react";
 import styled from "styled-components";
-import { Picture } from "../Picture";
+import { Picture, PictureProps } from "../Picture";
 
-const BlockImageStyled = styled.div`
-margin-bottom: ${({$marginBottom}: {$marginBottom: string}) => $marginBottom};
+export interface LargeImageBlockType extends PictureProps {
+    marginBottom?: string;
+    marginTop?: string;
+}
+
+const LargeBlockImageStyled = styled.div`
+margin-bottom: ${({$marginBottom}: {$marginBottom: string, $marginTop: string}) => $marginBottom};
+margin-top: ${({$marginTop}: {$marginBottom: string, $marginTop: string}) => $marginTop};
 width: 100%;
-height: 50vw;
+height: auto;
 display: block;
 position: relative;
 & picture{
@@ -15,13 +20,14 @@ position: relative;
 }
 `
 
-export default function LargeImageBlock({
+export function LargeImageBlock({
     marginBottom = "0",
+    marginTop = "0",
   ...pictureProps
 }: LargeImageBlockType) {
   return (
-    <BlockImageStyled $marginBottom={marginBottom}>
+    <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop}>
         <Picture {...pictureProps} />
-    </BlockImageStyled>
+    </LargeBlockImageStyled>
   );
 }

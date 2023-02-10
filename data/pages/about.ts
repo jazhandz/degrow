@@ -14,7 +14,9 @@ export const ABOUT_PAGE_DATA : PageType = {
             data: {
                 alt:"large illustration",
                 src: "/images/large_illustration",
-                supportedTypes: ["webp", "png"]
+                supportedTypes: ["webp", "png"],
+                width: 1246,
+                height: 651,
             }
         },
         {

@@ -4,8 +4,11 @@ export const fontSize = {
   h3: "24px",
   h4: "21px",
   input: "16px",
-  p: "16px",
+  p: "18px",
   button: "16px",
   small: "14px",
-  display: "20px"
+  displayDesktop: "30px",
+  displayMobile: "22px",
+  linkDesktop: "22px",
+  linkMobile: "20px"
 };

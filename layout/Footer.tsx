@@ -29,7 +29,8 @@ const FooterStyled = styled.footer`
 
 const FooterHeadingStyled = styled.div`
   margin: ${spacing.l} ${spacing.m};
-  font-size: 40px;
+  font-size: 44px;
+  font-variant-numeric: slashed-zero;
   @media ${media.mobile} {
     width: 100%;
   }
@@ -60,14 +61,14 @@ const FooterContentStyled = styled.div`
   margin: ${spacing.l} ${spacing.m};
   grid-gap: ${spacing.l};
     & h2{
-      font-size: ${fontSize.display};
+      font-size: ${fontSize.p};
       font-weight: ${fontWeight.thin};
       text-decoration: underline;
       margin: 0;
     }
     & a, *{
       line-height: 30px;
-      font-size: ${fontSize.display};
+      font-size: ${fontSize.p};
       font-weight: ${fontWeight.thin};
     }
 `;

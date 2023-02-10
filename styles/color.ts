@@ -25,5 +25,5 @@ export const color = {
   softGreen: "rgb(226,255,205)",
   softBlue: "rgb(223,236,255)",
   softOrange: "rgb(255,214,158)",
-  softPing: "rgb(250,227,232)"
+  softPink: "rgb(250,227,232)"
 };

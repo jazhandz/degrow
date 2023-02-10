@@ -1,7 +1,7 @@
 import { FooterType } from "@/types/CMS/Footer";
 
 export const FOOTER_DATA : FooterType = {
-    "title": "DEGRØW LAB",
+    "title": "DEGR0W LAB",
     homePath: "/",
     contact: {
         title: "Contact",
