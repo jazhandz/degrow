@@ -1,4 +1,4 @@
-import { useIsMobile } from "@/hooks/use-is-mobile";
+import { media } from "@/styles/media";
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
@@ -18,7 +18,13 @@ const CenterBlockImageStyled = styled(Container)`
     height: auto;
     display: block;
     position: relative;
-    width: ${({$size}: {$size: string}) => $size};
+    width: ${({$size}: {$size?: "large" | "small"}) => $size};
+    @media ${media.mobile} {
+      width: ${({$size}: {$size?: "large" | "small"}) => $size === "small" ? SMALL_IMAGE_MOBILE_SIZE : LARGE_IMAGE_MOBILE_SIZE};
+    }
+    @media ${media.desktop} {
+      width: ${({$size}: {$size?: "large" | "small"}) => $size === "small" ? SMALL_IMAGE_DESKTOP_SIZE : LARGE_IMAGE_DESKTOP_SIZE};
+    }
     & picture{
       width: 100%;
       height: 100%;
@@ -30,12 +36,8 @@ export function CenterImageBlock({
   ...pictureProps
 }: CenterImageBlockType) {
 
-  const isMobile= useIsMobile();
-
-  const sizeValue = isMobile ?size === "small" ? SMALL_IMAGE_MOBILE_SIZE : LARGE_IMAGE_MOBILE_SIZE  : size === "small" ? SMALL_IMAGE_DESKTOP_SIZE : LARGE_IMAGE_DESKTOP_SIZE
-
   return (
-    <CenterBlockImageStyled $size={sizeValue}>
+    <CenterBlockImageStyled $size={size}>
         <Picture {...pictureProps} />
     </CenterBlockImageStyled>
   );

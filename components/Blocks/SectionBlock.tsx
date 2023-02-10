@@ -1,4 +1,3 @@
-import { useIsMobile } from "@/hooks/use-is-mobile";
 import { BlockType } from "@/types/CMS/Block";
 import * as React from "react";
 import styled from "styled-components";

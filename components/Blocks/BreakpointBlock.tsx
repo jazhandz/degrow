@@ -1,8 +1,9 @@
-import { useIsMobile } from "@/hooks/use-is-mobile";
 import { BlockType } from "@/types/CMS/Block";
 import * as React from "react";
 import styled from "styled-components";
 import { Blocks } from "@/components/Blocks";
+import { IsMobile } from "../Breakpoints/IsMobile";
+import { IsDesktop } from "../Breakpoints/IsDesktop";
 
 // Block Type
 export type BreakpointBlockType = {
@@ -14,9 +15,8 @@ export function BreakpointBlock({
     mobile,
   desktop,
 }: BreakpointBlockType) {
-    const isMobile = useIsMobile();
 
   return (
-    isMobile ? <Blocks data={[mobile]}/>: <Blocks data={[desktop]} />
+    <><IsMobile><Blocks data={[mobile]}/></IsMobile>: <IsDesktop><Blocks data={[desktop]} /></IsDesktop></>
   );
 }

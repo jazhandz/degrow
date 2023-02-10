@@ -25,6 +25,7 @@ export function LargeImageBlock({
     marginTop = "0",
   ...pictureProps
 }: LargeImageBlockType) {
+    console.log("pic:", pictureProps);
   return (
     <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop}>
         <Picture {...pictureProps} />
