@@ -8,6 +8,7 @@ import {color as colors} from "@/styles/color"
 export type SectionBlockType = {
   items: BlockType<any>[];
   color?: "softGreen" | "softBlue" | "softOrange" | "softPink";
+  id: string;
 };
 
 const SectionStyled = styled.section`
@@ -20,9 +21,10 @@ const SectionStyled = styled.section`
 export function SectionBlock({
     items,
     color,
+    id
 }: SectionBlockType) {
 
   return (
-    <SectionStyled $color={color !== undefined ? colors[color] : undefined}><Blocks data={items}/></SectionStyled>
+    <SectionStyled id={id} $color={color !== undefined ? colors[color] : undefined}><Blocks data={items}/></SectionStyled>
   );
 }

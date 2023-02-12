@@ -5,6 +5,7 @@ export const ABOUT_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "team",
                 color: "softPink",
                 items: [
                     {
@@ -39,6 +40,7 @@ export const ABOUT_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "our-story",
                 items: [
                     {
                         type: "chapter-heading",
@@ -68,6 +70,7 @@ export const ABOUT_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "merchandise",
                 items: [
                     {
                         type: "chapter-heading",
@@ -90,6 +93,7 @@ export const ABOUT_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "newsletter",
                 color: "softGreen",
                 items: [
                     {

@@ -40,6 +40,7 @@ export const HOME_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "what-is-kombucha",
                 color: "softGreen",
                 items: [
                     {
@@ -92,6 +93,7 @@ export const HOME_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "community",
                 items: [
                     {
                         type: "large-image",
@@ -154,6 +156,7 @@ export const HOME_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "we-are-a-local-brewery",
                 items: [
                     {
                         type: "chapter-heading",
@@ -216,6 +219,7 @@ export const HOME_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "core-values",
                 items: [
                     {
                         type: "chapter-heading",
@@ -263,6 +267,7 @@ export const HOME_PAGE_DATA : PageType = {
         {
             type: "section",
             data: {
+                id: "newsletter",
                 color: "softGreen",
                 items: [
                     {
