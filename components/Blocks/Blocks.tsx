@@ -1,14 +1,13 @@
-import { BlockType, BlockTypeOptions } from "@/types/CMS/Block";
-import { HeadingBlockType } from "@/types/CMS/Blocks/HeadingBlock";
+import { BlockType } from "@/types/CMS/Block";
 import * as React from "react";
 import styled from "styled-components";
 import { BreakpointBlock } from "./BreakpointBlock";
 import { CenterImageBlock } from "./CenterImageBlock";
 import { ChapterHeadingBlock } from "./ChapterHeadingBlock";
 import { HeadingBlock } from "./HeadingBlock";
-import {LargeImageBlock} from "./LargeImageBlock";
+import { LargeImageBlock } from "./LargeImageBlock";
 import { LinkBlock } from "./LinkBlock";
-import {RichTextBlock} from "./RichTextBlock";
+import { RichTextBlock } from "./RichTextBlock";
 import { SectionBlock } from "./SectionBlock";
 
 interface BlocksProps {
@@ -18,10 +17,9 @@ interface BlocksProps {
 const BlocksContainerStyled = styled.div`
   width: 100%;
   margin: 0 auto;
-`
+`;
 
 export default function BlocksComponent({ data }: BlocksProps) {
-
   return (
     <BlocksContainerStyled>
       {data.map((block, index) => {
