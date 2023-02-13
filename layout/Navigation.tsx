@@ -274,6 +274,7 @@ const NavPadding = styled.div`
   @media ${media.mobile} {
     height: calc(${NAV_MOBILE_HEADER_HEIGHT} + ${NAV_MOBILE_TOP_OFFSET});
     width: 100%;
+    background-color: ${({ $backgroundColor }: { $backgroundColor: string }) => $backgroundColor};
   }
 `;
 
@@ -402,7 +403,7 @@ export default function NavigationComponent({ data, backgroundColor }: Navigatio
           </NavMainListContainer>
         </NavContainer>
       </NavWrapper>
-      <NavPadding />
+      <NavPadding $backgroundColor={MENU_BACKGROUND_COLOR} />
     </>
   );
 }
