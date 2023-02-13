@@ -373,14 +373,18 @@ export default function NavigationComponent({ data }: NavigationProps) {
             >
               {data.options.map(option => (
                 <NavMainItem key={`nav_${option.path}`}>
-                  <Link href={option.path} onClick={isOpen ? handleOnToggleMenu : undefined}>
+                  <Link href={option.path} target={option.target} onClick={isOpen ? handleOnToggleMenu : undefined}>
                     {option.label}
                   </Link>
                   {option.items && (
                     <NavSubListStyled>
                       {option.items.map(subOption => (
                         <NavSubItemStyled key={`subNav_${option.label}_${subOption.label}`}>
-                          <Link href={subOption.path} onClick={isOpen ? handleOnToggleMenu : undefined}>
+                          <Link
+                            target={subOption.target}
+                            href={subOption.path}
+                            onClick={isOpen ? handleOnToggleMenu : undefined}
+                          >
                             {subOption.label}
                           </Link>
                         </NavSubItemStyled>
