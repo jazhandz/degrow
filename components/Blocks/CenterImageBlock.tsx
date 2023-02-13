@@ -15,30 +15,27 @@ const LARGE_IMAGE_MOBILE_SIZE = "100%";
 const SMALL_IMAGE_MOBILE_SIZE = "100%";
 
 const CenterBlockImageStyled = styled(Container)`
-    height: auto;
-    display: block;
-    position: relative;
-    width: ${({$size}: {$size?: "large" | "small"}) => $size};
-    @media ${media.mobile} {
-      width: ${({$size}: {$size?: "large" | "small"}) => $size === "small" ? SMALL_IMAGE_MOBILE_SIZE : LARGE_IMAGE_MOBILE_SIZE};
-    }
-    @media ${media.desktop} {
-      width: ${({$size}: {$size?: "large" | "small"}) => $size === "small" ? SMALL_IMAGE_DESKTOP_SIZE : LARGE_IMAGE_DESKTOP_SIZE};
-    }
-    & picture{
-      width: 100%;
-      height: 100%;
-    }
-  `
+  height: auto;
+  display: block;
+  position: relative;
+  @media ${media.mobile} {
+    width: ${({ $size }: { $size?: "large" | "small" }) =>
+      $size === "small" ? SMALL_IMAGE_MOBILE_SIZE : LARGE_IMAGE_MOBILE_SIZE};
+  }
+  @media ${media.desktop} {
+    width: ${({ $size }: { $size?: "large" | "small" }) =>
+      $size === "small" ? SMALL_IMAGE_DESKTOP_SIZE : LARGE_IMAGE_DESKTOP_SIZE};
+  }
+  & picture {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
-export function CenterImageBlock({
-  size = "small",
-  ...pictureProps
-}: CenterImageBlockType) {
-
+export function CenterImageBlock({ size = "small", ...pictureProps }: CenterImageBlockType) {
   return (
     <CenterBlockImageStyled $size={size}>
-        <Picture {...pictureProps} />
+      <Picture {...pictureProps} />
     </CenterBlockImageStyled>
   );
 }

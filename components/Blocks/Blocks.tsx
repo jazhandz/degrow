@@ -9,6 +9,7 @@ import { HeadingBlock } from "./HeadingBlock";
 import { LargeImageBlock } from "./LargeImageBlock";
 import { LinkBlock } from "./LinkBlock";
 import { LocationsBlock } from "./LocationsBlock";
+import { ProductsBlock } from "./ProductsBlock";
 import { RichTextBlock } from "./RichTextBlock";
 import { SectionBlock } from "./SectionBlock";
 
@@ -56,6 +57,9 @@ export default function BlocksComponent({ data }: BlocksProps) {
           }
           case "article": {
             return <ArticleBlock key={key} {...block.data} />;
+          }
+          case "products": {
+            return <ProductsBlock key={key} {...block.data} />;
           }
           default: {
             return <>Unknown block</>;

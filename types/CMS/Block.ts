@@ -8,6 +8,7 @@ import { LinkBlockType } from "@/components/Blocks/LinkBlock";
 import { HeadingBlockType } from "@/components/Blocks/HeadingBlock";
 import { LocationsBlockType } from "@/components/Blocks/LocationsBlock";
 import { ArticleBlockType } from "@/components/Blocks/ArticleBlock";
+import { ProductsBlockType } from "@/components/Blocks/ProductsBlock";
 
 export type BlockTypeOptions =
   | HeadingBlockType
@@ -19,7 +20,8 @@ export type BlockTypeOptions =
   | SectionBlockType
   | LinkBlockType
   | LocationsBlockType
-  | ArticleBlockType;
+  | ArticleBlockType
+  | ProductsBlockType;
 
 export type BlockType<T = BlockTypeOptions> = {
   type:
@@ -32,6 +34,7 @@ export type BlockType<T = BlockTypeOptions> = {
     | "section"
     | "link"
     | "locations"
-    | "article";
+    | "article"
+    | "products";
   data: T;
 };

@@ -84,6 +84,58 @@ export const ABOUT_PAGE_DATA: PageType = {
               body: "We’re proud of our brand and our ideals so we want as many people to get to know us and our mission. Therefor we occasionally create cool merchandise that you can pick up at our HQ, if you’re in time that is.",
             },
           },
+          {
+            type: "products",
+            data: {
+              products: [
+                {
+                  picture: {
+                    src: "/images/product_tote_bag",
+                    alt: "Degrow Lab Kombucha Tote bag",
+                    objectFit: "cover",
+                    size: "small",
+                    supportedTypes: ["webp", "jpg"],
+                    width: 2130, // See why this is required https://www.youtube.com/watch?v=4-d_SoCHeWE and https://nextjs.org/docs/basic-features/image-optimization
+                    height: 1420,
+                  },
+                  title: "Degrow Lab Kombucha Tote bag",
+                  details: "100% Organic cotton<br/>Glow in the dark details",
+                  whereToBuy: "Degrow Lab HQ",
+                  price: 25,
+                },
+                {
+                  picture: {
+                    src: "/images/product_tshirt",
+                    alt: "Degrow Lab Zero T-Shirt",
+                    objectFit: "cover",
+                    size: "small",
+                    supportedTypes: ["webp", "jpg"],
+                    width: 2130, // See why this is required https://www.youtube.com/watch?v=4-d_SoCHeWE and https://nextjs.org/docs/basic-features/image-optimization
+                    height: 1420,
+                  },
+                  title: "Degrow Lab Zero T-Shirt",
+                  details: "100% Organic cotton<br/>Size: S,M,L,XL",
+                  whereToBuy: "Degrow Lab HQ",
+                  price: 25,
+                },
+                {
+                  picture: {
+                    src: "/images/product_stickers",
+                    alt: "Degrow Lab Stickers",
+                    objectFit: "cover",
+                    size: "small",
+                    supportedTypes: ["webp", "jpg"],
+                    width: 2130, // See why this is required https://www.youtube.com/watch?v=4-d_SoCHeWE and https://nextjs.org/docs/basic-features/image-optimization
+                    height: 1420,
+                  },
+                  title: "Degrow Lab Stickers",
+                  details: "100% Recycled Plastic",
+                  whereToBuy: "Degrow Lab HQ",
+                  price: 0,
+                },
+              ],
+            },
+          },
         ],
       },
     },
