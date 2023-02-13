@@ -3,14 +3,13 @@ import * as React from "react";
 import styled from "styled-components";
 import { Blocks } from "@/components/Blocks";
 import { color as colors } from "@/styles/color";
-
-type colorVarient = "softGreen" | "softBlue" | "softOrange" | "softPink";
+import { ColorVarientType } from "@/types/CMS/Generic";
 
 // Block Type
 export type SectionBlockType = {
   items: BlockType<any>[];
-  color?: colorVarient;
-  gradient?: [colorVarient, colorVarient, colorVarient];
+  color?: ColorVarientType;
+  gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
   id: string;
 };
 

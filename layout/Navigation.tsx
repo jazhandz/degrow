@@ -9,6 +9,7 @@ import { fontWeight } from "@/styles/fontWeight";
 import { spacing } from "@/styles/spacing";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-is-mobile";
+import { ColorVarientType } from "@/types/CMS/Generic";
 
 const NAV_DESKTOP_HEADER_HEIGHT = "53px";
 
@@ -21,11 +22,10 @@ const NAV_DESKTOP_MAIN_LINK_PADDING = spacing.m;
 
 const BORDER_COLOR = color.black;
 
-const MENU_BACKGROUND_COLOR = color.grey1;
-
 const NAV_MOBILE_HEADER_HEIGHT = "53px";
 const NAV_MOBILE_PADDING = spacing.m;
 const NAV_MOBILE_SUB_MENU_ITEM_HEIGHT = "24px";
+const NAV_MOBILE_TOP_OFFSET = spacing.m;
 
 const NAV_DESKTOP_LINK_HIGHLIGHT_COLOR = color.black;
 const NAV_DESKTOP_LINK_HOVER_WEIGHT = fontWeight.light;
@@ -34,6 +34,7 @@ const NAV_DESKTOP_LINK_HOVER_TEXT_DECORATION = "underline";
 const NavWrapper = styled.div`
   z-index: 100;
   width: 100%;
+  background-color: ${({ $backgroundColor }: { $backgroundColor: string }) => $backgroundColor};
   @media ${media.mobile} {
     background-color: ${color.white};
     position: fixed;
@@ -45,13 +46,13 @@ const NavWrapper = styled.div`
 `;
 
 const NavContainer = styled.nav`
-  background-color: ${color.grey1};
+  background-color: ${({ $backgroundColor }: { $backgroundColor: string }) => $backgroundColor};
   width: 100%;
   box-sizing: border-box;
   display: flex;
   z-index: 100;
   @media ${media.mobile} {
-    height: ${NAV_MOBILE_HEADER_HEIGHT};
+    height: calc(${NAV_MOBILE_HEADER_HEIGHT} + ${NAV_MOBILE_TOP_OFFSET});
     flex-direction: column;
     position: fixed;
   }
@@ -74,7 +75,6 @@ const NavContainer = styled.nav`
 const NavHeaderBar = styled.div`
   width: 100%;
   @media ${media.mobile} {
-    background-color: ${MENU_BACKGROUND_COLOR};
     height: ${NAV_MOBILE_HEADER_HEIGHT};
     box-sizing: border-box;
     padding: 0 ${NAV_MOBILE_PADDING};
@@ -83,6 +83,7 @@ const NavHeaderBar = styled.div`
     display: flex;
     justify-content: center;
     z-index: 10;
+    margin-top: ${NAV_MOBILE_TOP_OFFSET};
   }
 
   @media ${media.desktop} {
@@ -144,7 +145,7 @@ const NavMainList = styled(motion.ul)`
   margin: 0; // Reset list style
   list-style-type: none; // Reset list style
   z-index: 100;
-  background-color: ${MENU_BACKGROUND_COLOR};
+  background-color: ${({ $backgroundColor }: { $backgroundColor: string }) => $backgroundColor};
   @media ${media.mobile} {
     height: 0px;
     overflow-y: scroll;
@@ -271,7 +272,7 @@ const NavSubItemStyled = styled.li`
 
 const NavPadding = styled.div`
   @media ${media.mobile} {
-    height: ${NAV_MOBILE_HEADER_HEIGHT};
+    height: calc(${NAV_MOBILE_HEADER_HEIGHT} + ${NAV_MOBILE_TOP_OFFSET});
     width: 100%;
   }
 `;
@@ -315,11 +316,14 @@ const NavMobileBorderStyled = styled.div`
 
 interface NavigationProps {
   data: NavigationType;
+  backgroundColor?: ColorVarientType;
 }
 
-export default function NavigationComponent({ data }: NavigationProps) {
+export default function NavigationComponent({ data, backgroundColor }: NavigationProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const isMobile = useIsMobile();
+
+  const MENU_BACKGROUND_COLOR = backgroundColor ? color[backgroundColor] : color.grey1;
 
   const DESKTOP_SUB_MENU_MAX_LENGTH = React.useMemo(
     () => data.options.map(option => (option.items ? option.items.length : 0)).sort()[data.options.length - 1],
@@ -347,8 +351,8 @@ export default function NavigationComponent({ data }: NavigationProps) {
 
   return (
     <>
-      <NavWrapper>
-        <NavContainer>
+      <NavWrapper $backgroundColor={MENU_BACKGROUND_COLOR}>
+        <NavContainer $backgroundColor={MENU_BACKGROUND_COLOR}>
           <NavHeaderBar>
             <NavTitleLinkStyled href={data.homePath} onClick={isOpen ? handleOnToggleMenu : undefined}>
               {data.title}
@@ -360,6 +364,7 @@ export default function NavigationComponent({ data }: NavigationProps) {
           </NavHeaderBar>
           <NavMainListContainer>
             <NavMainList
+              $backgroundColor={MENU_BACKGROUND_COLOR}
               transition={{ type: "tween", duration: 0.2 }}
               animate={isMobile ? { height: isOpen ? MOBILE_MENU_MAX_LENGTH : "0px" } : undefined}
               // initial={{height: isMobile ? "0px" : NAV_DESKTOP_HEADER_HEIGHT}}

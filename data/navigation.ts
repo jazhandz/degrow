@@ -3,6 +3,10 @@ import { NavigationType } from "@/types/CMS/Navigation";
 export const NAVIGATION_DATA: NavigationType = {
   title: "DEGR0W  LAB",
   homePath: "/",
+  colors: [
+    { path: "/about-us", color: "softPink" },
+    { path: "/our-story", color: "softGreen" },
+  ],
   options: [
     {
       label: "Flavours",
