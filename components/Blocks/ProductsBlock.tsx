@@ -27,7 +27,7 @@ const IMAGE_DESKTOP_SIZE = "800px";
 
 const IMAGE_MOBILE_SIZE = "100%";
 
-const ProductsBlockImageStyled = styled.div`
+const ProductsBlockImageStyled = styled(Container)`
   height: auto;
   display: block;
   position: relative;
@@ -87,7 +87,7 @@ const ProductContainerStyled = styled(Container)`
 
 export function ProductsBlock({ products }: ProductsBlockType) {
   return (
-    <ProductsBlockImageStyled>
+    <ProductsBlockImageStyled maxWidth={["1024px", "1024px"]}>
       {products.map((product, index) => (
         <React.Fragment key={product.title}>
           <ProductContainerStyled as="article">
