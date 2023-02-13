@@ -6,6 +6,7 @@ import { CenterImageBlockType } from "@/components/Blocks/CenterImageBlock";
 import { SectionBlockType } from "@/components/Blocks/SectionBlock";
 import { LinkBlockType } from "@/components/Blocks/LinkBlock";
 import { HeadingBlockType } from "@/components/Blocks/HeadingBlock";
+import { LocationsBlockType } from "@/components/Blocks/LocationsBlock";
 
 export type BlockTypeOptions =
   | HeadingBlockType
@@ -15,7 +16,8 @@ export type BlockTypeOptions =
   | RichTextBlockType
   | CenterImageBlockType
   | SectionBlockType
-  | LinkBlockType;
+  | LinkBlockType
+  | LocationsBlockType;
 
 export type BlockType<T = BlockTypeOptions> = {
   type:
@@ -26,6 +28,7 @@ export type BlockType<T = BlockTypeOptions> = {
     | "breakpoint"
     | "rich-text"
     | "section"
-    | "link";
+    | "link"
+    | "locations";
   data: T;
 };
