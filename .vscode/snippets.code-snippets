@@ -11,7 +11,7 @@
       "const ${TM_FILENAME_BASE}Container = styled.div`",
       "`;",
       "",
-      "export default function ${TM_FILENAME_BASE}Component({}: ${TM_FILENAME_BASE}Props){",
+      "export function ${TM_FILENAME_BASE}Component({}: ${TM_FILENAME_BASE}Props){",
       "  return (",
       "    <${TM_FILENAME_BASE}Container>",
       "    </${TM_FILENAME_BASE}Container>",

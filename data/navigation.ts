@@ -28,7 +28,7 @@ export const NAVIGATION_DATA : NavigationType= {
         ]},
         {label: "About us", path: "/about-us", items: [{
             label: "The team",
-            path: "/about-us#the-team"
+            path: "/about-us#team"
         },
         {
             label: "Our story",

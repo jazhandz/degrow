@@ -1,9 +1,10 @@
 import * as React from "react";
-import styled from "styled-components";
-import ReactHtmlParser from 'react-html-parser';
+import ReactHtmlParser from "react-html-parser";
 
 interface RichTextProps {
-    children: string;
+  children: string;
 }
 
-export function RichText({children}: RichTextProps){ return <React.Fragment>{ReactHtmlParser(children)}</React.Fragment>};
+export function RichText({ children }: RichTextProps) {
+  return <React.Fragment>{ReactHtmlParser(children)}</React.Fragment>;
+}

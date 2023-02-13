@@ -1,22 +1,18 @@
 import React from "react";
-import CloseSVG from "@/assets/icons/close.svg";
-import MenuSVG from "@/assets/icons/menu.svg";
 import styled from "styled-components";
-import { Constants, SCREEN_SIZES, Theme } from "@/constants";
 import Link from "next/link";
-import Button from "@/components/Button";
 import { NavigationType } from "@/types/CMS/Navigation";
 import { media } from "@/styles/media";
 import { color } from "@/styles/color";
 import { fontSize } from "@/styles/fontSize";
 import { fontWeight } from "@/styles/fontWeight";
 import { spacing } from "@/styles/spacing";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const NAV_DESKTOP_HEADER_HEIGHT = "53px";
 
-const NAV_DESKTOP_WIDTH = SCREEN_SIZES.laptop;
+const NAV_DESKTOP_MAX_WIDTH = "1024px";
 const NAV_DESKTOP_MARGIN = spacing.m;
 const NAV_DESKTOP_SUB_ITEM_HEIGHT = "30px";
 const NAV_DESKTOP_SUB_MENU_PADDING = spacing.s;
@@ -34,7 +30,6 @@ const NAV_MOBILE_SUB_MENU_ITEM_HEIGHT = "24px";
 const NAV_DESKTOP_LINK_HIGHLIGHT_COLOR = color.black;
 const NAV_DESKTOP_LINK_HOVER_WEIGHT = fontWeight.light;
 const NAV_DESKTOP_LINK_HOVER_TEXT_DECORATION = "underline";
-
 
 const NavWrapper = styled.div`
   z-index: 100;
@@ -65,8 +60,8 @@ const NavContainer = styled.nav`
     margin: 0 ${NAV_DESKTOP_MARGIN};
     flex-direction: column;
     padding: 0px 0px;
-    max-width: ${NAV_DESKTOP_WIDTH};
-    left: calc(50vw - (${NAV_DESKTOP_WIDTH} / 2));
+    max-width: ${NAV_DESKTOP_MAX_WIDTH};
+    left: calc(50vw - (${NAV_DESKTOP_MAX_WIDTH} / 2));
     box-sizing: border-box;
     border-radius: 6px;
   }
@@ -124,7 +119,7 @@ const NavMainListContainer = styled.div`
   /* overflow: hidden; */
   @media ${media.mobile} {
     /* overflow: hidden; */
-    &::after{
+    &::after {
       content: "";
       width: calc(100% - ${NAV_MOBILE_PADDING} * 2);
       margin: 0 ${NAV_MOBILE_PADDING};
@@ -140,9 +135,9 @@ const NavMainListContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     min-height: ${NAV_DESKTOP_HEADER_HEIGHT};
-    max-height:${NAV_DESKTOP_HEADER_HEIGHT};
+    max-height: ${NAV_DESKTOP_HEADER_HEIGHT};
   }
-`
+`;
 
 const NavMainList = styled(motion.ul)`
   padding: 0; // Reset list style
@@ -176,7 +171,7 @@ const NavMainItem = styled.li`
       flex: 1;
       line-height: ${NAV_MOBILE_SUB_MENU_ITEM_HEIGHT};
     }
-    &:not(:last-child)&::after{
+    &:not(:last-child)&::after {
       content: "";
       width: calc(100% - ${NAV_MOBILE_PADDING} * 2);
       margin: 0 ${NAV_MOBILE_PADDING};
@@ -187,7 +182,7 @@ const NavMainItem = styled.li`
     }
   }
   @media ${media.desktop} {
-    flex:1;
+    flex: 1;
     position: relative;
     min-height: ${NAV_DESKTOP_HEADER_HEIGHT};
   }
@@ -224,14 +219,14 @@ const NavMainItem = styled.li`
       text-decoration: ${NAV_DESKTOP_LINK_HOVER_TEXT_DECORATION};
     }
   }
-  &:first-child{
+  &:first-child {
     @media ${media.desktop} {
       & a {
         padding-left: 0;
       }
     }
   }
-  &:last-child{
+  &:last-child {
     @media ${media.desktop} {
       & a {
         text-align: right;
@@ -246,18 +241,18 @@ const NavSubListStyled = styled.ul`
   list-style-type: none;
   position: relative;
   padding: 0;
-  @media ${media.mobile} { 
+  @media ${media.mobile} {
     flex: 1;
     line-height: ${NAV_MOBILE_SUB_MENU_ITEM_HEIGHT};
   }
-  
+
   @media ${media.desktop} {
     width: 100%;
     text-align: left;
     line-height: ${NAV_DESKTOP_SUB_ITEM_HEIGHT};
     padding: ${NAV_DESKTOP_SUB_MENU_PADDING} 0;
   }
-`
+`;
 const NavSubItemStyled = styled.li`
   & > a {
     display: flex;
@@ -272,7 +267,7 @@ const NavSubItemStyled = styled.li`
       transition: color 0.2s ease;
     }
   }
-`
+`;
 
 const NavPadding = styled.div`
   @media ${media.mobile} {
@@ -284,14 +279,14 @@ const NavPadding = styled.div`
 const NavTitleLinkStyled = styled(Link)`
   width: 100%;
   text-align: center;
-  font-size:${fontSize.h2};
+  font-size: ${fontSize.h2};
   margin: ${spacing.xs} 0;
   font-weight: ${fontWeight.light};
-  text-decoration : none;
+  text-decoration: none;
   color: ${color.black};
   font-variant-numeric: slashed-zero;
 
-  @media ${media.mobile} { 
+  @media ${media.mobile} {
     line-height: ${NAV_MOBILE_HEADER_HEIGHT};
     text-align: left;
   }
@@ -300,10 +295,10 @@ const NavTitleLinkStyled = styled(Link)`
     text-align: center;
     line-height: ${NAV_DESKTOP_HEADER_HEIGHT};
   }
-`
+`;
 
 const NavMobileBorderStyled = styled.div`
-  @media ${media.mobile} { 
+  @media ${media.mobile} {
     border-bottom: 1px ${BORDER_COLOR} solid;
     position: absolute;
     bottom: 0;
@@ -311,7 +306,7 @@ const NavMobileBorderStyled = styled.div`
     margin: 0 ${NAV_MOBILE_PADDING};
     width: calc(100% - ${NAV_MOBILE_PADDING} * 2);
   }
-  
+
   @media ${media.desktop} {
     text-align: center;
     line-height: ${NAV_DESKTOP_HEADER_HEIGHT};
@@ -323,19 +318,28 @@ interface NavigationProps {
 }
 
 export default function NavigationComponent({ data }: NavigationProps) {
-
   const [isOpen, setIsOpen] = React.useState(false);
   const isMobile = useIsMobile();
 
-  const DESKTOP_SUB_MENU_MAX_LENGTH = React.useMemo(() => data.options.map(option => option.items ? option.items.length : 0).sort()[data.options.length - 1], [data.options])
-  const MOBILE_MENU_MAX_LENGTH = React.useMemo(() => `calc((${data.options.map(option => option.items ? option.items.length : 0).reduce((a, b) => a + b, 0)} * ${NAV_MOBILE_SUB_MENU_ITEM_HEIGHT}) + (${data.options.length * 2} * ${NAV_DESKTOP_SUB_MENU_PADDING}))`, [data.options]);
+  const DESKTOP_SUB_MENU_MAX_LENGTH = React.useMemo(
+    () => data.options.map(option => (option.items ? option.items.length : 0)).sort()[data.options.length - 1],
+    [data.options]
+  );
+  const MOBILE_MENU_MAX_LENGTH = React.useMemo(
+    () =>
+      `calc((${data.options
+        .map(option => (option.items ? option.items.length : 0))
+        .reduce((a, b) => a + b, 0)} * ${NAV_MOBILE_SUB_MENU_ITEM_HEIGHT}) + (${
+        data.options.length * 2
+      } * ${NAV_DESKTOP_SUB_MENU_PADDING}))`,
+    [data.options]
+  );
 
   React.useEffect(() => {
-    if(!isMobile && isOpen){
-      setIsOpen(false)
+    if (!isMobile && isOpen) {
+      setIsOpen(false);
     }
-
-  }, [isMobile, isOpen])
+  }, [isMobile, isOpen]);
 
   const handleOnToggleMenu = () => {
     setIsOpen(!isOpen);
@@ -346,43 +350,47 @@ export default function NavigationComponent({ data }: NavigationProps) {
       <NavWrapper>
         <NavContainer>
           <NavHeaderBar>
-            <NavTitleLinkStyled href={data.homePath} onClick={isOpen ? handleOnToggleMenu : undefined}>{data.title}</NavTitleLinkStyled>
-            <NavHamburger
-              className={`nav__menu-burger ${isOpen ? "-open" : ""}`}
-              onClick={handleOnToggleMenu}
-            >
+            <NavTitleLinkStyled href={data.homePath} onClick={isOpen ? handleOnToggleMenu : undefined}>
+              {data.title}
+            </NavTitleLinkStyled>
+            <NavHamburger className={`nav__menu-burger ${isOpen ? "-open" : ""}`} onClick={handleOnToggleMenu}>
               <img alt={isOpen ? "close icon" : "menu icon"} src={`icons/${isOpen ? "close" : "menu"}.svg`} />
             </NavHamburger>
-            <NavMobileBorderStyled/>
+            <NavMobileBorderStyled />
           </NavHeaderBar>
           <NavMainListContainer>
-          <NavMainList 
-          transition={{ type: "tween", duration: 0.2}}
-          animate={isMobile ? { height: isOpen ? MOBILE_MENU_MAX_LENGTH : "0px"} : undefined} 
-          // initial={{height: isMobile ? "0px" : NAV_DESKTOP_HEADER_HEIGHT}} 
-          whileHover={isMobile ? undefined : {height: `calc(${DESKTOP_SUB_MENU_MAX_LENGTH} * ${NAV_DESKTOP_SUB_ITEM_HEIGHT} + (${NAV_DESKTOP_SUB_MENU_PADDING} * 2) + ${NAV_DESKTOP_HEADER_HEIGHT})`}}
-          >
-            {data.options.map((option) => (
-              <NavMainItem key={`nav_${option.path}`}>
-                <Link href={option.path} onClick={isOpen ? handleOnToggleMenu : undefined}>
+            <NavMainList
+              transition={{ type: "tween", duration: 0.2 }}
+              animate={isMobile ? { height: isOpen ? MOBILE_MENU_MAX_LENGTH : "0px" } : undefined}
+              // initial={{height: isMobile ? "0px" : NAV_DESKTOP_HEADER_HEIGHT}}
+              whileHover={
+                isMobile
+                  ? undefined
+                  : {
+                      height: `calc(${DESKTOP_SUB_MENU_MAX_LENGTH} * ${NAV_DESKTOP_SUB_ITEM_HEIGHT} + (${NAV_DESKTOP_SUB_MENU_PADDING} * 2) + ${NAV_DESKTOP_HEADER_HEIGHT})`,
+                    }
+              }
+            >
+              {data.options.map(option => (
+                <NavMainItem key={`nav_${option.path}`}>
+                  <Link href={option.path} onClick={isOpen ? handleOnToggleMenu : undefined}>
                     {option.label}
-                </Link>
-                {
-                 option.items && <NavSubListStyled>
-                  {option.items.map((subOption) => (
-                    <NavSubItemStyled key={`subNav_${option.label}_${subOption.label}`}>
-                      <Link href={subOption.path} onClick={isOpen ? handleOnToggleMenu : undefined}>
-                          {subOption.label}
-                      </Link>
-                    </NavSubItemStyled>
-                  ))}
-                 </NavSubListStyled> 
-                }
-              </NavMainItem>
-            ))}
-          </NavMainList>
+                  </Link>
+                  {option.items && (
+                    <NavSubListStyled>
+                      {option.items.map(subOption => (
+                        <NavSubItemStyled key={`subNav_${option.label}_${subOption.label}`}>
+                          <Link href={subOption.path} onClick={isOpen ? handleOnToggleMenu : undefined}>
+                            {subOption.label}
+                          </Link>
+                        </NavSubItemStyled>
+                      ))}
+                    </NavSubListStyled>
+                  )}
+                </NavMainItem>
+              ))}
+            </NavMainList>
           </NavMainListContainer>
-          
         </NavContainer>
       </NavWrapper>
       <NavPadding />
