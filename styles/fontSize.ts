@@ -10,5 +10,7 @@ export const fontSize = {
   displayDesktop: "30px",
   displayMobile: "22px",
   linkDesktop: "22px",
-  linkMobile: "20px"
+  linkMobile: "20px",
+  articleMobile: "16px",
+  articleDesktop: "18px",
 };

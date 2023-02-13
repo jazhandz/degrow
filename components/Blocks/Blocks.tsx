@@ -1,6 +1,7 @@
 import { BlockType } from "@/types/CMS/Block";
 import * as React from "react";
 import styled from "styled-components";
+import { ArticleBlock } from "./ArticleBlock";
 import { BreakpointBlock } from "./BreakpointBlock";
 import { CenterImageBlock } from "./CenterImageBlock";
 import { ChapterHeadingBlock } from "./ChapterHeadingBlock";
@@ -52,6 +53,9 @@ export default function BlocksComponent({ data }: BlocksProps) {
           }
           case "locations": {
             return <LocationsBlock key={key} {...block.data} />;
+          }
+          case "article": {
+            return <ArticleBlock key={key} {...block.data} />;
           }
           default: {
             return <>Unknown block</>;

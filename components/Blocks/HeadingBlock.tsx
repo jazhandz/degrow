@@ -1,5 +1,6 @@
 import { fontSize } from "@/styles/fontSize";
 import { fontWeight } from "@/styles/fontWeight";
+import { spacing } from "@/styles/spacing";
 import styled from "styled-components";
 import { Container } from "../Container";
 
@@ -14,6 +15,7 @@ const HeadingStyled = styled.h1`
   font-size: ${fontSize.h1};
   width: 100%;
   font-variant-numeric: slashed-zero;
+  margin: ${spacing.l} 0;
 `;
 
 export function HeadingBlock({ title, varient }: HeadingBlockType) {

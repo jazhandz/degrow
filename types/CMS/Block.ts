@@ -7,6 +7,7 @@ import { SectionBlockType } from "@/components/Blocks/SectionBlock";
 import { LinkBlockType } from "@/components/Blocks/LinkBlock";
 import { HeadingBlockType } from "@/components/Blocks/HeadingBlock";
 import { LocationsBlockType } from "@/components/Blocks/LocationsBlock";
+import { ArticleBlockType } from "@/components/Blocks/ArticleBlock";
 
 export type BlockTypeOptions =
   | HeadingBlockType
@@ -17,7 +18,8 @@ export type BlockTypeOptions =
   | CenterImageBlockType
   | SectionBlockType
   | LinkBlockType
-  | LocationsBlockType;
+  | LocationsBlockType
+  | ArticleBlockType;
 
 export type BlockType<T = BlockTypeOptions> = {
   type:
@@ -29,6 +31,7 @@ export type BlockType<T = BlockTypeOptions> = {
     | "rich-text"
     | "section"
     | "link"
-    | "locations";
+    | "locations"
+    | "article";
   data: T;
 };
