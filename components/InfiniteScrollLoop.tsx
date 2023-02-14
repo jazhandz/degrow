@@ -1,6 +1,7 @@
 import { color } from "@/styles/color";
 import React, { WheelEvent } from "react";
 import styled from "styled-components";
+import { debounce } from "lodash";
 
 const InfiniteScrollLoopOuterStyled = styled.div`
   position: relative;
@@ -42,6 +43,8 @@ const SurroundingStyled = styled.div`
   display: flex;
 `;
 
+const TOUCH_CLAMP = 10;
+
 export function InfiniteScrollLoop({
   surroundingBackup = 4,
   children,
@@ -55,6 +58,7 @@ export function InfiniteScrollLoop({
   const contentRef = React.useRef<HTMLDivElement | null>(null);
   const scrollRef = React.useRef<HTMLDivElement | null>(null);
   const [width, setWidth] = React.useState<number>(0);
+  const [touchStart, setTouchStart] = React.useState<number | undefined>(undefined);
   const [isScrolling, setIsScrolling] = React.useState<0 | 1 | -1>(0);
 
   const backupWidth = width * surroundingBackup;
@@ -66,7 +70,10 @@ export function InfiniteScrollLoop({
         scrollRef.current.scrollLeft = backupWidth + (scroll % width);
       }
     }
-  }, [backupWidth, width]);
+    handleEndScroll();
+  }, [backupWidth, width, handleEndScroll]);
+
+  const handleEndScroll = React.useMemo(() => debounce(() => setIsScrolling(0), 100), []);
 
   React.useLayoutEffect(() => {
     if (contentRef.current && scrollRef.current) {
@@ -76,7 +83,7 @@ export function InfiniteScrollLoop({
   }, [backupWidth]);
 
   const handleWheel = React.useCallback(
-    (ev: WheelEvent<HTMLDivElement>) => {
+    (ev: React.WheelEvent) => {
       if (ev.deltaX > 2 && isScrolling !== 1) {
         setIsScrolling(1);
       } else if (ev.deltaX < -2 && isScrolling !== -1) {
@@ -84,6 +91,19 @@ export function InfiniteScrollLoop({
       }
     },
     [isScrolling]
+  );
+
+  const handleTouchMove = React.useCallback(
+    (ev: React.TouchEvent) => {
+      const nextPosition = ev.changedTouches?.[0].clientX;
+      if (touchStart && nextPosition < touchStart - TOUCH_CLAMP && isScrolling !== 1) {
+        setIsScrolling(1);
+      } else if (touchStart && nextPosition > touchStart + TOUCH_CLAMP && isScrolling !== -1) {
+        setIsScrolling(-1);
+      }
+      setTouchStart(ev.changedTouches?.[0].clientX);
+    },
+    [isScrolling, touchStart]
   );
 
   return (
@@ -96,6 +116,7 @@ export function InfiniteScrollLoop({
         }}
         onWheel={handleWheel}
         onScroll={handleScroll}
+        onTouchMove={handleTouchMove}
       >
         {Array(surroundingBackup)
           .fill(null)
