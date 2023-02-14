@@ -60,7 +60,8 @@ export function InfiniteScrollLoop({
 
   const backupWidth = width * surroundingBackup;
 
-  const handleEndScroll = React.useMemo(() => debounce(() => setIsScrolling(0), 100), []);
+  // Incase we want to add recoil
+  //   const handleEndScroll = React.useMemo(() => debounce(() => setIsScrolling(0), 100), []);
 
   const handleScroll = React.useCallback(() => {
     if (scrollRef.current) {
@@ -69,8 +70,9 @@ export function InfiniteScrollLoop({
         scrollRef.current.scrollLeft = backupWidth + (scroll % width);
       }
     }
-    handleEndScroll();
-  }, [backupWidth, width, handleEndScroll]);
+    // Incase we want to add recoil
+    // handleEndScroll();
+  }, [backupWidth, width]);
 
   React.useLayoutEffect(() => {
     if (contentRef.current && scrollRef.current) {
