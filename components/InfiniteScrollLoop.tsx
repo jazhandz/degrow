@@ -97,9 +97,9 @@ export function InfiniteScrollLoop({
     (ev: React.TouchEvent) => {
       const nextPosition = ev.changedTouches?.[0].clientX;
       if (touchStart && nextPosition < touchStart - TOUCH_CLAMP && isScrolling !== 1) {
-        setIsScrolling(1);
-      } else if (touchStart && nextPosition > touchStart + TOUCH_CLAMP && isScrolling !== -1) {
         setIsScrolling(-1);
+      } else if (touchStart && nextPosition > touchStart + TOUCH_CLAMP && isScrolling !== -1) {
+        setIsScrolling(1);
       }
       setTouchStart(ev.changedTouches?.[0].clientX);
     },
