@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { InfiniteScrollLoop } from "../InfiniteScrollLoop";
 import { Picture } from "../Picture";
 import { FLAVOURS } from "@/data/flavours";
+import { media } from "@/styles/media";
 
 export type DiscoverFlavoursBlockType = {
   // empty
@@ -33,9 +34,11 @@ const DiscoverFlavourClickContainerStyled = styled(Link)`
   transform: ${({ $yOffset, $rotate }: { $yOffset: string; $rotate: number }) =>
     `rotate(${$rotate}deg) translateY(${$yOffset}) scale(100%)`};
   transition: transform 0.5s ease;
-  &:hover {
-    transform: ${({ $yOffset, $rotate }: { $yOffset: string; $rotate: number }) =>
-      `rotate(${$rotate}deg) translateY(${$yOffset}) scale(110%)`};
+  @media ${media.desktop} {
+    &:hover {
+      transform: ${({ $yOffset, $rotate }: { $yOffset: string; $rotate: number }) =>
+        `rotate(${$rotate}deg) translateY(${$yOffset}) scale(110%)`};
+    }
   }
 `;
 

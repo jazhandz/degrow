@@ -11,7 +11,7 @@ export const NAVIGATION_DATA: NavigationType = {
   options: [
     {
       label: "Flavours",
-      path: "/flavours",
+      path: "/flavours/original",
       items: [
         {
           label: "Original",

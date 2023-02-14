@@ -12,6 +12,8 @@ import { HeadingBlock } from "./HeadingBlock";
 import { LinkBlock } from "./LinkBlock";
 import { RichTextBlock } from "./RichTextBlock";
 import { motion } from "framer-motion";
+import { fontSize } from "@/styles/fontSize";
+import { RichText } from "../RichText";
 
 export interface FlavourBlockType extends FlavourType {
   headingVarient?: "h1" | "h2";
@@ -33,6 +35,11 @@ const PRODUCT_MOBILE_OFFSET_2 = 15;
 const PRODUCT_MOBILE_ROTATE_1 = 20;
 const PRODUCT_MOBILE_ROTATE_2 = -20;
 const PRODUCT_MOBILE_BETWEEN_MARGIN = spacing.m;
+
+const MOBILE_FONT_SIZE = fontSize.articleMobile;
+const DESKTOP_FONT_SIZE = fontSize.articleDesktop;
+
+const DETAILS_MAX_WIDTH = "275px";
 
 const ANIMATION_TRANSITION = { duration: 1, type: "tween" };
 
@@ -80,16 +87,62 @@ const ProductLeftContainerStyled = styled(motion.div)``;
 
 const ProductRightContainerStyled = styled(motion.div)``;
 
+const ProductDetailsStyled = styled(Container)`
+  @media ${media.mobile} {
+    margin: ${spacing.xl} auto;
+  }
+  @media ${media.desktop} {
+    margin-top: ${spacing.xl};
+    margin-bottom: ${spacing.xl};
+    display: flex;
+    justify-content: space-around;
+  }
+`;
+
+const ProductDataLabelStyled = styled.dl`
+  @media ${media.mobile} {
+    margin: ${spacing.xl} auto;
+  }
+  text-align: center;
+  max-width: ${DETAILS_MAX_WIDTH};
+`;
+
+const ProductDetailTypeStyled = styled.dt`
+  width: 100%;
+  margin-bottom: ${spacing.m};
+  @media ${media.mobile} {
+    font-size: ${fontSize.displayMobile};
+  }
+  @media ${media.desktop} {
+    font-size: ${fontSize.displayDesktop};
+  }
+`;
+
+const ProductDetailDataStyled = styled.dd`
+  width: 100%;
+  margin: 0;
+  @media ${media.mobile} {
+    font-size: ${MOBILE_FONT_SIZE};
+  }
+  @media ${media.desktop} {
+    font-size: ${DESKTOP_FONT_SIZE};
+  }
+`;
+
 export function FlavourBlock({
-  id,
   title,
   detailPage: { titleDesktopPicture, titleMobilePicture, ingredients, nutrition, description },
   productPicture,
 }: FlavourBlockType) {
-  console.log("render:", id);
   return (
     <>
-      <TitleContainerStyled as={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <TitleContainerStyled
+        as={motion.div}
+        transition={ANIMATION_TRANSITION}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
         {titleMobilePicture && titleDesktopPicture ? (
           <>
             <IsMobile>
@@ -124,6 +177,23 @@ export function FlavourBlock({
       </FlavourProductContainerStyled>
       <RichTextBlock body={description} />
       <LinkBlock href={`/find-us`} text="Where to buy?" />
+      <Container>
+        <Hr />
+      </Container>
+      <ProductDetailsStyled>
+        <ProductDataLabelStyled>
+          <ProductDetailTypeStyled>Ingrediënten</ProductDetailTypeStyled>
+          <ProductDetailDataStyled>
+            <RichText>{ingredients}</RichText>
+          </ProductDetailDataStyled>
+        </ProductDataLabelStyled>
+        <ProductDataLabelStyled>
+          <ProductDetailTypeStyled>Voedingswaarde*</ProductDetailTypeStyled>
+          <ProductDetailDataStyled>
+            <RichText>{nutrition}</RichText>
+          </ProductDetailDataStyled>
+        </ProductDataLabelStyled>
+      </ProductDetailsStyled>
       <Container>
         <Hr />
       </Container>

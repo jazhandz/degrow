@@ -11,12 +11,12 @@ export const FLAVOURS: FlavourType[] = [
       ingredients:
         "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
       nutrition:
-        "Energie 98.3 Kj (23.2 kcal) Vetten <0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
+        "Energie 98.3 Kj (23.2 kcal) Vetten &lt;0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
     },
     discover: {
       yOffset: "-30%",
       rotate: 20,
-      stiffness: 0.8,
+      stiffness: -0.8,
     },
     productPicture: {
       src: "/images/flavour_demo",
@@ -35,7 +35,7 @@ export const FLAVOURS: FlavourType[] = [
       ingredients:
         "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
       nutrition:
-        "Energie 98.3 Kj (23.2 kcal) Vetten <0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
+        "Energie 98.3 Kj (23.2 kcal) Vetten &lt;0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
     },
     discover: {
       yOffset: "20%",
@@ -76,12 +76,12 @@ export const FLAVOURS: FlavourType[] = [
       ingredients:
         "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
       nutrition:
-        "Energie 98.3 Kj (23.2 kcal) Vetten <0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
+        "Energie 98.3 Kj (23.2 kcal) Vetten &lt;0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
     },
     discover: {
       yOffset: "-10%",
       rotate: 15,
-      stiffness: 0.9,
+      stiffness: -0.9,
     },
     productPicture: {
       src: "/images/flavour_demo",
@@ -100,7 +100,7 @@ export const FLAVOURS: FlavourType[] = [
       ingredients:
         "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
       nutrition:
-        "Energie 98.3 Kj (23.2 kcal) Vetten <0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
+        "Energie 98.3 Kj (23.2 kcal) Vetten &lt;0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
     },
     discover: {
       yOffset: "25%",

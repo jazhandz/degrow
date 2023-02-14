@@ -10,6 +10,7 @@ const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType
     <>
       <SEO title="De Grow Lab" description="" />
       <Blocks
+        key={data.title}
         data={[
           {
             type: "section",
