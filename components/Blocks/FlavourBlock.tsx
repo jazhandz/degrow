@@ -23,8 +23,8 @@ const PRODUCT_DESKTOP_WIDTH = "200px";
 const PRODUCT_DESKTOP_PADDING = "100px";
 const PRODUCT_DESKTOP_OFFSET_1 = -15;
 const PRODUCT_DESKTOP_OFFSET_2 = 15;
-const PRODUCT_DESKTOP_ROTATE_1 = 20;
-const PRODUCT_DESKTOP_ROTATE_2 = -20;
+const PRODUCT_DESKTOP_ROTATE_1 = 15;
+const PRODUCT_DESKTOP_ROTATE_2 = -15;
 const PRODUCT_DESKTOP_BETWEEN_MARGIN = spacing.xl;
 const PRODUCT_DESKTOP_INTRO_OFFSET_X = 20;
 
@@ -160,16 +160,16 @@ export function FlavourBlock({
       <FlavourProductContainerStyled>
         <ProductLeftContainerStyled
           transition={ANIMATION_TRANSITION}
-          initial={{ opacity: 0, transform: `translateX(-${PRODUCT_DESKTOP_INTRO_OFFSET_X}%)` }}
-          whileInView={{ opacity: 1, transform: `translateX(0%)` }}
+          initial={{ opacity: 0, transform: `translateX(-${PRODUCT_DESKTOP_INTRO_OFFSET_X}%) rotate(0deg)` }}
+          whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)` }}
           viewport={{ once: true }}
         >
           <Picture {...productPicture} />
         </ProductLeftContainerStyled>
         <ProductRightContainerStyled
           transition={ANIMATION_TRANSITION}
-          initial={{ opacity: 0, transform: `translateX(${PRODUCT_DESKTOP_INTRO_OFFSET_X}%)` }}
-          whileInView={{ opacity: 1, transform: `translateX(0%)` }}
+          initial={{ opacity: 0, transform: `translateX(${PRODUCT_DESKTOP_INTRO_OFFSET_X}%) rotate(0deg)` }}
+          whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg)` }}
           viewport={{ once: true }}
         >
           <Picture {...productPicture} />

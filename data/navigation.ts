@@ -7,6 +7,7 @@ export const NAVIGATION_DATA: NavigationType = {
     { path: "/about-us", color: "softPink" },
     { path: "/our-story", color: "softGreen" },
     { path: "/flavours/original", color: "softBlue" },
+    { path: "/flavours/nabij", color: "softBlue" },
   ],
   options: [
     {

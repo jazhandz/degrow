@@ -52,7 +52,7 @@ export const FLAVOURS: FlavourType[] = [
   },
   {
     id: "tepache-sunrise",
-    title: "Flavour 1",
+    title: "Tepache Sunrise",
     gradient: ["softGrey", "softOrange", "softPink"],
     detailPage: {
       titleMobilePicture: {
@@ -94,6 +94,7 @@ export const FLAVOURS: FlavourType[] = [
   {
     id: "nabij",
     title: "Nabij",
+    gradient: ["softBlue", "softPink", "softOrange"],
     detailPage: {
       description:
         "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
@@ -108,10 +109,10 @@ export const FLAVOURS: FlavourType[] = [
       stiffness: 0.6,
     },
     productPicture: {
-      src: "/images/flavour_demo",
+      src: "/images/flavour_bottle_demo",
       supportedTypes: ["webp", "png"],
-      width: 300,
-      height: 600,
+      width: 272,
+      height: 631,
       alt: "flavour-4",
     },
   },
