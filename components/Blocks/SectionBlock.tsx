@@ -13,7 +13,7 @@ export type SectionBlockType = {
   id: string;
 };
 
-const SectionStyled = styled.section`
+const SectionStyled = styled.div`
   ${({ $color, $gradient }: { $color?: string; $gradient?: [string, string, string] }) =>
     $gradient !== undefined
       ? `background-image: linear-gradient(180deg, ${$gradient[0]} 0%, ${$gradient[1]} 49%, ${$gradient[2]} 100%);`

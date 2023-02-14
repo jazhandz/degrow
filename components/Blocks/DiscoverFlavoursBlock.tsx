@@ -1,19 +1,11 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { InfiniteScrollLoop } from "../InfiniteScrollLoop";
-import { Picture, PictureProps } from "../Picture";
-
-type FlavourListItemType = {
-  title: string;
-  picture: PictureProps;
-  path: string;
-  yOffset: string;
-  rotate: number;
-  stiffness: number;
-};
+import { Picture } from "../Picture";
+import { FLAVOURS } from "@/data/flavours";
 
 export type DiscoverFlavoursBlockType = {
-  flavours: FlavourListItemType[];
+  // empty
 };
 
 const DESKTOP_FLAVOUR_WIDTH = "200px";
@@ -21,7 +13,7 @@ const DESKTOP_FLAVOUR_CONTAINER_WIDTH = "300px";
 
 const DESKTOP_FLAVOUR_SCROLL_HEIGHT = "600px";
 
-const MAX_ROTATE_MOVEMENT = 15;
+const MAX_ROTATE_MOVEMENT = 5;
 
 const DiscoverFlavoursStyled = styled.div`
   width: ${DESKTOP_FLAVOUR_CONTAINER_WIDTH};
@@ -47,18 +39,18 @@ const DiscoverFlavourClickContainerStyled = styled(Link)`
   }
 `;
 
-export function DiscoverFlavoursBlock({ flavours }: DiscoverFlavoursBlockType) {
+export function DiscoverFlavoursBlock() {
   return (
     <InfiniteScrollLoop height={DESKTOP_FLAVOUR_SCROLL_HEIGHT}>
       {(isScrolling: -1 | 0 | 1) => {
-        return flavours.map(flavour => (
+        return FLAVOURS.map(flavour => (
           <DiscoverFlavoursStyled key={flavour.title}>
             <DiscoverFlavourClickContainerStyled
-              href={flavour.path}
-              $yOffset={flavour.yOffset}
-              $rotate={flavour.rotate + isScrolling * (MAX_ROTATE_MOVEMENT * flavour.stiffness)}
+              href={`/flavours/${flavour.id}`}
+              $yOffset={flavour.discover.yOffset}
+              $rotate={flavour.discover.rotate + isScrolling * (MAX_ROTATE_MOVEMENT * flavour.discover.stiffness)}
             >
-              <Picture {...flavour.picture} />
+              <Picture {...flavour.productPicture} />
             </DiscoverFlavourClickContainerStyled>
           </DiscoverFlavoursStyled>
         ));

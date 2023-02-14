@@ -359,7 +359,7 @@ export default function NavigationComponent({ data, backgroundColor }: Navigatio
               {data.title}
             </NavTitleLinkStyled>
             <NavHamburger className={`nav__menu-burger ${isOpen ? "-open" : ""}`} onClick={handleOnToggleMenu}>
-              <img alt={isOpen ? "close icon" : "menu icon"} src={`icons/${isOpen ? "close" : "menu"}.svg`} />
+              <img alt={isOpen ? "close icon" : "menu icon"} src={`/icons/${isOpen ? "close" : "menu"}.svg`} />
             </NavHamburger>
             <NavMobileBorderStyled />
           </NavHeaderBar>

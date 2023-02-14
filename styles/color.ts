@@ -1,3 +1,13 @@
+export const THEME_COLORS = {
+  deepBlue: "rgb(0,3,45)",
+  softGrey: "rgb(245,245,245)",
+  warmGrey: "rgb(240,240,227)",
+  softGreen: "rgb(226,255,205)",
+  softBlue: "rgb(223,236,255)",
+  softOrange: "rgb(255,214,158)",
+  softPink: "rgb(250,227,232)",
+};
+
 export const color = {
   gradient: " radial-gradient(circle at 20% 80%, #00b4c2 10%, #1e7ab8 110%)",
   primary: "#00032C",
@@ -19,11 +29,5 @@ export const color = {
   purple: "#635CCC",
   lightPurple: "#D4D1FF",
   // House styles
-  deepBlue: "rgb(0,3,45)",
-  softGrey: "rgb(245,245,245)",
-  warmGrey: "rgb(240,240,227)",
-  softGreen: "rgb(226,255,205)",
-  softBlue: "rgb(223,236,255)",
-  softOrange: "rgb(255,214,158)",
-  softPink: "rgb(250,227,232)"
+  ...THEME_COLORS,
 };

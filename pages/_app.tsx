@@ -11,8 +11,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const NAVIGATION_COLOR = React.useMemo(() => {
-    return NAVIGATION_DATA.colors.find(colorPath => router.pathname.startsWith(colorPath.path))?.color ?? undefined;
-  }, [router.pathname]);
+    return NAVIGATION_DATA.colors.find(colorPath => router.asPath.startsWith(colorPath.path))?.color ?? undefined;
+  }, [router.asPath]);
 
   return (
     <>

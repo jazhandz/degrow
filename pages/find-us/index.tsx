@@ -1,11 +1,10 @@
-import {Blocks} from "@/components/Blocks";
-import {SEO} from "@/components/SEO";
+import { Blocks } from "@/components/Blocks";
+import { SEO } from "@/components/SEO";
 import { FIND_US_PAGE_DATA } from "@/data/pages/find-us";
 import type { NextPage } from "next";
 import React from "react";
 
-const Home: NextPage = () => {
-
+const FindUs: NextPage = () => {
   return (
     <>
       <SEO title="De Grow Lab" description="" />
@@ -14,4 +13,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default FindUs;

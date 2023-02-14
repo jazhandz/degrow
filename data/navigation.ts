@@ -6,6 +6,7 @@ export const NAVIGATION_DATA: NavigationType = {
   colors: [
     { path: "/about-us", color: "softPink" },
     { path: "/our-story", color: "softGreen" },
+    { path: "/flavours/original", color: "softBlue" },
   ],
   options: [
     {
@@ -14,23 +15,23 @@ export const NAVIGATION_DATA: NavigationType = {
       items: [
         {
           label: "Original",
-          path: "/flavours#original",
+          path: "/flavours/original",
         },
         {
           label: "Harvest Spice",
-          path: "/flavours#harvest-spice",
+          path: "/flavours/harvest-spice",
         },
         {
           label: "Tepache Sunrise",
-          path: "/flavours#tepache-sunrise",
+          path: "/flavours/tepache-sunrise",
         },
         {
           label: "Nabij",
-          path: "/flavours#nabij",
+          path: "/flavours/nabij",
         },
         {
           label: "Collaborations",
-          path: "/flavours#collaborations",
+          path: "/flavours/collaborations",
         },
       ],
     },

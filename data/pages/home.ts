@@ -275,66 +275,7 @@ export const HOME_PAGE_DATA: PageType = {
     },
     {
       type: "discover-flavours",
-      data: {
-        flavours: [
-          {
-            title: "flavour_1",
-            path: "/flavour/1",
-            yOffset: "-30%",
-            rotate: 20,
-            stiffness: 0.8,
-            picture: {
-              src: "/images/flavour_demo",
-              supportedTypes: ["webp", "png"],
-              width: 300,
-              height: 600,
-              alt: "flavour-1",
-            },
-          },
-          {
-            title: "flavour_2",
-            path: "/flavour/2",
-            yOffset: "20%",
-            rotate: -20,
-            stiffness: 0.4,
-            picture: {
-              src: "/images/flavour_demo",
-              supportedTypes: ["webp", "png"],
-              width: 300,
-              height: 600,
-              alt: "flavour-2",
-            },
-          },
-          {
-            title: "flavour_3",
-            path: "/flavour/3",
-            yOffset: "-10%",
-            rotate: 15,
-            stiffness: 0.9,
-            picture: {
-              src: "/images/flavour_demo",
-              supportedTypes: ["webp", "png"],
-              width: 300,
-              height: 600,
-              alt: "flavour-3",
-            },
-          },
-          {
-            title: "flavour_4",
-            path: "/flavour/4",
-            yOffset: "25%",
-            rotate: -30,
-            stiffness: 0.6,
-            picture: {
-              src: "/images/flavour_demo",
-              supportedTypes: ["webp", "png"],
-              width: 300,
-              height: 600,
-              alt: "flavour-4",
-            },
-          },
-        ],
-      },
+      data: {},
     },
     {
       type: "section",
