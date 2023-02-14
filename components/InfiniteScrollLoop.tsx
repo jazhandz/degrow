@@ -43,8 +43,6 @@ const SurroundingStyled = styled.div`
   display: flex;
 `;
 
-const TOUCH_CLAMP = 10;
-
 export function InfiniteScrollLoop({
   surroundingBackup = 4,
   children,
@@ -58,7 +56,6 @@ export function InfiniteScrollLoop({
   const contentRef = React.useRef<HTMLDivElement | null>(null);
   const scrollRef = React.useRef<HTMLDivElement | null>(null);
   const [width, setWidth] = React.useState<number>(0);
-  const [touchStart, setTouchStart] = React.useState<number | undefined>(undefined);
   const [isScrolling, setIsScrolling] = React.useState<0 | 1 | -1>(0);
 
   const backupWidth = width * surroundingBackup;
@@ -93,19 +90,6 @@ export function InfiniteScrollLoop({
     [isScrolling]
   );
 
-  const handleTouchMove = React.useCallback(
-    (ev: React.TouchEvent) => {
-      const nextPosition = ev.changedTouches?.[0].clientX;
-      if (touchStart && nextPosition < touchStart - TOUCH_CLAMP && isScrolling !== 1) {
-        setIsScrolling(-1);
-      } else if (touchStart && nextPosition > touchStart + TOUCH_CLAMP && isScrolling !== -1) {
-        setIsScrolling(1);
-      }
-      setTouchStart(ev.changedTouches?.[0].clientX);
-    },
-    [isScrolling, touchStart]
-  );
-
   return (
     <InfiniteScrollLoopOuterStyled className="infinite-scroll-loop-outer" $height={height}>
       <InfiniteScrollLoopInnerStyled
@@ -116,7 +100,6 @@ export function InfiniteScrollLoop({
         }}
         onWheel={handleWheel}
         onScroll={handleScroll}
-        onTouchMove={handleTouchMove}
       >
         {Array(surroundingBackup)
           .fill(null)
