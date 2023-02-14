@@ -1,5 +1,5 @@
 import { color } from "@/styles/color";
-import React, { WheelEvent } from "react";
+import React from "react";
 import styled from "styled-components";
 import { debounce } from "lodash";
 
@@ -63,6 +63,8 @@ export function InfiniteScrollLoop({
 
   const backupWidth = width * surroundingBackup;
 
+  const handleEndScroll = React.useMemo(() => debounce(() => setIsScrolling(0), 100), []);
+
   const handleScroll = React.useCallback(() => {
     if (scrollRef.current) {
       const scroll = scrollRef.current.scrollLeft;
@@ -72,8 +74,6 @@ export function InfiniteScrollLoop({
     }
     handleEndScroll();
   }, [backupWidth, width, handleEndScroll]);
-
-  const handleEndScroll = React.useMemo(() => debounce(() => setIsScrolling(0), 100), []);
 
   React.useLayoutEffect(() => {
     if (contentRef.current && scrollRef.current) {
