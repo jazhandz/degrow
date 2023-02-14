@@ -1,6 +1,5 @@
 import { BlockType } from "@/types/CMS/Block";
 import * as React from "react";
-import styled from "styled-components";
 import { Blocks } from "@/components/Blocks";
 import { IsMobile } from "../Breakpoints/IsMobile";
 import { IsDesktop } from "../Breakpoints/IsDesktop";
@@ -11,12 +10,15 @@ export type BreakpointBlockType = {
   desktop: BlockType<any>;
 };
 
-export function BreakpointBlock({
-    mobile,
-  desktop,
-}: BreakpointBlockType) {
-
+export function BreakpointBlock({ mobile, desktop }: BreakpointBlockType) {
   return (
-    <><IsMobile><Blocks data={[mobile]}/></IsMobile>: <IsDesktop><Blocks data={[desktop]} /></IsDesktop></>
+    <>
+      <IsMobile>
+        <Blocks data={[mobile]} />
+      </IsMobile>
+      <IsDesktop>
+        <Blocks data={[desktop]} />
+      </IsDesktop>
+    </>
   );
 }
