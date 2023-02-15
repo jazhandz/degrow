@@ -1,1 +1,15 @@
-{}
+{
+  "custom-list": [
+    {
+      "custom-list-item": "test"
+    },
+    {
+      "custom-list-item": "test"
+    }
+  ],
+  "custom-field": "test",
+  "custom-object": {
+    "custom-line": "test",
+    "custom-text": "test"
+  }
+}
