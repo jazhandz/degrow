@@ -46,7 +46,7 @@ export function DiscoverFlavoursBlock() {
   return (
     <InfiniteScrollLoop height={DESKTOP_FLAVOUR_SCROLL_HEIGHT}>
       {(isScrolling: -1 | 0 | 1) => {
-        return FLAVOURS.map(flavour => (
+        return FLAVOURS.filter(flavour => !flavour.isCollaboration).map(flavour => (
           <DiscoverFlavoursStyled key={flavour.title}>
             <DiscoverFlavourClickContainerStyled
               href={`/flavours/${flavour.id}`}
