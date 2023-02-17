@@ -6,6 +6,7 @@ export const THEME_COLORS = {
   softBlue: "rgb(223,236,255)",
   softOrange: "rgb(255,214,158)",
   softPink: "rgb(250,227,232)",
+  green: "#00B974",
 };
 
 export const color = {
@@ -22,7 +23,6 @@ export const color = {
   red: "#FF5B42",
   lightRed: "#",
   yellow: "#EDE325",
-  green: "#00CE59",
   lightGreen: "#ACE68F",
   orange: "#FD886E",
   lightOrange: "#FDBEB0",

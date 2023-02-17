@@ -22,6 +22,8 @@ const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType
                   type: "flavour",
                   data: {
                     ...data,
+                    gradient: undefined, // Used in section
+                    color: undefined, // Used in section
                   },
                 },
                 {

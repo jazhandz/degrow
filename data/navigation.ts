@@ -8,6 +8,7 @@ export const NAVIGATION_DATA: NavigationType = {
     { path: "/our-story", color: "softGreen" },
     { path: "/flavours/original", color: "softBlue" },
     { path: "/flavours/nabij", color: "softBlue" },
+    { path: "/flavours/collaborations", color: "softPink" },
   ],
   options: [
     {
@@ -42,7 +43,7 @@ export const NAVIGATION_DATA: NavigationType = {
       items: [
         {
           label: "The team",
-          path: "/about-us#team",
+          path: "/about-us",
         },
         {
           label: "Our story",
@@ -50,7 +51,7 @@ export const NAVIGATION_DATA: NavigationType = {
         },
         {
           label: "Collaborations",
-          path: "/about-us#collaborations",
+          path: "/flavours/collaborations",
         },
       ],
     },
@@ -60,7 +61,7 @@ export const NAVIGATION_DATA: NavigationType = {
       items: [
         {
           label: "Where we get served",
-          path: "/find-us#where-we-get-served",
+          path: "/find-us",
         },
         {
           label: "Instagram",

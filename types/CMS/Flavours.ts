@@ -6,6 +6,7 @@ export type FlavourType = {
   title: string;
   color?: ColorVarientType;
   gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
+  isCollaboration?: boolean;
   detailPage: {
     titleMobilePicture?: PictureProps;
     titleDesktopPicture?: PictureProps;

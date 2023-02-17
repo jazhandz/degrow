@@ -116,4 +116,56 @@ export const FLAVOURS: FlavourType[] = [
       alt: "flavour-4",
     },
   },
+  {
+    id: "x-declique",
+    title: "Degrow Lab X deClique",
+    isCollaboration: true,
+    color: "softPink",
+    detailPage: {
+      description:
+        "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+      ingredients:
+        "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+      nutrition:
+        "Energie 98.3 Kj (23.2 kcal) Vetten &lt;0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
+    },
+    discover: {
+      yOffset: "25%",
+      rotate: -30,
+      stiffness: 0.6,
+    },
+    productPicture: {
+      src: "/images/flavour_bottle_demo",
+      supportedTypes: ["webp", "png"],
+      width: 272,
+      height: 631,
+      alt: "flavour-4",
+    },
+  },
+  {
+    id: "rose-bunker",
+    title: "Degrow Lab X Roze Bunker",
+    isCollaboration: true,
+    color: "green",
+    detailPage: {
+      description:
+        "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+      ingredients:
+        "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+      nutrition:
+        "Energie 98.3 Kj (23.2 kcal) Vetten &lt;0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g<br/><br/>*Per 100 ml",
+    },
+    discover: {
+      yOffset: "25%",
+      rotate: -30,
+      stiffness: 0.6,
+    },
+    productPicture: {
+      src: "/images/flavour_bottle_demo",
+      supportedTypes: ["webp", "png"],
+      width: 272,
+      height: 631,
+      alt: "flavour-4",
+    },
+  },
 ];

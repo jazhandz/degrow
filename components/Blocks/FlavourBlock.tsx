@@ -14,34 +14,42 @@ import { RichTextBlock } from "./RichTextBlock";
 import { motion } from "framer-motion";
 import { fontSize } from "@/styles/fontSize";
 import { RichText } from "../RichText";
+import { ColorVarientType } from "@/types/CMS/Generic";
+import { color as colors } from "@/styles/color";
 
 export interface FlavourBlockType extends FlavourType {
   headingVarient?: "h1" | "h2";
+  color?: ColorVarientType;
+  gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
+  listItem?: boolean;
 }
 
-const PRODUCT_DESKTOP_WIDTH = "200px";
-const PRODUCT_DESKTOP_PADDING = "100px";
-const PRODUCT_DESKTOP_OFFSET_1 = -15;
-const PRODUCT_DESKTOP_OFFSET_2 = 15;
-const PRODUCT_DESKTOP_ROTATE_1 = 15;
-const PRODUCT_DESKTOP_ROTATE_2 = -15;
+const PRODUCT_DESKTOP_PRODUCT_1_WIDTH = "210px";
+const PRODUCT_DESKTOP_PRODUCT_2_WIDTH = "250px";
+const PRODUCT_DESKTOP_PADDING = "70px";
+const PRODUCT_DESKTOP_OFFSET_1 = -7.5;
+const PRODUCT_DESKTOP_OFFSET_2 = 7.5;
+const PRODUCT_DESKTOP_ROTATE_1 = 12;
+const PRODUCT_DESKTOP_ROTATE_2 = -12;
 const PRODUCT_DESKTOP_BETWEEN_MARGIN = spacing.xl;
-const PRODUCT_DESKTOP_INTRO_OFFSET_X = 20;
 
-const PRODUCT_MOBILE_WIDTH = "150px";
-const PRODUCT_MOBILE_PADDING = "75px";
-const PRODUCT_MOBILE_OFFSET_1 = -15;
-const PRODUCT_MOBILE_OFFSET_2 = 15;
-const PRODUCT_MOBILE_ROTATE_1 = 20;
-const PRODUCT_MOBILE_ROTATE_2 = -20;
-const PRODUCT_MOBILE_BETWEEN_MARGIN = spacing.m;
+const PRODUCT_INTRO_OFFSET_X = 50;
+
+const PRODUCT_MOBILE_PRODUCT_1_WIDTH = "150px";
+const PRODUCT_MOBILE_PRODUCT_2_WIDTH = "200px";
+const PRODUCT_MOBILE_PADDING = "50px";
+const PRODUCT_MOBILE_OFFSET_1 = -12;
+const PRODUCT_MOBILE_OFFSET_2 = 12;
+const PRODUCT_MOBILE_ROTATE_1 = 6;
+const PRODUCT_MOBILE_ROTATE_2 = -6;
+const PRODUCT_MOBILE_BETWEEN_MARGIN = spacing.s;
 
 const MOBILE_FONT_SIZE = fontSize.articleMobile;
 const DESKTOP_FONT_SIZE = fontSize.articleDesktop;
 
 const DETAILS_MAX_WIDTH = "275px";
 
-const ANIMATION_TRANSITION = { duration: 1, type: "tween" };
+const ANIMATION_TRANSITION = { duration: 1.5, type: "spring" };
 
 const TitleContainerStyled = styled(Container)``;
 
@@ -55,12 +63,13 @@ const FlavourProductContainerStyled = styled(Container)`
     & div {
       &:first-child img {
         transform: translateY(${PRODUCT_MOBILE_OFFSET_1}%) rotate(${PRODUCT_MOBILE_ROTATE_1}deg);
+        width: ${PRODUCT_MOBILE_PRODUCT_1_WIDTH};
       }
       &:last-child img {
         transform: translateY(${PRODUCT_MOBILE_OFFSET_2}%) rotate(${PRODUCT_MOBILE_ROTATE_2}deg);
+        width: ${PRODUCT_MOBILE_PRODUCT_2_WIDTH};
       }
       & img {
-        width: ${PRODUCT_MOBILE_WIDTH};
         margin: 0 ${PRODUCT_MOBILE_BETWEEN_MARGIN};
       }
     }
@@ -71,12 +80,13 @@ const FlavourProductContainerStyled = styled(Container)`
     & div {
       &:first-child img {
         transform: translateY(${PRODUCT_DESKTOP_OFFSET_1}%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg);
+        width: ${PRODUCT_DESKTOP_PRODUCT_1_WIDTH};
       }
       &:last-child img {
         transform: translateY(${PRODUCT_DESKTOP_OFFSET_2}%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg);
+        width: ${PRODUCT_DESKTOP_PRODUCT_2_WIDTH};
       }
       & img {
-        width: ${PRODUCT_DESKTOP_WIDTH};
         margin: 0 ${PRODUCT_DESKTOP_BETWEEN_MARGIN};
       }
     }
@@ -129,13 +139,30 @@ const ProductDetailDataStyled = styled.dd`
   }
 `;
 
+const FlavourStyled = styled.div`
+  ${({ $color, $gradient }: { $color?: string; $gradient?: [string, string, string] }) =>
+    $gradient !== undefined
+      ? `background-image: linear-gradient(180deg, ${$gradient[0]} 0%, ${$gradient[1]} 49%, ${$gradient[2]} 100%);`
+      : $color !== undefined
+      ? `background-color: ${$color};`
+      : ""}
+  display: inline-block;
+  width: 100%;
+`;
+
 export function FlavourBlock({
   title,
   detailPage: { titleDesktopPicture, titleMobilePicture, ingredients, nutrition, description },
   productPicture,
+  color,
+  gradient,
+  listItem,
 }: FlavourBlockType) {
   return (
-    <>
+    <FlavourStyled
+      $gradient={gradient !== undefined ? [colors[gradient[0]], colors[gradient[1]], colors[gradient[2]]] : undefined}
+      $color={color !== undefined ? colors[color] : undefined}
+    >
       <TitleContainerStyled
         as={motion.div}
         transition={ANIMATION_TRANSITION}
@@ -159,16 +186,16 @@ export function FlavourBlock({
 
       <FlavourProductContainerStyled>
         <ProductLeftContainerStyled
-          transition={ANIMATION_TRANSITION}
-          initial={{ opacity: 0, transform: `translateX(-${PRODUCT_DESKTOP_INTRO_OFFSET_X}%) rotate(0deg)` }}
-          whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)` }}
+          transition={{ ...ANIMATION_TRANSITION, delay: 0 }}
+          initial={{ opacity: 0, transform: `translateX(-${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)` }}
+          whileInView={{ opacity: 0.9, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)` }}
           viewport={{ once: true }}
         >
           <Picture {...productPicture} />
         </ProductLeftContainerStyled>
         <ProductRightContainerStyled
-          transition={ANIMATION_TRANSITION}
-          initial={{ opacity: 0, transform: `translateX(${PRODUCT_DESKTOP_INTRO_OFFSET_X}%) rotate(0deg)` }}
+          transition={{ ...ANIMATION_TRANSITION, delay: 0.1 }}
+          initial={{ opacity: 0, transform: `translateX(${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)` }}
           whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg)` }}
           viewport={{ once: true }}
         >
@@ -194,9 +221,11 @@ export function FlavourBlock({
           </ProductDetailDataStyled>
         </ProductDataLabelStyled>
       </ProductDetailsStyled>
-      <Container>
-        <Hr />
-      </Container>
-    </>
+      {!listItem && (
+        <Container>
+          <Hr />
+        </Container>
+      )}
+    </FlavourStyled>
   );
 }
