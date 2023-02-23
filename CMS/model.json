@@ -1,16 +1,71 @@
 {
   ":name": "FrontAid CMS Example Model",
   ":description": "This is a simple example of a FrontAid CMS model. You can change and extend it according to your needs, for example add new fields or restructure it. You can edit this file by cloning this repository and update it with your local editor and push it back into this Git repository. ",
-  "custom-field": {
-    ":description": "This example text is used as a description.",
-    ":type": "line"
-  },
-  "custom-object": {
-    "custom-line": {
-      ":type": "line"
+  ":custom-types": {
+    "rich-text": {
+      ":title": "Rich Text",
+      ":description": "Text that can contain formatting",
+      ":type": "object",
+      "body": {
+        ":title": "Body",
+        ":type": "string"
+      }
     },
-    "custom-text": {
-      ":type": "text"
+    "heading": {
+      ":title": "Heading",
+      ":description": "Basic heading component",
+      ":type": "object",
+      "title": {
+        ":title": "Title",
+        ":type": "string"
+      }
+    },
+    "custom-object": {
+      "custom-line": {
+        ":type": "line"
+      },
+      "custom-text": {
+        ":type": "text"
+      }
+    }
+  },
+  "pages": {
+    ":title": "Pages",
+    ":description": "A data object for each page",
+    ":type": "array",
+    ":display-key": "slug",
+    ":items": {
+      "slug": {
+        ":title": "Slug",
+        ":type": "string",
+        ":placeholder": "id-for-page"
+      },
+      "seo": {
+        ":title": "SEO",
+        ":type": "object",
+        "title": {
+          ":type": "string"
+        },
+        "description": {
+          ":type": "string"
+        }
+      },
+      "blocks": {
+        ":title": "Blocks",
+        ":type": "arrayOf",
+        ":display-key": "slug",
+        ":items": ["rich-text", "heading"]
+      }
+    }
+  },
+  "footer": {
+    ":title": "Footer",
+    ":description": "Footer for website",
+    ":type": "object",
+    "title": {
+      ":title": "Title",
+      ":type": "string",
+      ":placeholder": "Title for footer"
     }
   },
   "custom-list": {

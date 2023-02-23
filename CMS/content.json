@@ -1,15 +1,32 @@
 {
-  "custom-list": [
+  "pages": [
     {
-      "custom-list-item": "test"
+      "slug": "home",
+      "seo": {
+        "title": "DEGR0W LAB",
+        "description": "Home page"
+      },
+      "blocks": [
+        {
+          ":label": "Intro heading",
+          ":type": "heading",
+          "title": "Hello this is a heading"
+        },
+        {
+          ":label": "Rich text content",
+          ":type": "rich-text",
+          "body": "This is rich text"
+        }
+      ]
     },
     {
-      "custom-list-item": "test"
+      "slug": "about-us"
+    },
+    {
+      "slug": "story"
     }
   ],
-  "custom-field": "test",
-  "custom-object": {
-    "custom-line": "test",
-    "custom-text": "test"
+  "footer": {
+    "title": "DEGR0W LAB"
   }
 }
