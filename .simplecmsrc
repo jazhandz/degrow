@@ -1,4 +1,5 @@
 {
   "model": "cms/model.json",
-  "content": "cms/content.json"
+  "content": "cms/content.json",
+  "target": "master"
 }
