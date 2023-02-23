@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "slug": "home",
+      "slug": "home-cms",
       "seo": {
         "title": "DEGR0W LAB",
         "description": "Home page"
