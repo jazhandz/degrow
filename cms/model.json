@@ -37,6 +37,7 @@
     "colors": {
       ":title": "Navigation colors",
       ":type": "array",
+      ":display-key": "path",
       ":items": {
         "path": {
           ":title": "Path",
@@ -53,6 +54,7 @@
     "options": {
       ":title": "Navigation Options",
       ":type": "array",
+      ":display-key": "label",
       ":items": {
         "label": {
           ":title": "Label",
@@ -72,6 +74,7 @@
         "items": {
           ":title": "Items (Children)",
           ":type": "array",
+          ":display-key": "label",
           ":items": {
             "label": {
               ":title": "Label",
