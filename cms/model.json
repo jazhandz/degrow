@@ -19,6 +19,34 @@
         ":title": "Title",
         ":type": "string"
       }
+    },
+    "uploadcare-image": {
+      ":title": "Image (uploadcare.com)",
+      ":type": "object",
+      "alt": {
+        ":title": "Alternative name",
+        ":type": "string"
+      },
+      "src": {
+        ":title": "Source",
+        ":type": "string"
+      },
+      "supportedTypes": {
+        ":title": "Supported Types",
+        ":type": "array",
+        ":items": {
+          ":title": "Image Type",
+          ":type": "string"
+        }
+      },
+      "width": {
+        ":title": "Width",
+        ":type": "string"
+      },
+      "height": {
+        ":title": "Height",
+        ":type": "string"
+      }
     }
   },
   "navigation": {
@@ -121,7 +149,7 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["rich-text", "heading"]
+        ":items": ["rich-text", "heading", "uploadcare-image"]
       }
     }
   },
