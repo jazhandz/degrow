@@ -130,7 +130,7 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["rich-text", "heading", "uploadcare-image"]
+        ":items": ["rich-text", "heading"]
       }
     }
   },
