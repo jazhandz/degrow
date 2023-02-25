@@ -23,6 +23,7 @@
   },
   "navigation": {
     ":title": "Navigation",
+    ":type": "object",
     "title": {
       ":title": "Title",
       ":type": "string",
