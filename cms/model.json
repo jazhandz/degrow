@@ -22,6 +22,7 @@
     },
     "uploadcare-image": {
       ":title": "Image (uploadcare.com)",
+      ":description": "Uploadcare image",
       ":type": "object",
       "alt": {
         ":title": "Alternative name",
@@ -29,24 +30,6 @@
       },
       "src": {
         ":title": "Source",
-        ":type": "string"
-      },
-      "supportedTypes": {
-        ":title": "Supported Types",
-        ":type": "array",
-        ":items": {
-          "type": {
-            ":title": "Image Type",
-            ":type": "string"
-          }
-        }
-      },
-      "width": {
-        ":title": "Width",
-        ":type": "string"
-      },
-      "height": {
-        ":title": "Height",
         ":type": "string"
       }
     }
