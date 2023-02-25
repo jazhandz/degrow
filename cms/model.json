@@ -21,15 +21,11 @@
       }
     },
     "uploadcare-image": {
-      ":title": "Image (uploadcare.com)",
+      ":title": "Image",
       ":description": "Uploadcare image",
       ":type": "object",
       "alt": {
         ":title": "Alternative name",
-        ":type": "string"
-      },
-      "src": {
-        ":title": "Source",
         ":type": "string"
       }
     }
