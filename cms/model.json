@@ -35,8 +35,10 @@
         ":title": "Supported Types",
         ":type": "array",
         ":items": {
-          ":title": "Image Type",
-          ":type": "string"
+          "type": {
+            ":title": "Image Type",
+            ":type": "string"
+          }
         }
       },
       "width": {
