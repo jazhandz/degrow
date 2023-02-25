@@ -1,6 +1,6 @@
 {
-  ":name": "FrontAid CMS Example Model",
-  ":description": "This is a simple example of a FrontAid CMS model. You can change and extend it according to your needs, for example add new fields or restructure it. You can edit this file by cloning this repository and update it with your local editor and push it back into this Git repository. ",
+  ":name": "CMS Example Model",
+  ":description": "This is the CMS model for de-grow-lab. It is found in the directory of the 'target' branch in the git repository.",
   ":custom-types": {
     "rich-text": {
       ":title": "Rich Text",
@@ -19,13 +19,76 @@
         ":title": "Title",
         ":type": "string"
       }
+    }
+  },
+  "navigation": {
+    ":title": "Navigation",
+    "title": {
+      ":title": "Title",
+      ":type": "string",
+      ":placeholer": "Title Text"
     },
-    "custom-object": {
-      "custom-line": {
-        ":type": "line"
-      },
-      "custom-text": {
-        ":type": "text"
+    "homePath": {
+      ":title": "Home path",
+      ":type": "string",
+      ":placeholer": "Home path"
+    },
+    "colors": {
+      ":title": "Navigation colors",
+      ":type": "array",
+      ":items": {
+        "path": {
+          ":title": "Path",
+          ":type": "string",
+          ":placeholder": "/path/location"
+        },
+        "color": {
+          ":title": "Color",
+          ":type": "string",
+          ":placeholder": "softGreen, softBlue, softPink ..."
+        }
+      }
+    },
+    "options": {
+      ":title": "Navigation Options",
+      ":type": "array",
+      ":items": {
+        "label": {
+          ":title": "Label",
+          ":type": "string",
+          ":placeholder": "Text label"
+        },
+        "path": {
+          ":title": "Path",
+          ":type": "string",
+          ":placeholder": "/path/location"
+        },
+        "target": {
+          ":title": "Target (optional)",
+          ":type": "string",
+          ":placeholder": "eg. blank"
+        },
+        "items": {
+          ":title": "Items (Children)",
+          ":type": "array",
+          ":items": {
+            "label": {
+              ":title": "Label",
+              ":type": "string",
+              ":placeholder": "Text label"
+            },
+            "path": {
+              ":title": "Path",
+              ":type": "string",
+              ":placeholder": "/path/location"
+            },
+            "target": {
+              ":title": "Target (optional)",
+              ":type": "string",
+              ":placeholder": "eg. blank"
+            }
+          }
+        }
       }
     }
   },
@@ -66,13 +129,6 @@
       ":title": "Title",
       ":type": "string",
       ":placeholder": "Title for footer"
-    }
-  },
-  "custom-list": {
-    ":items": {
-      "custom-list-item": {
-        ":type": "line"
-      }
     }
   }
 }
