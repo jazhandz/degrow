@@ -92,7 +92,7 @@
     ":type": "object",
     "testField": {
       ":title": "testimage",
-      ":type": "picture"
+      ":type": "rich-text"
     }
   },
   "navigation": {
