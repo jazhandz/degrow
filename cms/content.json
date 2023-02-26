@@ -73,5 +73,5 @@
       }
     ]
   },
-  "test": { "test2": "<p>hello <strong>david</strong> is my name</p>" }
+  "test": { "test2": "<p>hello <strong>david</strong> is my <em>name</em></p>" }
 }
