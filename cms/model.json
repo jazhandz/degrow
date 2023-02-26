@@ -72,8 +72,8 @@
         ":type": "string"
       },
       "image": {
-        ":title": "Source",
-        ":type": "string"
+        ":title": "Image",
+        ":type": "image"
       },
       "supportedTypes": {
         ":title": "Supported Types",
