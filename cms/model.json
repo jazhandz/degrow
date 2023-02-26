@@ -115,8 +115,21 @@
       "items": {
         ":title": "Items",
         ":type": "arrayOf",
-        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image", "center-image", "link"]
+        ":items": [
+          "section",
+          "paragraph",
+          "heading",
+          "chapter-heading",
+          "large-image",
+          "center-image",
+          "link",
+          "discover-flavours"
+        ]
       }
+    },
+    "discover-flavours": {
+      ":title": "Discover Flavours",
+      ":type": "object"
     }
   },
   "test": {
@@ -227,7 +240,16 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image", "center-image", "link"]
+        ":items": [
+          "section",
+          "paragraph",
+          "heading",
+          "chapter-heading",
+          "large-image",
+          "center-image",
+          "link",
+          "discover-flavours"
+        ]
       }
     }
   },
