@@ -85,6 +85,20 @@
           }
         }
       }
+    },
+    "section": {
+      ":title": "Section",
+      ":type": "object",
+      "color": {
+        ":title": "Color",
+        ":type": "string",
+        ":placeholder": "softGreen, softBlue, softPink ..."
+      },
+      "items": {
+        ":title": "Items",
+        ":type": "arrayOf",
+        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image"]
+      }
     }
   },
   "test": {
@@ -195,7 +209,7 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["paragraph", "heading", "chapter-heading", "large-image"]
+        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image"]
       }
     }
   },
