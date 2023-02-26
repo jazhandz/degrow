@@ -3,25 +3,7 @@
     {
       "slug": "home",
       "seo": { "title": "DEGR0W LAB", "description": "Home page" },
-      "blocks": [
-        { ":label": "Intro heading", ":type": "heading", "title": "Hello this is a heading" },
-        { ":label": "Rich text content", ":type": "rich-text", "body": "This is rich text" },
-        {
-          ":type": "uploadcare-image",
-          "alt": "Test Image",
-          "supportedTypes": [{ "type": "webp" }, { "type": "jpg" }],
-          "src": {
-            "tagret": {
-              "value": {
-                "id": "d38d1418-57b4-4973-b95c-e7d0ea6ee28b",
-                "url": "https://ucarecdn.com/d38d1418-57b4-4973-b95c-e7d0ea6ee28b/",
-                "width": 898,
-                "height": 898
-              }
-            }
-          }
-        }
-      ]
+      "blocks": []
     },
     { "slug": "about-us" },
     { "slug": "story" }
