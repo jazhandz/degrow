@@ -35,6 +35,11 @@
       "varient": {
         ":title": "Varient",
         ":type": "string"
+      },
+      "color": {
+        ":title": "Color",
+        ":type": "string",
+        ":placeholder": "softGreen, softBlue, softPink ..."
       }
     },
     "link": {
@@ -107,6 +112,11 @@
     "section": {
       ":title": "Section",
       ":type": "object",
+      "id": {
+        ":title": "ID",
+        ":type": "string",
+        ":placeholder": "example-id"
+      },
       "color": {
         ":title": "Color",
         ":type": "string",

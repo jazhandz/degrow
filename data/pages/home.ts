@@ -183,21 +183,20 @@ export const HOME_PAGE_DATA: PageType = {
     },
     {
       type: "section",
-      data: {
-        id: "core-values",
-        items: [
-          {
-            type: "chapter-heading",
-            data: {
-              title: `OUR CORE VALUES`,
-              varient: "h2",
-              color: "softOrange",
-            },
+      id: "core-values",
+      items: [
+        {
+          type: "chapter-heading",
+          data: {
+            title: `OUR CORE VALUES`,
+            varient: "h2",
+            color: "softOrange",
           },
-          {
-            type: "rich-text",
-            data: {
-              body: `<p>We started Degrow lab to make an awesome local product,
+        },
+        {
+          type: "rich-text",
+          data: {
+            body: `<p>We started Degrow lab to make an awesome local product,
                             to make a name for ourselves, to meet our community and
                             form bonds within it, to experiment, and to fail but try and
                             try again. We are small, so we are taking small steps. Make
@@ -210,43 +209,37 @@ export const HOME_PAGE_DATA: PageType = {
                             The name is a reminder to us that we want to operate
                             differently than the norm. We grow together, while
                             respecting the limits of our planet.</p>`,
-            },
           },
-          {
-            type: "link",
-            data: {
-              text: "Read more",
-              href: "/about",
-            },
+        },
+        {
+          type: "link",
+          data: {
+            text: "Read more",
+            href: "/about",
           },
-        ],
-      },
+        },
+      ],
     },
     {
       type: "heading",
-      data: {
-        title: `DISCOVER OUR FLAVOURS`,
-        varient: "h2",
-      },
+      title: `DISCOVER OUR FLAVOURS`,
+      varient: "h2",
     },
     {
       type: "discover-flavours",
-      data: {},
     },
     {
       type: "section",
-      data: {
-        id: "newsletter",
-        color: "softGreen",
-        items: [
-          {
-            type: "chapter-heading",
-            data: {
-              title: "NEWSLETTER",
-            },
+      id: "newsletter",
+      color: "softGreen",
+      items: [
+        {
+          type: "chapter-heading",
+          data: {
+            title: "NEWSLETTER",
           },
-        ],
-      },
+        },
+      ],
     },
   ],
 };
