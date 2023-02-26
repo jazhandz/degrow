@@ -1,5 +1,6 @@
-import { BlockType } from "./Block"
+import { BlockType } from "./Block";
 
 export type PageType = {
-    items: BlockType[]
-}
+  slug: string;
+  blocks: BlockType[];
+};

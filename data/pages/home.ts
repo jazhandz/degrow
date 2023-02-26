@@ -1,7 +1,8 @@
 import { PageType } from "@/types/CMS/Page";
 
 export const HOME_PAGE_DATA: PageType = {
-  items: [
+  slug: "home",
+  blocks: [
     {
       type: "paragraph",
       body: `Degrow lab is an Utrecht- based kombucha

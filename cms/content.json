@@ -108,8 +108,8 @@
       ],
       "slug": "home"
     },
-    { "slug": "about-us" },
-    { "slug": "story" }
+    { "slug": "about-us", "blocks": [] },
+    { "slug": "story", "blocks": [] }
   ],
   "footer": { "title": "DEGR0W LAB" },
   "navigation": {
