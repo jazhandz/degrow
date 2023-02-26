@@ -2,8 +2,8 @@
   ":name": "DeGrowLab.com",
   ":description": "This is the CMS model for de-grow-lab. It is found in the directory of the 'target' branch in the git repository.",
   ":custom-types": {
-    "rich-text": {
-      ":title": "Rich Text",
+    "paragraph": {
+      ":title": "Paragraph (Rich Text)",
       ":description": "Text that can contain formatting",
       ":type": "object",
       "body": {
@@ -195,7 +195,7 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["rich-text", "heading", "picture"]
+        ":items": ["paragraph", "heading", "chapter-heading", "large-image"]
       }
     }
   },
