@@ -30,6 +30,14 @@
       }
     }
   },
+  "test": {
+    ":title": "Navigation",
+    ":type": "object",
+    "testField": {
+      ":title": "testimage",
+      ":type": "uploadcare-image"
+    }
+  },
   "navigation": {
     ":title": "Navigation",
     ":type": "object",
