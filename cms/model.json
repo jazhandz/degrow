@@ -18,17 +18,60 @@
       "title": {
         ":title": "Title",
         ":type": "string"
+      },
+      "varient": {
+        ":title": "Varient",
+        ":type": "string"
       }
     },
-    "uploadcare-image": {
-      ":title": "Image (uploadcare.com)",
+    "chapter-heading": {
+      ":title": "Chapter Heading",
+      ":description": "Chapter heading component",
+      ":type": "object",
+      "title": {
+        ":title": "Title",
+        ":type": "string"
+      },
+      "varient": {
+        ":title": "Varient",
+        ":type": "string"
+      }
+    },
+    "link": {
+      ":title": "Link (CTA)",
+      ":description": "Link",
+      ":type": "object",
+      "text": {
+        ":title": "Text",
+        ":type": "string"
+      },
+      "href": {
+        ":title": "Href (Link)",
+        ":type": "string"
+      }
+    },
+    "large-image": {
+      ":title": "Large Image",
+      ":type": "object",
+      "marginBottom": {
+        ":title": "Bottom Margin",
+        ":placeholder": "Example: -30px",
+        ":type": "string"
+      },
+      "picture": {
+        ":title": "Picture",
+        ":type": "picture"
+      }
+    },
+    "picture": {
+      ":title": "Picture (uploadcare.com)",
       ":description": "Uploadcare image",
       ":type": "object",
       "alt": {
         ":title": "Alternative name",
         ":type": "string"
       },
-      "src": {
+      "image": {
         ":title": "Source",
         ":type": "string"
       },
@@ -41,14 +84,6 @@
             ":type": "string"
           }
         }
-      },
-      "width": {
-        ":title": "Width",
-        ":type": "string"
-      },
-      "height": {
-        ":title": "Height",
-        ":type": "string"
       }
     }
   },
@@ -57,7 +92,7 @@
     ":type": "object",
     "testField": {
       ":title": "testimage",
-      ":type": "uploadcare-image"
+      ":type": "picture"
     }
   },
   "navigation": {
@@ -160,7 +195,7 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["rich-text", "heading", "uploadcare-image"]
+        ":items": ["rich-text", "heading", "picture"]
       }
     }
   },
