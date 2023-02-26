@@ -30,10 +30,9 @@ export function LargeImageBlock({
   picture,
   ...pictureProps
 }: LargeImageBlockType) {
-  console.log("pic:", pictureProps);
   return (
     <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop}>
-      <UploadCarePicture {...picture} supportedTypes={["webp", "jpg"]} alt={alt} />
+      <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} alt={alt} />
     </LargeBlockImageStyled>
   );
 }

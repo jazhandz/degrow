@@ -32,11 +32,19 @@ export function UploadCarePicture({
   objectFit = "cover",
   image,
 }: UploadCarePictureProps) {
+  const isComplete = image?.url && image?.height && image?.width;
   return (
     <UploadCarePictureStyled $objectFit={objectFit}>
-      {supportedTypes.includes("jpg") && <source srcSet={`${image.url}-/format/jpeg/`} type="image/jpg" />}
-      {supportedTypes.includes("png") && <source srcSet={`${image.url}-/format/png/`} type="image/png" />}
-      <Image width={image.width} height={image.height} src={`${image.url}-/format/webp/`} alt={alt} />
+      {supportedTypes.includes("jpg") && isComplete && (
+        <source srcSet={`${image.url}-/format/jpeg/`} type="image/jpg" />
+      )}
+      {supportedTypes.includes("png") && isComplete && <source srcSet={`${image.url}-/format/png/`} type="image/png" />}
+      <Image
+        width={isComplete ? image.width : 150}
+        height={isComplete ? image.height : 200}
+        src={isComplete ? `${image.url}-/format/webp/` : "/images/empty.png"}
+        alt={alt}
+      />
       {children}
     </UploadCarePictureStyled>
   );

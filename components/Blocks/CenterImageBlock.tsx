@@ -3,9 +3,12 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
 import { Picture, PictureProps } from "../Picture";
+import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
 
-export interface CenterImageBlockType extends PictureProps {
+export interface CenterImageBlockType {
   size?: "large" | "small";
+  alt: string;
+  picture: UploadCarePictureProps;
 }
 
 const LARGE_IMAGE_DESKTOP_SIZE = "100%";
@@ -32,10 +35,11 @@ const CenterBlockImageStyled = styled(Container)`
   }
 `;
 
-export function CenterImageBlock({ size = "small", ...pictureProps }: CenterImageBlockType) {
+export function CenterImageBlock({ size = "small", picture, alt }: CenterImageBlockType) {
+  console.log("picture", picture);
   return (
     <CenterBlockImageStyled $size={size}>
-      <Picture {...pictureProps} />
+      <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} alt={alt} />
     </CenterBlockImageStyled>
   );
 }
