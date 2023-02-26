@@ -34,7 +34,7 @@ export type BlockType<T = BlockTypeOptions> = {
     | "center-image"
     | "chapter-heading"
     | "breakpoint"
-    | "rich-text"
+    | "paragraph"
     | "section"
     | "link"
     | "locations"
@@ -42,5 +42,4 @@ export type BlockType<T = BlockTypeOptions> = {
     | "products"
     | "discover-flavours"
     | "flavour";
-  data: T;
-};
+} & T;

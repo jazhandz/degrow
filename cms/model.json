@@ -53,9 +53,27 @@
     "large-image": {
       ":title": "Large Image",
       ":type": "object",
+      "marginTop": {
+        ":title": "Top Margin",
+        ":placeholder": "Example: -30px",
+        ":type": "string"
+      },
       "marginBottom": {
         ":title": "Bottom Margin",
         ":placeholder": "Example: -30px",
+        ":type": "string"
+      },
+      "picture": {
+        ":title": "Picture",
+        ":type": "picture"
+      }
+    },
+    "center-image": {
+      ":title": "Center Image",
+      ":type": "object",
+      "size": {
+        ":title": "Size",
+        ":placeholder": "small, large",
         ":type": "string"
       },
       "picture": {
@@ -97,7 +115,7 @@
       "items": {
         ":title": "Items",
         ":type": "arrayOf",
-        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image"]
+        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image", "center-image", "link"]
       }
     }
   },
@@ -209,7 +227,7 @@
         ":title": "Blocks",
         ":type": "arrayOf",
         ":display-key": "slug",
-        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image"]
+        ":items": ["section", "paragraph", "heading", "chapter-heading", "large-image", "center-image", "link"]
       }
     }
   },

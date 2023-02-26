@@ -1,34 +1,39 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Picture, PictureProps } from "../Picture";
+import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
 
-export interface LargeImageBlockType extends PictureProps {
-    marginBottom?: string;
-    marginTop?: string;
+export interface LargeImageBlockType {
+  alt: string;
+  marginBottom?: string;
+  marginTop?: string;
+  picture: UploadCarePictureProps;
 }
 
 const LargeBlockImageStyled = styled.div`
-margin-bottom: ${({$marginBottom}: {$marginBottom: string, $marginTop: string}) => $marginBottom};
-margin-top: ${({$marginTop}: {$marginBottom: string, $marginTop: string}) => $marginTop};
-width: 100%;
-height: auto;
-display: block;
-position: relative;
-& picture{
+  margin-bottom: ${({ $marginBottom }: { $marginBottom: string; $marginTop: string }) => $marginBottom};
+  margin-top: ${({ $marginTop }: { $marginBottom: string; $marginTop: string }) => $marginTop};
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  & picture {
     width: 100%;
     height: 100%;
-}
-`
+  }
+`;
 
 export function LargeImageBlock({
-    marginBottom = "0",
-    marginTop = "0",
+  marginBottom = "0",
+  marginTop = "0",
+  alt,
+  picture,
   ...pictureProps
 }: LargeImageBlockType) {
-    console.log("pic:", pictureProps);
+  console.log("pic:", pictureProps);
   return (
     <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop}>
-        <Picture {...pictureProps} />
+      <UploadCarePicture {...picture} supportedTypes={["webp", "jpg"]} alt={alt} />
     </LargeBlockImageStyled>
   );
 }

@@ -1,10 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
-import Image from "next/image"
+import Image from "next/image";
 
 export type SupportedImageType = "webp" | "png" | "jpg" | "svg";
 
 export interface PictureProps {
+  id: string;
   src: string;
   supportedTypes: SupportedImageType[];
   alt: string;
@@ -15,11 +16,11 @@ export interface PictureProps {
 }
 
 const PictureStyled = styled.picture`
-    & img{
-        width: 100%;
-        height: auto;
-        object-fit: ${({$objectFit}: {$objectFit: "cover" | "contain"}) => $objectFit}
-    }
+  & img {
+    width: 100%;
+    height: auto;
+    object-fit: ${({ $objectFit }: { $objectFit: "cover" | "contain" }) => $objectFit};
+  }
 `;
 
 export function Picture({ src, supportedTypes, alt, children, objectFit = "cover", width, height }: PictureProps) {

@@ -30,45 +30,45 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
     <BlocksContainerStyled>
       {data.map((block, index) => {
         const itemKey = `${key}_${block.type}_${index}`;
-        switch (block.type) {
+        switch (block?.[":type"]) {
           case "heading": {
-            return <HeadingBlock key={itemKey} {...block.data} />;
+            return <HeadingBlock key={itemKey} {...block} />;
           }
           case "large-image": {
-            return <LargeImageBlock key={itemKey} {...block.data} />;
+            return <LargeImageBlock key={itemKey} {...block} />;
           }
           case "center-image": {
-            return <CenterImageBlock key={itemKey} {...block.data} />;
+            return <CenterImageBlock key={itemKey} {...block} />;
           }
           case "chapter-heading": {
-            return <ChapterHeadingBlock key={itemKey} {...block.data} />;
+            return <ChapterHeadingBlock key={itemKey} {...block} />;
           }
           case "breakpoint": {
-            return <BreakpointBlock key={itemKey} {...block.data} />;
+            return <BreakpointBlock key={itemKey} {...block} />;
           }
-          case "rich-text": {
-            return <RichTextBlock key={itemKey} {...block.data} />;
+          case "paragraph": {
+            return <RichTextBlock key={itemKey} {...block} />;
           }
           case "section": {
-            return <SectionBlock key={itemKey} {...block.data} />;
+            return <SectionBlock key={itemKey} {...block} />;
           }
           case "link": {
-            return <LinkBlock key={itemKey} {...block.data} />;
+            return <LinkBlock key={itemKey} {...block} />;
           }
           case "locations": {
-            return <LocationsBlock key={itemKey} {...block.data} />;
+            return <LocationsBlock key={itemKey} {...block} />;
           }
           case "article": {
-            return <ArticleBlock key={itemKey} {...block.data} />;
+            return <ArticleBlock key={itemKey} {...block} />;
           }
           case "products": {
-            return <ProductsBlock key={itemKey} {...block.data} />;
+            return <ProductsBlock key={itemKey} {...block} />;
           }
           case "discover-flavours": {
-            return <DiscoverFlavoursBlock key={itemKey} {...block.data} />;
+            return <DiscoverFlavoursBlock key={itemKey} {...block} />;
           }
           case "flavour": {
-            return <FlavourBlock key={itemKey} {...block.data} />;
+            return <FlavourBlock key={itemKey} {...block} />;
           }
           default: {
             return <>Unknown block</>;
