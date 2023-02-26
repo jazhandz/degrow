@@ -8,7 +8,7 @@
       ":type": "object",
       "body": {
         ":title": "Body",
-        ":type": "string"
+        ":type": "rich-text"
       }
     },
     "heading": {
