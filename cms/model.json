@@ -90,7 +90,7 @@
   "test": {
     ":title": "Test",
     ":type": "object",
-    "testField": {
+    "test2": {
       ":title": "testimage",
       ":type": "rich-text"
     }
