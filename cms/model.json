@@ -2,6 +2,39 @@
   ":name": "DeGrowLab.com",
   ":description": "This is the CMS model for de-grow-lab. It is found in the directory of the 'target' branch in the git repository.",
   ":custom-types": {
+    "breakpoint": {
+      ":title": "Breakpoint",
+      ":description": "Seperate a block into two components for mobile and desktop",
+      ":type": "object",
+      "mobile": {
+        ":title": "Mobile",
+        ":type": "typeOf",
+        ":items": [
+          "section",
+          "paragraph",
+          "heading",
+          "chapter-heading",
+          "large-image",
+          "center-image",
+          "link",
+          "discover-flavours"
+        ]
+      },
+      "desktop": {
+        ":title": "Desktop",
+        ":type": "typeOf",
+        ":items": [
+          "section",
+          "paragraph",
+          "heading",
+          "chapter-heading",
+          "large-image",
+          "center-image",
+          "link",
+          "discover-flavours"
+        ]
+      }
+    },
     "paragraph": {
       ":title": "Paragraph (Rich Text)",
       ":description": "Text that can contain formatting",
