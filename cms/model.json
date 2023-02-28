@@ -17,7 +17,9 @@
           "large-image",
           "center-image",
           "link",
-          "discover-flavours"
+          "discover-flavours",
+          "article",
+          "products"
         ]
       },
       "desktop": {
@@ -32,7 +34,8 @@
           "center-image",
           "link",
           "discover-flavours",
-          "article"
+          "article",
+          "products"
         ]
       }
     },
@@ -156,6 +159,35 @@
             ":type": "string"
           }
         }
+      },
+      "products": {
+        ":title": "Products",
+        ":display-key": "title",
+        ":type": "array",
+        ":items": {
+          ":type": "object",
+          "image": {
+            ":title": "Image",
+            ":type": "image"
+          },
+          "title": {
+            ":title": "Title",
+            ":type": "string"
+          },
+          "details": {
+            ":title": "Details",
+            ":type": "string"
+          },
+          "whereToBuy": {
+            ":title": "Where to buy",
+            ":type": "string"
+          },
+          "price": {
+            ":title": "Price",
+            ":placeholder": "10, 25 ...",
+            ":type": "string"
+          }
+        }
       }
     },
     "section": {
@@ -190,7 +222,8 @@
           "link",
           "discover-flavours",
           "breakpoint",
-          "article"
+          "article",
+          "products"
         ]
       }
     },
@@ -317,7 +350,8 @@
           "link",
           "discover-flavours",
           "breakpoint",
-          "article"
+          "article",
+          "products"
         ]
       }
     }
