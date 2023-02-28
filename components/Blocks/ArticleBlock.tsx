@@ -14,8 +14,11 @@ const MOBILE_FONT_SIZE = fontSize.articleMobile;
 const DESKTOP_FONT_SIZE = fontSize.articleDesktop;
 
 const ArticleContainer = styled(Container)`
-  text-align: left;
   margin: ${spacing.m} auto;
+  p {
+    text-align: left;
+    min-height: ${MOBILE_FONT_SIZE};
+  }
   @media ${media.mobile} {
     font-size: ${MOBILE_FONT_SIZE};
   }

@@ -169,9 +169,9 @@
         ":type": "array",
         ":display-key": "title",
         ":items": {
-          "image": {
-            ":title": "Image",
-            ":type": "image"
+          "picture": {
+            ":title": "Picture",
+            ":type": "picture"
           },
           "title": {
             ":title": "Title",
@@ -179,7 +179,7 @@
           },
           "details": {
             ":title": "Details",
-            ":type": "string"
+            ":type": "rich-text"
           },
           "whereToBuy": {
             ":title": "Where to buy",

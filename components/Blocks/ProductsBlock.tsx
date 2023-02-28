@@ -7,17 +7,18 @@ import { Container } from "../Container";
 import { Hr } from "../HR";
 import { Picture, PictureProps } from "../Picture";
 import { RichText } from "../RichText";
+import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
 
 export interface ProductsBlockType extends PictureProps {
   products: ProductType[];
 }
 
 interface ProductType {
-  picture: PictureProps;
+  picture: UploadCarePictureProps;
   title: string;
   details: string;
   whereToBuy: string;
-  price: number;
+  price: string;
 }
 
 const MOBILE_FONT_SIZE = fontSize.articleMobile;
@@ -91,7 +92,8 @@ export function ProductsBlock({ products }: ProductsBlockType) {
       {products.map((product, index) => (
         <React.Fragment key={product.title}>
           <ProductContainerStyled as="article">
-            <Picture {...product.picture} />
+            <UploadCarePicture {...product.picture} supportedTypes={["webp", "png"]} />
+            {/* <Picture {...product.picture} /> */}
             <ProductInfoRowStyled>
               <ProductInfoStyled as="h3">{product.title}</ProductInfoStyled>
               <ProductInfoStyled>
@@ -107,8 +109,8 @@ export function ProductsBlock({ products }: ProductsBlockType) {
                 </ProductInfoDataStyled>
               </ProductInfoStyled>
               <ProductInfoStyled>
-                {product.price > 0 ? "€" : ""}
-                <data value={product.price}>{product.price > 0 ? product.price : "Free"}</data>
+                {parseInt(product.price) > 0 ? "€" : ""}
+                <data value={product.price}>{parseInt(product.price) > 0 ? product.price : "Free"}</data>
               </ProductInfoStyled>
             </ProductInfoRowStyled>
           </ProductContainerStyled>

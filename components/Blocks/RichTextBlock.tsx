@@ -18,6 +18,7 @@ const RichTextContainer = styled(Container)`
   margin: ${spacing.xl} auto;
   & p {
     margin: 0;
+    min-height: ${MOBILE_FONT_SIZE};
   }
   @media ${media.mobile} {
     font-size: ${MOBILE_FONT_SIZE};
