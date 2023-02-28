@@ -166,7 +166,8 @@
           "large-image",
           "center-image",
           "link",
-          "discover-flavours"
+          "discover-flavours",
+          "breakpoint"
         ]
       }
     },
@@ -291,7 +292,8 @@
           "large-image",
           "center-image",
           "link",
-          "discover-flavours"
+          "discover-flavours",
+          "breakpoint"
         ]
       }
     }
