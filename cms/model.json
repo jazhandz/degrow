@@ -19,7 +19,8 @@
           "link",
           "discover-flavours",
           "article",
-          "products"
+          "products",
+          "locations"
         ]
       },
       "desktop": {
@@ -35,7 +36,8 @@
           "link",
           "discover-flavours",
           "article",
-          "products"
+          "products",
+          "locations"
         ]
       }
     },
@@ -193,6 +195,25 @@
         }
       }
     },
+    "locations": {
+      ":title": "Locations",
+      ":type": "object",
+      "locations": {
+        ":title": "Locations",
+        ":type": "array",
+        ":display-key": "title",
+        ":items": {
+          "address": {
+            ":title": "Address",
+            ":type": "rich-text"
+          },
+          "link": {
+            ":title": "Link",
+            ":type": "string"
+          }
+        }
+      }
+    },
     "section": {
       ":title": "Section",
       ":type": "object",
@@ -226,7 +247,8 @@
           "discover-flavours",
           "breakpoint",
           "article",
-          "products"
+          "products",
+          "locations"
         ]
       }
     },
@@ -354,7 +376,8 @@
           "discover-flavours",
           "breakpoint",
           "article",
-          "products"
+          "products",
+          "locations"
         ]
       }
     }
