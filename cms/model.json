@@ -159,34 +159,34 @@
             ":type": "string"
           }
         }
-      },
-      "products": {
-        ":title": "Products",
-        ":display-key": "title",
-        ":type": "array",
-        ":items": {
-          ":type": "object",
-          "image": {
-            ":title": "Image",
-            ":type": "image"
-          },
-          "title": {
-            ":title": "Title",
-            ":type": "string"
-          },
-          "details": {
-            ":title": "Details",
-            ":type": "string"
-          },
-          "whereToBuy": {
-            ":title": "Where to buy",
-            ":type": "string"
-          },
-          "price": {
-            ":title": "Price",
-            ":placeholder": "10, 25 ...",
-            ":type": "string"
-          }
+      }
+    },
+    "products": {
+      ":title": "Products",
+      ":display-key": "title",
+      ":type": "array",
+      ":items": {
+        ":type": "object",
+        "image": {
+          ":title": "Image",
+          ":type": "image"
+        },
+        "title": {
+          ":title": "Title",
+          ":type": "string"
+        },
+        "details": {
+          ":title": "Details",
+          ":type": "string"
+        },
+        "whereToBuy": {
+          ":title": "Where to buy",
+          ":type": "string"
+        },
+        "price": {
+          ":title": "Price",
+          ":placeholder": "10, 25 ...",
+          ":type": "string"
         }
       }
     },
