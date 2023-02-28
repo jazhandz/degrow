@@ -45,8 +45,8 @@
     "gradient": {
       ":title": "Gradient",
       ":description": "Gradient type",
-      ":type": "arrayOf",
-      ":items": ["color"]
+      ":type": "array",
+      ":items": "color"
     },
     "article": {
       ":title": "Article (Rich Text)",
