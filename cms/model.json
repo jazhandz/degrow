@@ -42,12 +42,6 @@
       ":placeholder": "Colory wolery",
       ":type": "string"
     },
-    "gradient": {
-      ":title": "Gradient",
-      ":description": "Gradient type",
-      ":type": "array",
-      ":items": "color"
-    },
     "article": {
       ":title": "Article (Rich Text)",
       ":description": "Text that can contain formatting",
@@ -178,7 +172,10 @@
         ":placeholder": "softGreen, softBlue, softPink ..."
       },
       "gradient": {
-        ":type": "gradient"
+        ":title": "Gradient",
+        ":description": "Gradient type",
+        ":type": "array",
+        ":items": "color"
       },
       "items": {
         ":title": "Items",
