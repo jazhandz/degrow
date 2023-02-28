@@ -173,20 +173,8 @@
     },
     {
       "slug": "our-story",
-      "blocks": [
-        {
-          ":type": "breakpoint",
-          "mobile": { ":type": "heading", "title": "hi", "varient": "h1" },
-          "desktop": { ":type": "chapter-heading", "title": "Hello chapter", "varient": "h1", "color": "softGreen" }
-        },
-        {
-          ":type": "breakpoint",
-          "mobile": { ":type": "heading", "title": "head 1", "varient": "h1" },
-          "desktop": { ":type": "chapter-heading", "title": "h3", "varient": "h3" }
-        },
-        { ":type": "section", "gradient": ["softGreen", "softPink", "softBlue"], "id": "story-test-section" }
-      ],
-      "seo": { "title": "we're Gabriël Bijleveld" }
+      "blocks": [{ ":type": "section", "gradient": ["softGreen", "softBlue", "softPink"], "id": "story-test-section" }],
+      "seo": { "title": "Our Story" }
     }
   ],
   "footer": { "title": "DEGR0W LAB" },
