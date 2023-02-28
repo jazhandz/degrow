@@ -31,8 +31,30 @@
           "large-image",
           "center-image",
           "link",
-          "discover-flavours"
+          "discover-flavours",
+          "article"
         ]
+      }
+    },
+    "color": {
+      ":title": "Color",
+      ":description": "Type of color",
+      ":placeholder": "Colory wolery",
+      ":type": "string"
+    },
+    "gradient": {
+      ":title": "Gradient",
+      ":description": "Gradient type",
+      ":type": "arrayOf",
+      ":items": ["color"]
+    },
+    "article": {
+      ":title": "Article (Rich Text)",
+      ":description": "Text that can contain formatting",
+      ":type": "object",
+      "body": {
+        ":title": "Body",
+        ":type": "rich-text"
       }
     },
     "paragraph": {
@@ -155,6 +177,9 @@
         ":type": "string",
         ":placeholder": "softGreen, softBlue, softPink ..."
       },
+      "gradient": {
+        ":type": "gradient"
+      },
       "items": {
         ":title": "Items",
         ":type": "arrayOf",
@@ -167,7 +192,8 @@
           "center-image",
           "link",
           "discover-flavours",
-          "breakpoint"
+          "breakpoint",
+          "article"
         ]
       }
     },
@@ -293,7 +319,8 @@
           "center-image",
           "link",
           "discover-flavours",
-          "breakpoint"
+          "breakpoint",
+          "article"
         ]
       }
     }
