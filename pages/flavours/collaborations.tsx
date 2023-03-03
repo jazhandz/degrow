@@ -14,11 +14,19 @@ const Flavours: NextPage<{ data: FlavourType }> = () => {
     <>
       <SEO title="De Grow Lab" description="" />
       <Blocks
-        data={data.map(flavour => ({
-          ":type": "flavour",
-          ...flavour,
-          listItem: true,
-        }))}
+        data={[
+          ...data.map(flavour => ({
+            ":type": "flavour",
+            ...flavour,
+            listItem: true,
+          })),
+          {
+            ":type": "section",
+            id: "newsletter",
+            color: "softGreen",
+            items: [{ ":type": "chapter-heading", title: "NEWSLETTER", varient: "h2" }],
+          },
+        ]}
       />
     </>
   );
