@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <SEO title="De Grow Lab" description="" />
-      <Blocks data={OUR_STORY_PAGE_DATA.items} />
+      <Blocks data={OUR_STORY_PAGE_DATA.blocks} />
     </>
   );
 };

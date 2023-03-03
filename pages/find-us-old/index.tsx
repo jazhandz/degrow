@@ -8,7 +8,7 @@ const FindUs: NextPage = () => {
   return (
     <>
       <SEO title="De Grow Lab" description="" />
-      <Blocks data={FIND_US_PAGE_DATA.items} />
+      <Blocks data={FIND_US_PAGE_DATA.blocks} />
     </>
   );
 };

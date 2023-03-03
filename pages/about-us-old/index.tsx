@@ -8,7 +8,7 @@ const AboutUs: NextPage = () => {
   return (
     <>
       <SEO title="De Grow Lab" description="" />
-      <Blocks data={ABOUT_PAGE_DATA.items} />
+      <Blocks data={ABOUT_PAGE_DATA.blocks} />
     </>
   );
 };
