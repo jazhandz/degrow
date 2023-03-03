@@ -420,11 +420,30 @@
           ":title": "Nutrition",
           ":type": "rich-text",
           ":placeholder": "Nutrition"
-        },
-        "picture": {
-          ":title": "Picture",
-          ":type": "picture"
         }
+      },
+      "discover": {
+        ":title": "Discover layout",
+        ":type": "object",
+        "yOffset": {
+          ":title": "yOffset",
+          ":type": "string",
+          ":placeholder": "-30%"
+        },
+        "rotate": {
+          ":title": "Rotate",
+          ":type": "string",
+          ":placeholder": "30"
+        },
+        "stiffness": {
+          ":title": "Stiffnes",
+          ":type": "string",
+          ":placeholder": "0.9"
+        }
+      },
+      "picture": {
+        ":title": "Picture",
+        ":type": "picture"
       }
     }
   },
