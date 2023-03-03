@@ -71,6 +71,7 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
             return <FlavourBlock key={itemKey} {...block} />;
           }
           default: {
+            console.log("block", block);
             return <>Unknown block</>;
           }
         }

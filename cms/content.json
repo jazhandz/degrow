@@ -383,11 +383,13 @@
     "options": [
       {
         "label": "Flavours",
-        "path": "/flavours",
+        "path": "/flavours/collaborations",
         "items": [
           { "label": "Original", "path": "/flavours/original" },
           { "label": "Harvest Spice", "path": "/flavours/harvest-spice" },
-          { "label": "Tepache Sunrise", "path": "/flavours/tepache-sunrise" }
+          { "label": "Tepache Sunrise", "path": "/flavours/tepache-sunrise" },
+          { "label": "Nabij", "path": "/flavours/nabij" },
+          { "label": "Collaborations", "path": "/flavours/collaborations" }
         ]
       },
       {
@@ -436,7 +438,112 @@
           "height": 908
         }
       },
+      "isCollaboration": "0",
       "discover": { "yOffset": "-20%", "rotate": "30", "stiffness": "0.4" }
+    },
+    {
+      "slug": "harvest-spice",
+      "title": "Harvest Spice",
+      "detailPage": {
+        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Harvest Spice Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "0",
+      "discover": { "yOffset": "20%", "rotate": "-20", "stiffness": "0.4" }
+    },
+    {
+      "slug": "tepache-sunrise",
+      "title": "Tepache Sunrise",
+      "gradient": ["softGrey", "softOrange", "softPink"],
+      "detailPage": {
+        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Tepache Sunrise Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "0",
+      "discover": { "yOffset": "-10%", "rotate": "15", "stiffness": "-0.9" }
+    },
+    {
+      "slug": "nabij",
+      "title": "Nabij",
+      "gradient": ["softBlue", "softPink", "softOrange"],
+      "detailPage": {
+        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Nabij Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "0",
+      "discover": { "yOffset": "25%", "rotate": "-30", "stiffness": "0.6" }
+    },
+    {
+      "slug": "x-declique",
+      "title": "Degrow Lab X deClique",
+      "color": "softPink",
+      "detailPage": {
+        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Degrow Lab X deClique Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "1",
+      "discover": { "yOffset": "-35%", "rotate": "15", "stiffness": "0.9" }
+    },
+    {
+      "slug": "rose-bunker",
+      "title": "Degrow Lab X Roze Bunker",
+      "color": "green",
+      "detailPage": {
+        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Degrow Lab X Roze Bunker Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "1",
+      "discover": { "yOffset": "20%", "rotate": "-20", "stiffness": "-0.4" }
     }
   ]
 }

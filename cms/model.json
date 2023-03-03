@@ -403,6 +403,16 @@
         ":type": "array",
         ":items": "color"
       },
+      "color": {
+        ":title": "Color",
+        ":type": "string",
+        ":placeholder": "softGreen, softBlue, softPink ..."
+      },
+      "isCollaboration": {
+        ":title": "Is Collaboration",
+        ":type": "string",
+        ":placeholder": "0 or 1"
+      },
       "detailPage": {
         ":title": "Detail Page",
         ":type": "object",

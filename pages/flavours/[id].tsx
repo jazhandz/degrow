@@ -1,9 +1,11 @@
 import { Blocks } from "@/components/Blocks";
 import { SEO } from "@/components/SEO";
-import { FLAVOURS } from "@/data/flavours";
+import CONTENT from "@/cms/content.json";
 import { FlavourType } from "@/types/CMS/Flavours";
 import type { GetServerSideProps, NextPage } from "next";
 import React from "react";
+
+const FLAVOURS = CONTENT.flavours;
 
 const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType }) => {
   return (
@@ -13,32 +15,25 @@ const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType
         key={data.title}
         data={[
           {
-            type: "section",
-            data: {
-              color: data.color,
-              gradient: data.gradient,
-              items: [
-                {
-                  type: "flavour",
-                  data: {
-                    ...data,
-                    gradient: undefined, // Used in section
-                    color: undefined, // Used in section
-                  },
-                },
-                {
-                  type: "heading",
-                  data: {
-                    title: `DISCOVER OUR OTHER FLAVOURS`,
-                    varient: "h2",
-                  },
-                },
-                {
-                  type: "discover-flavours",
-                  data: {},
-                },
-              ],
-            },
+            ":type": "section",
+            color: data.color,
+            gradient: data.gradient,
+            items: [
+              {
+                ":type": "flavour",
+                ...data,
+                gradient: undefined, // Used in section
+                color: undefined, // Used in section
+              },
+              {
+                ":type": "heading",
+                title: `DISCOVER OUR OTHER FLAVOURS`,
+                varient: "h2",
+              },
+              {
+                ":type": "discover-flavours",
+              },
+            ],
           },
         ]}
       />
@@ -52,7 +47,7 @@ export default Flavours;
 export async function getStaticPaths() {
   // Get the paths we want to pre-render based on id
   const paths = FLAVOURS.map(flavour => ({
-    params: { id: flavour.id },
+    params: { id: flavour.slug },
   }));
 
   // We'll pre-render only these paths at build time.
@@ -64,6 +59,6 @@ export const getStaticProps: GetServerSideProps<{ data: FlavourType }> = async c
   const { params } = context;
   const id = params?.id;
 
-  const data = FLAVOURS.find(flavour => flavour.id === id) as FlavourType; // This is fine to cast, id is taken care of in static path and returns 404 otherwise
+  const data = FLAVOURS.find(flavour => flavour.slug === id) as FlavourType; // This is fine to cast, id is taken care of in static path and returns 404 otherwise
   return { props: { data: data } };
 };

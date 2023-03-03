@@ -1,13 +1,15 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { InfiniteScrollLoop } from "../InfiniteScrollLoop";
-import { Picture } from "../Picture";
-import { FLAVOURS } from "@/data/flavours";
+import CONTENT from "@/cms/content.json";
 import { media } from "@/styles/media";
+import { UploadCarePicture } from "../UploadCarePicture";
 
 export type DiscoverFlavoursBlockType = {
   // empty
 };
+
+const FLAVOURS = CONTENT.flavours;
 
 const DESKTOP_FLAVOUR_WIDTH = "200px";
 const DESKTOP_FLAVOUR_CONTAINER_WIDTH = "300px";
@@ -46,14 +48,17 @@ export function DiscoverFlavoursBlock() {
   return (
     <InfiniteScrollLoop height={DESKTOP_FLAVOUR_SCROLL_HEIGHT}>
       {(isScrolling: -1 | 0 | 1) => {
-        return FLAVOURS.filter(flavour => !flavour.isCollaboration).map(flavour => (
+        return FLAVOURS.filter(flavour => flavour.isCollaboration !== "1").map(flavour => (
           <DiscoverFlavoursStyled key={flavour.title}>
             <DiscoverFlavourClickContainerStyled
-              href={`/flavours/${flavour.id}`}
+              href={`/flavours/${flavour.slug}`}
               $yOffset={flavour.discover.yOffset}
-              $rotate={flavour.discover.rotate + isScrolling * (MAX_ROTATE_MOVEMENT * flavour.discover.stiffness)}
+              $rotate={
+                parseInt(flavour.discover.rotate) +
+                isScrolling * (MAX_ROTATE_MOVEMENT * parseFloat(flavour.discover.stiffness))
+              }
             >
-              <Picture {...flavour.productPicture} />
+              <UploadCarePicture {...flavour.picture} supportedTypes={["webp", "png"]} />
             </DiscoverFlavourClickContainerStyled>
           </DiscoverFlavoursStyled>
         ));

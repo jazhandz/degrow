@@ -16,6 +16,7 @@ import { fontSize } from "@/styles/fontSize";
 import { RichText } from "../RichText";
 import { ColorVarientType } from "@/types/CMS/Generic";
 import { color as colors } from "@/styles/color";
+import { UploadCarePicture } from "../UploadCarePicture";
 
 export interface FlavourBlockType extends FlavourType {
   headingVarient?: "h1" | "h2";
@@ -152,8 +153,8 @@ const FlavourStyled = styled.div`
 
 export function FlavourBlock({
   title,
-  detailPage: { titleDesktopPicture, titleMobilePicture, ingredients, nutrition, description },
-  productPicture,
+  detailPage: { titleMobilePicture, titleDesktopPicture, ingredients, nutrition, description },
+  picture,
   color,
   gradient,
   listItem,
@@ -173,10 +174,10 @@ export function FlavourBlock({
         {titleMobilePicture && titleDesktopPicture ? (
           <>
             <IsMobile>
-              <Picture {...titleMobilePicture} />
+              <UploadCarePicture {...titleMobilePicture} supportedTypes={["webp", "png"]} />
             </IsMobile>
             <IsDesktop>
-              <Picture {...titleDesktopPicture} />
+              <UploadCarePicture {...titleDesktopPicture} supportedTypes={["webp", "png"]} />
             </IsDesktop>
           </>
         ) : (
@@ -191,7 +192,7 @@ export function FlavourBlock({
           whileInView={{ opacity: 0.9, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)` }}
           viewport={{ once: true }}
         >
-          <Picture {...productPicture} />
+          <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} />
         </ProductLeftContainerStyled>
         <ProductRightContainerStyled
           transition={{ ...ANIMATION_TRANSITION, delay: 0.1 }}
@@ -199,7 +200,7 @@ export function FlavourBlock({
           whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg)` }}
           viewport={{ once: true }}
         >
-          <Picture {...productPicture} />
+          <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} />
         </ProductRightContainerStyled>
       </FlavourProductContainerStyled>
       <RichTextBlock body={description} />

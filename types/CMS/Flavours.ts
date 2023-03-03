@@ -1,23 +1,23 @@
-import { PictureProps } from "@/components/Picture";
+import { UploadCarePictureProps } from "@/components/UploadCarePicture";
 import { ColorVarientType } from "./Generic";
 
 export type FlavourType = {
-  id: string;
+  slug: string;
   title: string;
   color?: ColorVarientType;
   gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
-  isCollaboration?: boolean;
+  isCollaboration?: "0" | "1";
   detailPage: {
-    titleMobilePicture?: PictureProps;
-    titleDesktopPicture?: PictureProps;
+    titleMobilePicture?: UploadCarePictureProps;
+    titleDesktopPicture?: UploadCarePictureProps;
     description: string;
     ingredients: string;
     nutrition: string;
   };
   discover: {
     yOffset: string;
-    rotate: number;
-    stiffness: number;
+    rotate: string;
+    stiffness: string;
   };
-  productPicture: PictureProps;
+  picture: UploadCarePictureProps;
 };

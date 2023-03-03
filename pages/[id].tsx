@@ -39,6 +39,6 @@ export const getStaticProps: GetServerSideProps<{ data: PageType }> = async cont
 
   console.log("test ", id);
 
-  const data = CONTENT.pages.find(page => page.slug === id) as PageType; // This is fine to cast, id is taken care of in static path and returns 404 otherwise
+  const data = CONTENT.pages.find(page => page.slug === id) as any; // This is fine to cast, id is taken care of in static path and returns 404 otherwise
   return { props: { data: data } };
 };
