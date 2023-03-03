@@ -382,6 +382,52 @@
       }
     }
   },
+  "flavours": {
+    ":title": "Flavours",
+    ":description": "List of all flavours",
+    ":type": "array",
+    ":display-key": "slug",
+    ":items": {
+      "slug": {
+        ":title": "Slug",
+        ":type": "string",
+        ":placeholder": "flavour-slug"
+      },
+      "title": {
+        ":title": "Title",
+        ":type": "string"
+      },
+      "gradient": {
+        ":title": "Gradient",
+        ":description": "Gradient type",
+        ":type": "array",
+        ":items": "color"
+      },
+      "detailPage": {
+        ":title": "Detail Page",
+        ":type": "object",
+        "description": {
+          ":title": "Description",
+          ":type": "string",
+          ":placeholder": "Description"
+        },
+        "ingredients": {
+          ":title": "Ingredients",
+          ":type": "string",
+          ":placeholder": "Ingredients"
+        },
+        "nutrition": {
+          ":title": "Nutrition",
+          ":type": "rich-text",
+          ":placeholder": "Nutrition"
+        },
+        "picture": {
+          ":title": "Picture",
+          ":type": "picture"
+        }
+      }
+    }
+  },
   "footer": {
     ":title": "Footer",
     ":description": "Footer for website",
