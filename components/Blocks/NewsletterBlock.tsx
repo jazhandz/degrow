@@ -47,7 +47,12 @@ export function NewsletterBlock() {
             <Field name="name" placeholder="Name" component={TextInput} />
             <Field name="email" placeholder="Email" component={TextInput} />
             <BottomStyled>
-              <Field name="accept" component={CheckBoxInput} label="I agree to the privacy policy" />
+              <Field
+                name="accept"
+                href="/privacy-policy"
+                component={CheckBoxInput}
+                label="I agree to the privacy policy"
+              />
               <SubmitInput value={"Sign me up!"}></SubmitInput>
             </BottomStyled>
           </NewsletterContainer>

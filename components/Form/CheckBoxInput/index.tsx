@@ -5,12 +5,14 @@ import { color } from "@/styles/color";
 import InputNoteComponent from "../components/InputNoteComponent";
 import { CheckBoxInputComponent } from "../components/CheckBoxInputComponent";
 import { fontSize } from "@/styles/fontSize";
+import { Link } from "@/components/Link";
 
 interface CheckBoxInputProps extends FieldRenderProps<boolean, HTMLInputElement> {
   icon?: React.ReactElement;
   note?: string;
   label?: string;
   compact?: boolean;
+  href?: string;
 }
 
 const MAX_INPUT_WIDTH = "500px";
@@ -29,7 +31,14 @@ const CheckBoxInputContainerStyled = styled.div`
 
 CheckBoxInput.testID = "CheckBoxInput";
 
-export function CheckBoxInput({ input: { ...inputProps }, note, label, compact = true, ...props }: CheckBoxInputProps) {
+export function CheckBoxInput({
+  input: { ...inputProps },
+  href,
+  note,
+  label,
+  compact = true,
+  ...props
+}: CheckBoxInputProps) {
   const errorMessage = props.meta.touched && props.meta.error;
 
   const handleOnCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +54,13 @@ export function CheckBoxInput({ input: { ...inputProps }, note, label, compact =
           onChange={handleOnCheckboxChange}
         ></CheckBoxInputComponent>
         <ParagraphStyled as="label" htmlFor={inputProps.name}>
-          {label}
+          {href ? (
+            <Link href={href ?? ""} target="blank">
+              {label ?? ""}
+            </Link>
+          ) : (
+            label
+          )}
         </ParagraphStyled>
       </CheckBoxInputContainerStyled>
       {compact === false || note !== undefined || typeof errorMessage === "string" ? (
