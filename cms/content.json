@@ -8,15 +8,30 @@
           "body": "<p>Degrow lab is an Utrecht- based kombucha</p><p>Microbrewery. We are obsessed with brewing</p><p>craft kombucha, while also determined to</p><p>run our company according to principles of sustainability.</p>"
         },
         {
-          ":type": "large-image",
-          "marginBottom": "-30px",
-          "picture": {
-            "alt": "Large Illustration",
-            "image": {
-              "id": "1b9689c7-a321-4e0e-ab6d-d2ec88f2d187",
-              "url": "https://ucarecdn.com/1b9689c7-a321-4e0e-ab6d-d2ec88f2d187/",
-              "width": 703,
-              "height": 355
+          ":type": "breakpoint",
+          "mobile": {
+            ":type": "large-image",
+            "picture": {
+              "alt": "Large Illustration Mouth",
+              "image": {
+                "id": "1b9689c7-a321-4e0e-ab6d-d2ec88f2d187",
+                "url": "https://ucarecdn.com/1b9689c7-a321-4e0e-ab6d-d2ec88f2d187/",
+                "width": 703,
+                "height": 355
+              }
+            }
+          },
+          "desktop": {
+            ":type": "large-image",
+            "marginBottom": "-30px",
+            "picture": {
+              "alt": "Large Illustration",
+              "image": {
+                "id": "1b9689c7-a321-4e0e-ab6d-d2ec88f2d187",
+                "url": "https://ucarecdn.com/1b9689c7-a321-4e0e-ab6d-d2ec88f2d187/",
+                "width": 703,
+                "height": 355
+              }
             }
           }
         },
@@ -68,16 +83,32 @@
             },
             { ":type": "link", "text": "Read more", "href": "/about-us" },
             {
-              ":type": "large-image",
-              "marginTop": "-8vw",
-              "picture": {
-                "alt": "Bees Illustration",
-                "image": {
-                  "id": "c87c680d-2863-41ac-8e4d-f190fbfa0d25",
-                  "url": "https://ucarecdn.com/c87c680d-2863-41ac-8e4d-f190fbfa0d25/",
-                  "width": 748,
-                  "height": 334
-                }
+              ":type": "breakpoint",
+              "mobile": {
+                ":type": "large-image",
+                "picture": {
+                  "image": {
+                    "id": "686be95e-9f5f-4ed0-addb-877a345b2bd6",
+                    "url": "https://ucarecdn.com/686be95e-9f5f-4ed0-addb-877a345b2bd6/",
+                    "width": 2006,
+                    "height": 1380
+                  },
+                  "alt": "Bee Illustration"
+                },
+                "marginTop": "-10vw"
+              },
+              "desktop": {
+                ":type": "large-image",
+                "picture": {
+                  "alt": "Bees Illustration",
+                  "image": {
+                    "id": "0b25e403-d7b0-4126-9bde-9efb952498b3",
+                    "url": "https://ucarecdn.com/0b25e403-d7b0-4126-9bde-9efb952498b3/",
+                    "width": 748,
+                    "height": 334
+                  }
+                },
+                "marginTop": "-8vw"
               }
             }
           ]
