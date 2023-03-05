@@ -24,7 +24,7 @@ const Flavours: NextPage<{ data: FlavourType }> = () => {
             ":type": "section",
             id: "newsletter",
             color: "softGreen",
-            items: [{ ":type": "chapter-heading", title: "NEWSLETTER", varient: "h2" }],
+            items: [{ ":type": "chapter-heading", title: "NEWSLETTER", varient: "h2" }, { ":type": "newsletter" }],
           },
         ]}
       />

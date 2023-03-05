@@ -11,6 +11,7 @@ import { HeadingBlock } from "./HeadingBlock";
 import { LargeImageBlock } from "./LargeImageBlock";
 import { LinkBlock } from "./LinkBlock";
 import { LocationsBlock } from "./LocationsBlock";
+import { NewsletterBlock } from "./NewsletterBlock";
 import { ProductsBlock } from "./ProductsBlock";
 import { RichTextBlock } from "./RichTextBlock";
 import { SectionBlock } from "./SectionBlock";
@@ -69,6 +70,9 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
           }
           case "flavour": {
             return <FlavourBlock key={itemKey} {...block} />;
+          }
+          case "newsletter": {
+            return <NewsletterBlock key={itemKey} {...block} />;
           }
           default: {
             console.log("block", block);

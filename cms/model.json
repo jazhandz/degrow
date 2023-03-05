@@ -255,6 +255,10 @@
     "discover-flavours": {
       ":title": "Discover Flavours",
       ":type": "object"
+    },
+    "newsletter": {
+      ":title": "Newsletter (Form)",
+      ":type": "object"
     }
   },
   "test": {

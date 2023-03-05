@@ -1,32 +1,26 @@
 import * as React from "react";
 import styled from "styled-components";
-import { RichText } from "@/components/RichText";
 import { Container } from "../Container";
-import { fontSize } from "@/styles/fontSize";
-import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
-import Link from "next/link";
+import { Link } from "@/components/Link";
 
-export interface LinkBlockType {
+export type LinkBlockType = {
+  external?: boolean;
   text: string;
   href: string;
-  external?: boolean;
-}
-
-const MOBILE_FONT_SIZE = fontSize.linkMobile;
-const DESKTOP_FONT_SIZE = fontSize.linkDesktop;
+};
 
 const LinkContainer = styled(Container)`
-    text-align: center;
-    margin: ${spacing.xl} auto;
-    @media ${media.mobile} {
-        font-size: ${MOBILE_FONT_SIZE};
-    }
-    @media ${media.desktop} {
-        font-size: ${DESKTOP_FONT_SIZE};
-    }
+  text-align: center;
+  margin: ${spacing.xl} auto;
 `;
 
 export function LinkBlock({ text, href, external }: LinkBlockType) {
-  return <LinkContainer><Link href={href} target={external ? "blank" : undefined}>{text}</Link></LinkContainer>;
+  return (
+    <LinkContainer>
+      <Link href={href} size="large" target={external ? "blank" : undefined}>
+        {text}
+      </Link>
+    </LinkContainer>
+  );
 }
