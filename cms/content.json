@@ -407,7 +407,8 @@
 		{
 			"slug": "find-us",
 			"seo": {
-				"title": "Find Us extra"
+				"title": "Find Us",
+				"description": "Where to find DeGrow Lab Kombucha"
 			},
 			"blocks": [
 				{
