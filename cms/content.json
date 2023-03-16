@@ -493,6 +493,17 @@
 					]
 				}
 			]
+		},
+		{
+			"slug": "test",
+			"blocks": [
+				{
+					":type": "chapter-heading",
+					"title": "This is a test page",
+					"varient": "h1",
+					"color": "softGreen"
+				}
+			]
 		}
 	],
 	"footer": {
