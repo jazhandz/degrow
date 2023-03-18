@@ -2,7 +2,7 @@
 	"pages": [
 		{
 			"seo": {
-				"title": "DEGR0W LABs",
+				"title": "DEGR0W LAB - Home",
 				"description": "Home page"
 			},
 			"blocks": [
@@ -321,7 +321,8 @@
 				}
 			],
 			"seo": {
-				"title": "test"
+				"title": "DeGrowLab - About",
+				"description": "About DeGrowLab"
 			}
 		},
 		{
