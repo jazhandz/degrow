@@ -11,7 +11,7 @@ const Page: NextPage<{ data: PageType }> = ({ data }: { data: PageType }) => {
   console.log("data: ", data);
   return (
     <>
-      <SEO title="De Grow Lab" description="" />
+      <SEO title={data.seo.title} description={data.seo.description} />
       <Blocks key={data.slug} data={data.blocks} />
     </>
   );
@@ -36,8 +36,6 @@ export async function getStaticPaths() {
 export const getStaticProps: GetServerSideProps<{ data: PageType }> = async context => {
   const { params } = context;
   const id = params?.id;
-
-  console.log("test ", id);
 
   const data = CONTENT.pages.find(page => page.slug === id) as any; // This is fine to cast, id is taken care of in static path and returns 404 otherwise
   return { props: { data: data } };

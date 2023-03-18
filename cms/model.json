@@ -44,7 +44,7 @@
     "color": {
       ":title": "Color",
       ":description": "Type of color",
-      ":placeholder": "Colory wolery",
+      ":placeholder": "softGreen, softBlue, softPink, softGrey, ...",
       ":type": "string"
     },
     "article": {
@@ -365,6 +365,21 @@
           "products",
           "locations"
         ]
+      }
+    }
+  },
+  "defaults": {
+    ":title": "Defaults",
+    ":description": "Default values",
+    ":type": "object",
+    "seo": {
+      ":title": "SEO",
+      ":type": "object",
+      "title": {
+        ":type": "string"
+      },
+      "description": {
+        ":type": "string"
       }
     }
   },

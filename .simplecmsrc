@@ -1,5 +1,9 @@
 {
   "model": "cms/model.json",
   "content": "cms/content.json",
-  "target": "master"
+  "target": "master",
+  "integrations": {
+    "type": "uploadcare",
+    "key": "8170697647125b977b5e"
+  }
 }

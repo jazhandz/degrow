@@ -70,7 +70,7 @@ export const Constants = {
   },
   metaData: {
     author: "David Vann",
-    title: "David Vann",
+    title: "DeGrowLab",
     description: "React developer",
   },
   style: {
