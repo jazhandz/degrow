@@ -718,7 +718,9 @@
 					"id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
 					"url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
 					"width": 500,
-					"height": 908
+					"height": 908,
+					"displayWidth": 500,
+					"displayHeight": 908
 				}
 			},
 			"isCollaboration": "0",
@@ -778,5 +780,11 @@
 				"stiffness": "-0.4"
 			}
 		}
-	]
+	],
+	"defaults": {
+		"seo": {
+			"title": "DeGrowLab",
+			"description": "Kombucha"
+		}
+	}
 }
