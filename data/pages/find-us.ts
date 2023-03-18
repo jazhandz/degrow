@@ -2,6 +2,10 @@ import { PageType } from "@/types/CMS/Page";
 
 export const FIND_US_PAGE_DATA: PageType = {
   slug: "",
+  seo: {
+    title: "title",
+    description: "description",
+  },
   blocks: [
     {
       type: "section",

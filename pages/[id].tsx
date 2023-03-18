@@ -11,8 +11,8 @@ const Page: NextPage<{ data: PageType }> = ({ data }: { data: PageType }) => {
   console.log("data: ", data);
   return (
     <>
-      <SEO title={data.seo.title} description={data.seo.description} />
-      <Blocks key={data.slug} data={data.blocks} />
+      <SEO title={data?.seo?.title} description={data?.seo?.description} />
+      <Blocks key={data?.slug} data={data?.blocks} />
     </>
   );
 };

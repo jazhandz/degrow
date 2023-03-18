@@ -2,6 +2,10 @@ import { PageType } from "@/types/CMS/Page";
 
 export const HOME_PAGE_DATA: PageType = {
   slug: "home",
+  seo: {
+    title: "title",
+    description: "description",
+  },
   blocks: [
     {
       type: "paragraph",
