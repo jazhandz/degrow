@@ -113,12 +113,12 @@
                 ":type": "large-image",
                 "picture": {
                   "image": {
-                    "id": "686be95e-9f5f-4ed0-addb-877a345b2bd6",
-                    "url": "https://ucarecdn.com/686be95e-9f5f-4ed0-addb-877a345b2bd6/",
-                    "width": 2006,
-                    "height": 1380
+                    "id": "b586f010-dc7e-4e92-9b35-403a72a6f500",
+                    "url": "https://ucarecdn.com/b586f010-dc7e-4e92-9b35-403a72a6f500/",
+                    "width": 6000,
+                    "height": 4000
                   },
-                  "alt": "Bee Illustration"
+                  "alt": "bottles and flowers"
                 },
                 "marginTop": "-10vw"
               },
@@ -126,15 +126,14 @@
                 ":type": "large-image",
                 "maxHeight": "800px",
                 "picture": {
-                  "alt": "Bees Illustration",
+                  "alt": "bottles and flowers",
                   "image": {
-                    "id": "0b25e403-d7b0-4126-9bde-9efb952498b3",
-                    "url": "https://ucarecdn.com/0b25e403-d7b0-4126-9bde-9efb952498b3/",
-                    "width": 748,
-                    "height": 334
+                    "id": "7be56892-1e91-4b63-a125-eb7b22d94c81",
+                    "url": "https://ucarecdn.com/7be56892-1e91-4b63-a125-eb7b22d94c81/",
+                    "width": 6000,
+                    "height": 4000
                   }
-                },
-                "marginTop": "-8vw"
+                }
               }
             }
           ]
@@ -150,7 +149,7 @@
             },
             {
               ":type": "paragraph",
-              "body": "<p>We started Degrow lab to make an awesome local product, to make a name for ourselves, to meet our community and form bonds within it, to experiment, and to fail but try and try again. We are small, so we are taking small steps. Make kombucha with ingredients we care about, share it, and build up our capacity to make a positive impact.</p><p>Our name derives from the degrowth movement, which is about using less resources while at the same time increasing wellbeing. Pursuing prosperity over profit. The name is a reminder to us that we want to operate differently than the norm. We grow together, while respecting the limits of our planet.</p>"
+              "body": "<p>We started Degrow lab to make an awesome local product, to make a name for ourselves, to meet our community and form bonds within it, to experiment, and to fail but try and try again. We are small, so we are taking small steps. Make kombucha with ingredients we care about, share it, and build up our capacity to make a positive impact.</p><p></p><p>Our name derives from the degrowth movement, which is about using less resources while at the same time increasing wellbeing. Pursuing prosperity over profit. The name is a reminder to us that we want to operate differently than the norm. We grow together, while respecting the limits of our planet.</p>"
             },
             {
               ":type": "link",
@@ -158,6 +157,18 @@
               "href": "/story"
             }
           ]
+        },
+        {
+          ":type": "center-image",
+          "picture": {
+            "image": {
+              "id": "a23c02b6-ed2f-45a2-b8c1-045aab02caef",
+              "url": "https://ucarecdn.com/a23c02b6-ed2f-45a2-b8c1-045aab02caef/",
+              "width": 3067,
+              "height": 4600
+            }
+          },
+          "size": "large"
         },
         {
           ":type": "section",

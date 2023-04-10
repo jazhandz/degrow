@@ -44,6 +44,7 @@ export function CenterImageBlock({ size = "small", picture, alt }: CenterImageBl
   return (
     <CenterBlockImageStyled $size={size}>
       <UploadCarePicture
+        maxHeight={"600px"}
         resizeWidth={size === "large" ? RESIZE_WIDTH_LARGE : RESIZE_WIDTH_SMALL}
         resizeHeight={size === "large" ? RESIZE_HEIGHT_LARGE : RESIZE_HEIGHT_SMALL}
         {...picture}
