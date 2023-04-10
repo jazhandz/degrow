@@ -17,25 +17,28 @@
             "picture": {
               "alt": "Large Illustration Mouth",
               "image": {
-                "id": "d14ffa4b-176e-4325-be5b-4453cdd608b2",
-                "url": "https://ucarecdn.com/d14ffa4b-176e-4325-be5b-4453cdd608b2/",
-                "width": 1331,
-                "height": 1330
+                "id": "fb8de427-db94-4598-9fae-9a24bdb9eeaf",
+                "url": "https://ucarecdn.com/fb8de427-db94-4598-9fae-9a24bdb9eeaf/",
+                "width": 2627,
+                "height": 3550
               }
-            }
+            },
+            "maxHeight": "330px",
+            "marginTop": "-30px"
           },
           "desktop": {
             ":type": "large-image",
-            "marginBottom": "-30px",
+            "marginBottom": "-2vw",
             "picture": {
               "alt": "Large Illustration",
               "image": {
-                "id": "1b9689c7-a321-4e0e-ab6d-d2ec88f2d187",
-                "url": "https://ucarecdn.com/1b9689c7-a321-4e0e-ab6d-d2ec88f2d187/",
-                "width": 703,
-                "height": 355
+                "id": "40582f76-2b4e-4e9d-8c34-08c44ecb0dc1",
+                "url": "https://ucarecdn.com/40582f76-2b4e-4e9d-8c34-08c44ecb0dc1/",
+                "width": 2874,
+                "height": 1964
               }
-            }
+            },
+            "marginTop": "-4vw"
           }
         },
         {
@@ -110,7 +113,7 @@
             {
               ":type": "breakpoint",
               "mobile": {
-                ":type": "large-image",
+                ":type": "center-image",
                 "picture": {
                   "image": {
                     "id": "b586f010-dc7e-4e92-9b35-403a72a6f500",
@@ -223,10 +226,10 @@
               "picture": {
                 "alt": "Team photo",
                 "image": {
-                  "id": "878b41e1-f3a7-4651-8ec5-db27684edbd1",
-                  "url": "https://ucarecdn.com/878b41e1-f3a7-4651-8ec5-db27684edbd1/",
-                  "width": 639,
-                  "height": 427
+                  "id": "7228243f-8fbd-4cb9-b881-47b1f3750f8b",
+                  "url": "https://ucarecdn.com/7228243f-8fbd-4cb9-b881-47b1f3750f8b/",
+                  "width": 3659,
+                  "height": 5489
                 }
               }
             }
@@ -244,7 +247,7 @@
             },
             {
               ":type": "paragraph",
-              "body": "<p>We are four friends making kombucha to the best of our ability. Jaz is the founder and head brewer, Lilly leads our finances and makes sure the bills are paid, Gabriël is our technical lead and assists with brewing, and Tom leads our sales and marketing.</p>"
+              "body": "<p>Sometimes you have to quit daydreaming (and your day job) and make those dreams a reality. For us, that&#x27;s to make kombucha with our friends, hone a craft, and make sure that it has a positve impact. </p><p></p><p>Through deterimation and the support of our community, we are living that dream! Jaz is our founder and head of product development. Our co-founders are Lilly, who manages our finances and makes sure the bills are paid; Gabriël, our technical lead and brewer; andTom who leads our sales and marketing.</p>"
             },
             {
               ":type": "link",
@@ -443,27 +446,74 @@
               "locations": [
                 {
                   "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "link": "https://goo.gl/maps/sV9T3aCrx9DLBRn58"
                 },
                 {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "address": "<p>Kaffeetaria</p><p>Saffierlaan 10, </p><p>3523 RC Utrecht</p>",
+                  "link": "https://goo.gl/maps/S72Q6g3FXLSWNfKv6"
                 },
                 {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "address": "<p>Kaffeetaria - Espressobar en Bakkerij</p><p>Croeselaan 207, </p><p>3521 BN Utrecht</p>",
+                  "link": "https://goo.gl/maps/Mb6dLqpAKh3pLjVX6"
                 },
                 {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "address": "<p>Boulderhal Sterk</p><p>Kon. Wilhelminalaan 4b, </p><p>3527 LD Utrecht</p><p></p>",
+                  "link": "https://goo.gl/maps/YJe8T2iUckikwm4z8"
                 },
                 {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "address": "<p>Boulderhal Sterk Spoor</p><p>Schaverijstraat 52, </p><p>3534 AS Utrecht</p>",
+                  "link": "https://goo.gl/maps/PxqMTfzF7fLCxmyw5"
                 },
                 {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "address": "<p>Boulderhal Energiehaven</p><p>Elektronweg 10A, </p><p>3542 AC Utrecht</p>",
+                  "link": "https://goo.gl/maps/8BJJdLsFUUJgst3b6"
+                },
+                {
+                  "address": "<p>Boulderhal Zuidhaven</p><p>Vrieslantlaan 2, </p><p>3526 AA Utrecht</p>",
+                  "link": "https://goo.gl/maps/uurR7uqCqx34qkTu7"
+                },
+                {
+                  "address": "<p>Locals Utrecht</p><p>Vismarkt 2, </p><p>3511 KR Utrecht</p>",
+                  "link": "https://goo.gl/maps/GbtykUr7e8UubHkw5"
+                },
+                {
+                  "address": "<p>Warmoes</p><p>Vlampijpstraat 94, </p><p>3534 AR Utrecht</p>",
+                  "link": "https://goo.gl/maps/ADk6c6GK7UgCTnH38"
+                },
+                {
+                  "address": "<p>BUNK Hotel Utrecht</p><p>Catharijnekade 9, </p><p>3511 RT Utrecht</p>",
+                  "link": "https://goo.gl/maps/3eno5nq3ZnN8acp68"
+                },
+                {
+                  "address": "<p>Koffie &amp; Ik</p><p>Vleutenseweg 169, </p><p>3532 HC Utrecht</p>",
+                  "link": "https://goo.gl/maps/wArmhYEGWuELW1we6"
+                },
+                {
+                  "address": "<p>Landhuis in de stad</p><p>Park Oog in Al 1, </p><p>3533 HE Utrecht</p>",
+                  "link": "https://goo.gl/maps/JmVnjd8c1vAoDawx9"
+                },
+                {
+                  "address": "<p>Restaurant Dengh Utrecht</p><p>Enghlaan 17, </p><p>3543 BD Utrecht</p>",
+                  "link": "https://goo.gl/maps/xxSRmMuni5cHXGwS8"
+                },
+                {
+                  "address": "<p>Café de Zaak</p><p>Korte Minrebroederstraat 9, </p><p>3512 GG Utrecht</p>",
+                  "link": "https://goo.gl/maps/3iV7R5tQxTfMqtKy8"
+                },
+                {
+                  "address": "<p>De Ping Pong Club</p><p>Concordiastraat 80, </p><p>3551 EM Utrecht</p>",
+                  "link": "https://goo.gl/maps/ZmfYxMchpNLcrvaJ6"
+                },
+                {
+                  "address": "<p>dB&#x27;s oefenstudio&#x27;s, concertzaal &amp; muziekcafé</p><p>CAB-Rondom 100, </p><p>3534 BE Utrecht</p>",
+                  "link": "https://goo.gl/maps/UPMmELwitFhCP7T18"
+                },
+                {
+                  "address": "<p>De Clique</p><p>Gageldijk 3, </p><p>3566 ME Utrecht</p>"
+                },
+                {
+                  "address": "<p>Ohøj Coffee Roasting</p><p>Rijnlaan 27,</p><p>3522 BB Utrecht</p>",
+                  "link": "https://goo.gl/maps/C3z3fQ11cGjXyNcb9"
                 }
               ]
             },
@@ -477,28 +527,8 @@
               ":type": "locations",
               "locations": [
                 {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
-                },
-                {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
-                },
-                {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
-                },
-                {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
-                },
-                {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
-                },
-                {
-                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-                  "link": "https://maps.google.com"
+                  "address": "<p>Back to Black</p><p>Weteringstraat 48, </p><p>1017 SP Amsterdam</p>",
+                  "link": "https://goo.gl/maps/sjU4wsy1kGhmDPhU6"
                 }
               ]
             }
@@ -514,6 +544,20 @@
           "title": "This is a test page",
           "varient": "h1",
           "color": "softGreen"
+        }
+      ]
+    },
+    {
+      "slug": "catalogue",
+      "seo": {
+        "title": "Our Catalogue",
+        "description": "degrow lab products and prices"
+      },
+      "blocks": [
+        {
+          ":type": "heading",
+          "title": "Our current range",
+          "varient": "h1"
         }
       ]
     }
@@ -596,7 +640,7 @@
         "path": "/find-us",
         "items": [
           {
-            "label": "Where we get served",
+            "label": "Where we're at",
             "path": "/find-us"
           },
           {
