@@ -375,7 +375,9 @@ export default function NavigationComponent({ data, backgroundColor }: Navigatio
             <NavMainList
               $backgroundColor={MENU_BACKGROUND_COLOR}
               transition={{ type: "tween", duration: 0.2 }}
-              animate={isMobile ? { height: isOpen ? MOBILE_MENU_MAX_LENGTH : "0px" } : undefined}
+              animate={
+                isMobile ? { height: isOpen ? MOBILE_MENU_MAX_LENGTH : "0px" } : { height: NAV_DESKTOP_HEADER_HEIGHT }
+              }
               // initial={{height: isMobile ? "0px" : NAV_DESKTOP_HEADER_HEIGHT}}
               whileHover={
                 isMobile
