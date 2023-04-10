@@ -43,6 +43,7 @@ const NavWrapper = styled.div`
   @media ${media.desktop} {
     display: flex;
     justify-content: center;
+    position: fixed;
   }
 `;
 
@@ -274,6 +275,11 @@ const NavSubItemStyled = styled.li`
 const NavPadding = styled.div`
   @media ${media.mobile} {
     height: calc(${NAV_MOBILE_HEADER_HEIGHT} + ${NAV_MOBILE_TOP_OFFSET});
+    width: 100%;
+    background-color: ${({ $backgroundColor }: { $backgroundColor: string }) => $backgroundColor};
+  }
+  @media ${media.desktop} {
+    height: calc(${NAV_MOBILE_HEADER_HEIGHT} + ${NAV_DESKTOP_HEADER_HEIGHT});
     width: 100%;
     background-color: ${({ $backgroundColor }: { $backgroundColor: string }) => $backgroundColor};
   }

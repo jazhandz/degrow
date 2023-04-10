@@ -1,3 +1,3 @@
 export const Layout = {
-  desktopMaxWidth: "1450px",
+  desktopMaxWidth: "2000px",
 };
