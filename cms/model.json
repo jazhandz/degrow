@@ -127,6 +127,11 @@
         ":placeholder": "Default: 650px",
         ":type": "string"
       },
+      "marginHorizontal": {
+        ":title": "Margin Horizontal",
+        ":placeholder": "none | small, Default: none",
+        ":type": "string"
+      },
       "picture": {
         ":title": "Picture",
         ":type": "picture"

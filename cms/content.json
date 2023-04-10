@@ -82,6 +82,7 @@
             {
               ":type": "large-image",
               "imageFit": "cover",
+              "marginHorizontal": "small",
               "picture": {
                 "alt": "Flowers",
                 "image": {
