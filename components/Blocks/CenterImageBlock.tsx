@@ -11,6 +11,11 @@ export interface CenterImageBlockType {
   picture: UploadCarePictureProps;
 }
 
+const RESIZE_WIDTH_LARGE = 700;
+const RESIZE_HEIGHT_LARGE = 700;
+const RESIZE_WIDTH_SMALL = 400;
+const RESIZE_HEIGHT_SMALL = 400;
+
 const LARGE_IMAGE_DESKTOP_SIZE = "100%";
 const SMALL_IMAGE_DESKTOP_SIZE = "800px";
 
@@ -38,7 +43,13 @@ const CenterBlockImageStyled = styled(Container)`
 export function CenterImageBlock({ size = "small", picture, alt }: CenterImageBlockType) {
   return (
     <CenterBlockImageStyled $size={size}>
-      <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} alt={alt} />
+      <UploadCarePicture
+        resizeWidth={size === "large" ? RESIZE_WIDTH_LARGE : RESIZE_WIDTH_SMALL}
+        resizeHeight={size === "large" ? RESIZE_HEIGHT_LARGE : RESIZE_HEIGHT_SMALL}
+        {...picture}
+        supportedTypes={["webp", "png"]}
+        alt={alt}
+      />
     </CenterBlockImageStyled>
   );
 }

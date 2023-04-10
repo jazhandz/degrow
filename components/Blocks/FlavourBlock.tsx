@@ -7,7 +7,6 @@ import { IsDesktop } from "../Breakpoints/IsDesktop";
 import { IsMobile } from "../Breakpoints/IsMobile";
 import { Container } from "../Container";
 import { Hr } from "../HR";
-import { Picture } from "../Picture";
 import { HeadingBlock } from "./HeadingBlock";
 import { LinkBlock } from "./LinkBlock";
 import { RichTextBlock } from "./RichTextBlock";
@@ -174,10 +173,20 @@ export function FlavourBlock({
         {titleMobilePicture && titleDesktopPicture ? (
           <>
             <IsMobile>
-              <UploadCarePicture {...titleMobilePicture} supportedTypes={["webp", "png"]} />
+              <UploadCarePicture
+                {...titleMobilePicture}
+                resizeWidth={250}
+                resizeHeight={600}
+                supportedTypes={["webp", "png"]}
+              />
             </IsMobile>
             <IsDesktop>
-              <UploadCarePicture {...titleDesktopPicture} supportedTypes={["webp", "png"]} />
+              <UploadCarePicture
+                {...titleDesktopPicture}
+                resizeWidth={250}
+                resizeHeight={600}
+                supportedTypes={["webp", "png"]}
+              />
             </IsDesktop>
           </>
         ) : (

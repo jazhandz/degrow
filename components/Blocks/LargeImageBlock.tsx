@@ -11,6 +11,9 @@ export interface LargeImageBlockType {
   imageFit?: "contain" | "cover";
 }
 
+const RESIZE_WIDTH = "1200";
+const RESIZE_HEIGHT = "800";
+
 const LargeBlockImageStyled = styled.div`
   margin-bottom: ${({ $marginBottom }: { $marginBottom: string; $marginTop: string; $maxHeight: string }) =>
     $marginBottom};
@@ -38,6 +41,8 @@ export function LargeImageBlock({
     <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop} $maxHeight={maxHeight}>
       <UploadCarePicture
         objectFit={imageFit}
+        resizeWidth={RESIZE_WIDTH}
+        resizeHeight={RESIZE_HEIGHT}
         {...picture}
         maxHeight={maxHeight}
         supportedTypes={["webp", "png"]}

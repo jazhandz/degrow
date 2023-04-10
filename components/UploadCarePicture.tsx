@@ -16,6 +16,8 @@ export interface UploadCarePictureProps {
   maxHeight?: string;
   children?: React.ReactElement;
   objectFit?: "cover" | "contain";
+  resizeWidth?: string | number;
+  resizeHeight?: string | number;
 }
 
 const UploadCarePictureStyled = styled.picture`
@@ -34,18 +36,23 @@ export function UploadCarePicture({
   objectFit = "cover",
   image,
   maxHeight,
+  resizeWidth = "500",
+  resizeHeight = "500",
 }: UploadCarePictureProps) {
   const isComplete = image?.url && image?.height && image?.width;
+  const formatResize = `${resizeWidth}x${resizeHeight}`;
   return (
     <UploadCarePictureStyled $objectFit={objectFit} $maxHeight={maxHeight}>
       {supportedTypes.includes("jpg") && isComplete && (
-        <source srcSet={`${image.url}-/format/jpeg/`} type="image/jpg" />
+        <source srcSet={`${image.url}-/preview/${formatResize}/-/format/jpeg/`} type="image/jpg" />
       )}
-      {supportedTypes.includes("png") && isComplete && <source srcSet={`${image.url}-/format/png/`} type="image/png" />}
+      {supportedTypes.includes("png") && isComplete && (
+        <source srcSet={`${image.url}-/preview/${formatResize}/-/format/png/`} type="image/png" />
+      )}
       <Image
         width={isComplete ? image.width : 150}
         height={isComplete ? image.height : 200}
-        src={isComplete ? `${image.url}-/format/webp/` : "/images/empty.png"}
+        src={isComplete ? `${image.url}-/preview/${formatResize}/-/format/webp/` : "/images/empty.png"}
         alt={alt}
       />
       {children}

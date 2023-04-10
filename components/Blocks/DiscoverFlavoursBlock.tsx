@@ -11,6 +11,9 @@ export type DiscoverFlavoursBlockType = {
 
 const FLAVOURS = CONTENT.flavours;
 
+const CAN_RESIZE_WIDTH = 280;
+const CAN_RESIZE_HEIGHT = 600;
+
 const DESKTOP_FLAVOUR_WIDTH = "280px";
 const MOBILE_FLAVOUR_WIDTH = "200px";
 const DESKTOP_FLAVOUR_CONTAINER_WIDTH = "420px";
@@ -74,7 +77,12 @@ export function DiscoverFlavoursBlock() {
                 isScrolling * (MAX_ROTATE_MOVEMENT * parseFloat(flavour.discover.stiffness))
               }
             >
-              <UploadCarePicture {...flavour.picture} supportedTypes={["webp", "png"]} />
+              <UploadCarePicture
+                resizeWidth={CAN_RESIZE_WIDTH}
+                resizeHeight={CAN_RESIZE_HEIGHT}
+                {...flavour.picture}
+                supportedTypes={["webp", "png"]}
+              />
             </DiscoverFlavourClickContainerStyled>
           </DiscoverFlavoursStyled>
         ));

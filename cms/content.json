@@ -123,6 +123,7 @@
               },
               "desktop": {
                 ":type": "large-image",
+                "maxHeight": "800px",
                 "picture": {
                   "alt": "Bees Illustration",
                   "image": {

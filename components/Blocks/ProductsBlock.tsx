@@ -24,6 +24,9 @@ interface ProductType {
 const MOBILE_FONT_SIZE = fontSize.articleMobile;
 const DESKTOP_FONT_SIZE = fontSize.articleDesktop;
 
+const RESIZE_WIDTH = 500;
+const RESIZE_HEIGHT = 500;
+
 const IMAGE_DESKTOP_SIZE = "800px";
 
 const IMAGE_MOBILE_SIZE = "100%";
@@ -101,7 +104,12 @@ export function ProductsBlock({ products }: ProductsBlockType) {
       {products.map((product, index) => (
         <React.Fragment key={product.title}>
           <ProductContainerStyled as="article">
-            <UploadCarePicture {...product.picture} supportedTypes={["webp", "png"]} />
+            <UploadCarePicture
+              {...product.picture}
+              supportedTypes={["webp", "png"]}
+              resizeWidth={RESIZE_WIDTH}
+              resizeHeight={RESIZE_HEIGHT}
+            />
             {/* <Picture {...product.picture} /> */}
             <ProductInfoRowStyled>
               <ProductInfoStyled as="h3">
