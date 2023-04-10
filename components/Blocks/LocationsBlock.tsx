@@ -17,7 +17,9 @@ export type LocationsBlockType = {
 
 const ContainerStyled = styled(Container)`
   position: relative;
-  padding: ${spacing.m} 0;
+  padding: 0 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
 `;
 
 const LocationStyled = styled.span`
@@ -38,6 +40,7 @@ const LocationDirectionsStyled = styled.a`
   display: block;
   text-align: center;
   margin-top: ${spacing.m};
+  margin-bottom: ${spacing.m};
 `;
 
 export function LocationsBlock({ locations }: LocationsBlockType) {

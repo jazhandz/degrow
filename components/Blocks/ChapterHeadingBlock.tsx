@@ -20,10 +20,17 @@ export type ChapterHeadingBlockType = {
 const ChapterHeadingStyled = styled(Container)`
   text-align: center;
   font-weight: ${fontWeight.light};
-  font-size: ${fontSize.h1};
+  @media ${media.mobile} {
+    font-size: ${fontSize.h1Mobile};
+  }
+  @media ${media.desktop} {
+    font-size: ${fontSize.h1Desktop};
+  }
   text-transform: uppercase;
   margin: ${spacing.m} 0;
   min-width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 `;
 
 const BorderWrapperStyled = styled.div`

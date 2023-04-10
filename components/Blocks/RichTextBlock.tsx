@@ -12,6 +12,8 @@ export interface RichTextBlockType {
 
 const MOBILE_FONT_SIZE = fontSize.displayMobile;
 const DESKTOP_FONT_SIZE = fontSize.displayDesktop;
+const MOBILE_LINE_HEIGHT = fontSize.displayMobileLineHeight;
+const DESKTOP_LINE_HEIGHT = fontSize.displayDesktopLineHeight;
 
 const RichTextContainer = styled(Container)`
   text-align: center;
@@ -22,9 +24,13 @@ const RichTextContainer = styled(Container)`
   }
   @media ${media.mobile} {
     font-size: ${MOBILE_FONT_SIZE};
+    line-height: ${MOBILE_LINE_HEIGHT};
+    padding-left: ${spacing.m};
+    padding-right: ${spacing.m};
   }
   @media ${media.desktop} {
     font-size: ${DESKTOP_FONT_SIZE};
+    line-height: ${DESKTOP_LINE_HEIGHT};
   }
 `;
 

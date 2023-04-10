@@ -23,6 +23,7 @@ const CheckBoxInputStyled = styled.div`
 
 const ParagraphStyled = styled.p`
   font-size: ${fontSize.p};
+  font-weight: 600;
 `;
 
 const CheckBoxInputContainerStyled = styled.div`

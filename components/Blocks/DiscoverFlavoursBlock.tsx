@@ -11,19 +11,35 @@ export type DiscoverFlavoursBlockType = {
 
 const FLAVOURS = CONTENT.flavours;
 
-const DESKTOP_FLAVOUR_WIDTH = "200px";
-const DESKTOP_FLAVOUR_CONTAINER_WIDTH = "300px";
+const DESKTOP_FLAVOUR_WIDTH = "280px";
+const MOBILE_FLAVOUR_WIDTH = "200px";
+const DESKTOP_FLAVOUR_CONTAINER_WIDTH = "420px";
+const MOBILE_FLAVOUR_CONTAINER_WIDTH = "300px";
 
-const DESKTOP_FLAVOUR_SCROLL_HEIGHT = "600px";
+const DESKTOP_FLAVOUR_SCROLL_HEIGHT = "800px";
+const MOBILE_FLAVOUR_SCROLL_HEIGHT = "500px";
 
 const MAX_ROTATE_MOVEMENT = 5;
 
 const DiscoverFlavoursStyled = styled.div`
   width: ${DESKTOP_FLAVOUR_CONTAINER_WIDTH};
   height: ${DESKTOP_FLAVOUR_SCROLL_HEIGHT};
+  @media ${media.mobile} {
+    width: ${MOBILE_FLAVOUR_CONTAINER_WIDTH};
+    height: ${MOBILE_FLAVOUR_SCROLL_HEIGHT};
+  }
+  @media ${media.desktop} {
+    width: ${DESKTOP_FLAVOUR_CONTAINER_WIDTH};
+    height: ${DESKTOP_FLAVOUR_SCROLL_HEIGHT};
+  }
   display: inline-block;
   & picture > img {
-    width: ${DESKTOP_FLAVOUR_WIDTH};
+    @media ${media.mobile} {
+      width: ${MOBILE_FLAVOUR_WIDTH};
+    }
+    @media ${media.desktop} {
+      width: ${DESKTOP_FLAVOUR_WIDTH};
+    }
   }
   display: flex;
   flex-direction: column;

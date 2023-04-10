@@ -26,7 +26,7 @@ const BORDER_COLOR = color.black;
 const NAV_MOBILE_HEADER_HEIGHT = "53px";
 const NAV_MOBILE_PADDING = spacing.m;
 const NAV_MOBILE_SUB_MENU_ITEM_HEIGHT = "24px";
-const NAV_MOBILE_TOP_OFFSET = spacing.m;
+const NAV_MOBILE_TOP_OFFSET = "0px";
 
 const NAV_DESKTOP_LINK_HIGHLIGHT_COLOR = color.black;
 const NAV_DESKTOP_LINK_HOVER_WEIGHT = fontWeight.light;
@@ -282,7 +282,6 @@ const NavPadding = styled.div`
 const NavTitleLinkStyled = styled(Link)`
   width: 100%;
   text-align: center;
-  font-size: ${fontSize.h2};
   margin: ${spacing.xs} 0;
   font-weight: ${fontWeight.light};
   text-decoration: none;
@@ -292,11 +291,13 @@ const NavTitleLinkStyled = styled(Link)`
   @media ${media.mobile} {
     line-height: ${NAV_MOBILE_HEADER_HEIGHT};
     text-align: left;
+    font-size: ${fontSize.h2Mobile};
   }
 
   @media ${media.desktop} {
     text-align: center;
     line-height: ${NAV_DESKTOP_HEADER_HEIGHT};
+    font-size: ${fontSize.h2Desktop};
   }
 `;
 

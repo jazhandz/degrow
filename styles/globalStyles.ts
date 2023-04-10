@@ -1,6 +1,6 @@
 import { normalize } from "styled-normalize";
 import { createGlobalStyle } from "styled-components";
-import {color} from "@/styles/color";
+import { color } from "@/styles/color";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -32,6 +32,7 @@ html,body, #root {
   */
   display:flex;
   flex-flow:column;
+  -webkit-font-smoothing: antialiased;
 }
 html {
   box-sizing: border-box;
@@ -50,6 +51,5 @@ input:focus, textarea:focus, select:focus{
       color: inherit;
     }
 `;
-
 
 export default GlobalStyle;

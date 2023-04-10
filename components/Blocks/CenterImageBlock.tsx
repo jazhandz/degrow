@@ -36,7 +36,6 @@ const CenterBlockImageStyled = styled(Container)`
 `;
 
 export function CenterImageBlock({ size = "small", picture, alt }: CenterImageBlockType) {
-  console.log("picture", picture);
   return (
     <CenterBlockImageStyled $size={size}>
       <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} alt={alt} />

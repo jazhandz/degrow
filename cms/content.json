@@ -206,6 +206,7 @@
             },
             {
               ":type": "center-image",
+              "size": "large",
               "picture": {
                 "alt": "Team photo",
                 "image": {
@@ -257,7 +258,7 @@
               ":type": "products",
               "products": [
                 {
-                  "title": "Degrow Lab Kombucha Tote bag",
+                  "title": "<p>Degrow Lab</p><p>Kombucha Tote bag</p>",
                   "details": "100% Organic cotton<br/>Glow in the dark details",
                   "whereToBuy": "Degrow Lab HQ",
                   "price": "25",
@@ -272,7 +273,7 @@
                   }
                 },
                 {
-                  "title": "Degrow Lab Zero T-Shirt",
+                  "title": "<p>Degrow Lab</p><p>Zero T-Shirt</p>",
                   "picture": {
                     "alt": "Degrow Lab Zero T-Shirt",
                     "image": {
@@ -288,7 +289,7 @@
                 },
                 {
                   "picture": {
-                    "alt": "Degrow Lab Stickers",
+                    "alt": "<p>Degrow Lab</p><p>Stickers</p>",
                     "image": {
                       "id": "301dfba4-fc7d-431b-a748-8be9d924b825",
                       "url": "https://ucarecdn.com/301dfba4-fc7d-431b-a748-8be9d924b825/",
@@ -296,7 +297,7 @@
                       "height": 1420
                     }
                   },
-                  "title": "Degrow Lab Stickers",
+                  "title": "<p>Degrow Lab</p><p>Stickers</p>",
                   "details": "<p>100% Recycled Plastic</p>",
                   "whereToBuy": "Degrow Lab HQ",
                   "price": "0"

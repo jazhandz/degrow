@@ -24,6 +24,7 @@ const InputStyled = styled.input`
   font-weight: ${fontWeight.thin};
   color: ${color.black};
   padding: ${spacing.s};
+  padding-left: 0;
   border: none;
   flex: 1;
   background-color: transparent;

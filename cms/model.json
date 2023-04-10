@@ -177,7 +177,7 @@
           },
           "title": {
             ":title": "Title",
-            ":type": "string"
+            ":type": "rich-text"
           },
           "details": {
             ":title": "Details",

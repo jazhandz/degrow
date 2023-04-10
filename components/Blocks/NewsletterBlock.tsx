@@ -31,6 +31,15 @@ const BottomStyled = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: ${spacing.xl};
+  @media ${media.mobile} {
+    flex-direction: column;
+    align-items: center;
+    & > *:first-child {
+      margin-bottom: ${spacing.m};
+    }
+  }
+  @media ${media.desktop} {
+  }
 `;
 
 export function NewsletterBlock() {

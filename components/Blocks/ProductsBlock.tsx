@@ -33,9 +33,16 @@ const ProductsBlockImageStyled = styled(Container)`
   display: block;
   position: relative;
   width: 100%;
+  @media ${media.mobile} {
+    padding-left: ${spacing.m};
+    padding-right: ${spacing.m};
+  }
+  @media ${media.desktop} {
+  }
 `;
 
 const ProductInfoStyled = styled.dl`
+  font-weight: 400;
   @media ${media.mobile} {
     font-size: ${MOBILE_FONT_SIZE};
   }
@@ -76,6 +83,8 @@ const ProductContainerStyled = styled(Container)`
   margin: ${spacing.xl} auto;
   @media ${media.mobile} {
     width: ${IMAGE_MOBILE_SIZE};
+    padding-left: 0;
+    padding-right: 0;
   }
   @media ${media.desktop} {
     width: ${IMAGE_DESKTOP_SIZE};
@@ -95,7 +104,9 @@ export function ProductsBlock({ products }: ProductsBlockType) {
             <UploadCarePicture {...product.picture} supportedTypes={["webp", "png"]} />
             {/* <Picture {...product.picture} /> */}
             <ProductInfoRowStyled>
-              <ProductInfoStyled as="h3">{product.title}</ProductInfoStyled>
+              <ProductInfoStyled as="h3">
+                <RichText>{product.title}</RichText>
+              </ProductInfoStyled>
               <ProductInfoStyled>
                 <ProductInfoTypeStyled>Where to buy:</ProductInfoTypeStyled>
                 <ProductInfoDataStyled>{product.whereToBuy}</ProductInfoDataStyled>

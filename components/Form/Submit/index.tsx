@@ -16,6 +16,7 @@ const SubmitStyled = styled.input`
   margin: 0;
   text-decoration: underline;
   cursor: pointer;
+  font-weight: 600;
   @media ${media.mobile} {
     font-size: ${MOBILE_FONT_SIZE};
   }
