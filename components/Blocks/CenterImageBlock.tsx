@@ -9,6 +9,8 @@ export interface CenterImageBlockType {
   size?: "large" | "small";
   alt: string;
   picture: UploadCarePictureProps;
+  imageFit?: "contain" | "cover";
+  maxHeight?: string;
 }
 
 const RESIZE_WIDTH_LARGE = 700;
@@ -40,11 +42,18 @@ const CenterBlockImageStyled = styled(Container)`
   }
 `;
 
-export function CenterImageBlock({ size = "small", picture, alt }: CenterImageBlockType) {
+export function CenterImageBlock({
+  size = "small",
+  picture,
+  alt,
+  imageFit = "cover",
+  maxHeight = "600px",
+}: CenterImageBlockType) {
   return (
     <CenterBlockImageStyled $size={size}>
       <UploadCarePicture
-        maxHeight={"600px"}
+        maxHeight={maxHeight}
+        objectFit={imageFit}
         resizeWidth={size === "large" ? RESIZE_WIDTH_LARGE : RESIZE_WIDTH_SMALL}
         resizeHeight={size === "large" ? RESIZE_HEIGHT_LARGE : RESIZE_HEIGHT_SMALL}
         {...picture}

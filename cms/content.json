@@ -223,6 +223,8 @@
             {
               ":type": "center-image",
               "size": "large",
+              "imageFit": "contain",
+              "maxHeight": "700px",
               "picture": {
                 "alt": "Team photo",
                 "image": {
