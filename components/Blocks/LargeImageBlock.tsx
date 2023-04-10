@@ -1,18 +1,21 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Picture, PictureProps } from "../Picture";
 import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
 
 export interface LargeImageBlockType {
   alt: string;
   marginBottom?: string;
   marginTop?: string;
+  maxHeight?: string;
   picture: UploadCarePictureProps;
+  imageFit?: "contain" | "cover";
 }
 
 const LargeBlockImageStyled = styled.div`
-  margin-bottom: ${({ $marginBottom }: { $marginBottom: string; $marginTop: string }) => $marginBottom};
-  margin-top: ${({ $marginTop }: { $marginBottom: string; $marginTop: string }) => $marginTop};
+  margin-bottom: ${({ $marginBottom }: { $marginBottom: string; $marginTop: string; $maxHeight: string }) =>
+    $marginBottom};
+  margin-top: ${({ $marginTop }: { $marginBottom: string; $marginTop: string; $maxHeight: string }) => $marginTop};
+  max-height: ${({ $maxHeight }: { $marginBottom: string; $marginTop: string; $maxHeight: string }) => $maxHeight};
   width: 100%;
   height: auto;
   display: block;
@@ -28,11 +31,18 @@ export function LargeImageBlock({
   marginTop = "0",
   alt,
   picture,
-  ...pictureProps
+  maxHeight = "650px",
+  imageFit = "contain",
 }: LargeImageBlockType) {
   return (
-    <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop}>
-      <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} alt={alt} />
+    <LargeBlockImageStyled $marginBottom={marginBottom} $marginTop={marginTop} $maxHeight={maxHeight}>
+      <UploadCarePicture
+        objectFit={imageFit}
+        {...picture}
+        maxHeight={maxHeight}
+        supportedTypes={["webp", "png"]}
+        alt={alt}
+      />
     </LargeBlockImageStyled>
   );
 }

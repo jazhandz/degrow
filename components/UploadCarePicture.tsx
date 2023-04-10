@@ -13,6 +13,7 @@ export interface UploadCarePictureProps {
   };
   supportedTypes: SupportedImageType[];
   alt: string;
+  maxHeight?: string;
   children?: React.ReactElement;
   objectFit?: "cover" | "contain";
 }
@@ -21,7 +22,8 @@ const UploadCarePictureStyled = styled.picture`
   & img {
     width: 100%;
     height: auto;
-    object-fit: ${({ $objectFit }: { $objectFit: "cover" | "contain" }) => $objectFit};
+    max-height: ${({ $maxHeight }: { $objectFit: "cover" | "contain"; $maxHeight?: string }) => $maxHeight};
+    object-fit: ${({ $objectFit }: { $objectFit: "cover" | "contain"; $maxHeight?: string }) => $objectFit};
   }
 `;
 
@@ -31,10 +33,11 @@ export function UploadCarePicture({
   children,
   objectFit = "cover",
   image,
+  maxHeight,
 }: UploadCarePictureProps) {
   const isComplete = image?.url && image?.height && image?.width;
   return (
-    <UploadCarePictureStyled $objectFit={objectFit}>
+    <UploadCarePictureStyled $objectFit={objectFit} $maxHeight={maxHeight}>
       {supportedTypes.includes("jpg") && isComplete && (
         <source srcSet={`${image.url}-/format/jpeg/`} type="image/jpg" />
       )}

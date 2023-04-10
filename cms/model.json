@@ -122,9 +122,19 @@
         ":placeholder": "Example: -30px",
         ":type": "string"
       },
+      "maxHeight": {
+        ":title": "Max Height",
+        ":placeholder": "Default: 650px",
+        ":type": "string"
+      },
       "picture": {
         ":title": "Picture",
         ":type": "picture"
+      },
+      "imageFit": {
+        ":title": "Image Fit",
+        ":placeholder": "contain or cover",
+        ":type": "string"
       }
     },
     "center-image": {

@@ -10,10 +10,11 @@ import { spacing } from "@/styles/spacing";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { ColorVarientType } from "@/types/CMS/Generic";
+import { Layout } from "@/styles/layout";
 
 const NAV_DESKTOP_HEADER_HEIGHT = "53px";
 
-const NAV_DESKTOP_MAX_WIDTH = "1024px";
+const NAV_DESKTOP_MAX_WIDTH = Layout.desktopMaxWidth;
 const NAV_DESKTOP_MARGIN = spacing.m;
 const NAV_DESKTOP_SUB_ITEM_HEIGHT = "30px";
 const NAV_DESKTOP_SUB_MENU_PADDING = spacing.s;
