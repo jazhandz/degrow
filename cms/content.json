@@ -610,15 +610,11 @@
 						"path": "/flavours/harvest-spice"
 					},
 					{
-						"label": "Tepache Sunrise",
-						"path": "/flavours/tepache-sunrise"
-					},
-					{
 						"label": "Nabij",
 						"path": "/flavours/nabij"
 					},
 					{
-						"label": "Collaborations",
+						"label": "Orange Hibiscus",
 						"path": "/flavours/collaborations"
 					}
 				]
