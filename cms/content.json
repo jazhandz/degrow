@@ -1,792 +1,780 @@
 {
-	"pages": [
-		{
-			"seo": {
-				"title": "DEGR0W LAB - Home",
-				"description": "Home page"
-			},
-			"blocks": [
-				{
-					":type": "paragraph",
-					"body": "<p>Degrow lab is an Utrecht- based kombucha</p><p>Microbrewery. We are obsessed with brewing</p><p>craft kombucha, while also determined to</p><p>run our company according to principles of sustainability.</p>"
-				},
-				{
-					":type": "breakpoint",
-					"mobile": {
-						":type": "large-image",
-						"picture": {
-							"alt": "Large Illustration Mouth",
-							"image": {
-								"id": "fb8de427-db94-4598-9fae-9a24bdb9eeaf",
-								"url": "https://ucarecdn.com/fb8de427-db94-4598-9fae-9a24bdb9eeaf/",
-								"width": 2627,
-								"height": 3550
-							}
-						},
-						"maxHeight": "330px",
-						"marginTop": "-30px"
-					},
-					"desktop": {
-						":type": "large-image",
-						"marginBottom": "-2vw",
-						"picture": {
-							"alt": "Large Illustration",
-							"image": {
-								"id": "75c349d9-30c2-4102-a8f1-3dcacc040ad6",
-								"url": "https://ucarecdn.com/75c349d9-30c2-4102-a8f1-3dcacc040ad6/",
-								"width": 850,
-								"height": 353
-							}
-						},
-						"marginTop": "-4vw"
-					}
-				},
-				{
-					":type": "section",
-					"color": "softGreen",
-					"items": [
-						{
-							":type": "chapter-heading",
-							"title": "What is kombucha?",
-							"varient": "h2"
-						},
-						{
-							":type": "center-image",
-							"size": "small",
-							"picture": {
-								"alt": "Tea Leaves",
-								"image": {
-									"id": "0e5db5a4-8068-4bc6-ab1f-2b30dbf80943",
-									"url": "https://ucarecdn.com/0e5db5a4-8068-4bc6-ab1f-2b30dbf80943/",
-									"width": 571,
-									"height": 437
-								}
-							}
-						},
-						{
-							":type": "heading",
-							"title": "KOMBUCHA IS COMUNITY",
-							"varient": "h3"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>Quite literally kombucha is fermented tea created by a</p><p>community of yeast and bacteria cultures working</p><p>symbiotically together. The yeast metabolize sugar</p><p>creating alcohol, and the acetobacter turn that alcohol</p><p>into acid. The finished product is bubbly, non-alcoholic,</p><p>and chocked full of good stuff like B vitamins,</p><p>organic acids, and antioxidants.</p>"
-						},
-						{
-							":type": "link",
-							"text": "I'm sold! Where to buy?",
-							"href": "/find-us"
-						}
-					]
-				},
-				{
-					":type": "section",
-					"items": [
-						{
-							":type": "large-image",
-							"imageFit": "cover",
-							"marginHorizontal": "small",
-							"picture": {
-								"alt": "Flowers",
-								"image": {
-									"id": "8ab0d025-4b6d-43fa-b62d-ad9f3639c0ee",
-									"url": "https://ucarecdn.com/8ab0d025-4b6d-43fa-b62d-ad9f3639c0ee/",
-									"width": 1246,
-									"height": 651
-								}
-							}
-						},
-						{
-							":type": "heading",
-							"title": "KOMBUCHA FOR A MORE VIBRANT COMMUNITY",
-							"varient": "h2"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>Our focus is brewing a craft product with positive environmental impacts. This means sourcing locally, collaborating with other small businesses, and selecting ingredients for their impact. For instance, our Nabij kombucha is brewed with wildflowers planted in the Dutch countryside specifically to benefit pollinators and other insects. We also work with circular ingredients, such as our orange hibiscus kombucha which uses upcycled residual streams from orange peels.</p>"
-						},
-						{
-							":type": "link",
-							"text": "Read more",
-							"href": "/about-us"
-						},
-						{
-							":type": "breakpoint",
-							"mobile": {
-								":type": "center-image",
-								"picture": {
-									"image": {
-										"id": "b586f010-dc7e-4e92-9b35-403a72a6f500",
-										"url": "https://ucarecdn.com/b586f010-dc7e-4e92-9b35-403a72a6f500/",
-										"width": 6000,
-										"height": 4000
-									},
-									"alt": "bottles and flowers"
-								},
-								"marginTop": "-10vw"
-							},
-							"desktop": {
-								":type": "large-image",
-								"maxHeight": "800px",
-								"picture": {
-									"alt": "bottles and flowers",
-									"image": {
-										"id": "7be56892-1e91-4b63-a125-eb7b22d94c81",
-										"url": "https://ucarecdn.com/7be56892-1e91-4b63-a125-eb7b22d94c81/",
-										"width": 6000,
-										"height": 4000
-									}
-								}
-							}
-						}
-					]
-				},
-				{
-					":type": "section",
-					"items": [
-						{
-							":type": "chapter-heading",
-							"title": "OUR CORE VALUES",
-							"varient": "h2",
-							"color": "softOrange"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>We started Degrow lab to make an awesome local product, to make a name for ourselves, to meet our community and form bonds within it, to experiment, and to fail but try and try again. We are small, so we are taking small steps. Make kombucha with ingredients we care about, share it, and build up our capacity to make a positive impact.</p><p></p><p>Our name derives from the degrowth movement, which is about using less resources while at the same time increasing wellbeing. Pursuing prosperity over profit. The name is a reminder to us that we want to operate differently than the norm. We grow together, while respecting the limits of our planet.</p>"
-						},
-						{
-							":type": "link",
-							"text": "Read more",
-							"href": "/story"
-						}
-					]
-				},
-				{
-					":type": "center-image",
-					"picture": {
-						"image": {
-							"id": "a23c02b6-ed2f-45a2-b8c1-045aab02caef",
-							"url": "https://ucarecdn.com/a23c02b6-ed2f-45a2-b8c1-045aab02caef/",
-							"width": 3067,
-							"height": 4600
-						}
-					},
-					"size": "large"
-				},
-				{
-					":type": "section",
-					"items": [
-						{
-							":type": "heading",
-							"title": "DISCOVER OUR FLAVOURS",
-							"varient": "h2"
-						},
-						{
-							":type": "discover-flavours"
-						}
-					]
-				},
-				{
-					":type": "section",
-					"color": "softGreen",
-					"items": [
-						{
-							":type": "chapter-heading",
-							"title": "NEWSLETTER",
-							"varient": "h2"
-						},
-						{
-							":type": "newsletter"
-						}
-					]
-				}
-			],
-			"slug": "home"
-		},
-		{
-			"slug": "about-us",
-			"blocks": [
-				{
-					":type": "section",
-					"id": "team",
-					"color": "softPink",
-					"items": [
-						{
-							":type": "heading",
-							"title": "We’re a small team and we’re obsessed with brewing craft kombucha with impact.",
-							"varient": "h1"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>Jaz Hereford,</p><p>Gabriël Bijleveld,</p><p>Tom Sifrin &amp;</p><p>Lily Mengyao.</p>"
-						},
-						{
-							":type": "center-image",
-							"size": "large",
-							"imageFit": "contain",
-							"maxHeight": "700px",
-							"picture": {
-								"alt": "Team photo",
-								"image": {
-									"id": "7228243f-8fbd-4cb9-b881-47b1f3750f8b",
-									"url": "https://ucarecdn.com/7228243f-8fbd-4cb9-b881-47b1f3750f8b/",
-									"width": 3659,
-									"height": 5489
-								}
-							}
-						}
-					]
-				},
-				{
-					":type": "section",
-					"id": "our-story",
-					"items": [
-						{
-							":type": "chapter-heading",
-							"title": "OUR STORY",
-							"varient": "h2",
-							"color": "softPink"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>Sometimes you have to quit daydreaming (and your day job) and make those dreams a reality. For us, that&#x27;s to make kombucha with our friends, hone a craft, and make sure that it has a positve impact. </p><p></p><p>Through deterimation and the support of our community, we are living that dream! Jaz is our founder and head of product development. Our co-founders are Lilly, who manages our finances and makes sure the bills are paid; Gabriël, our technical lead and brewer; andTom who leads our sales and marketing.</p>"
-						},
-						{
-							":type": "link",
-							"text": "Read our full story here",
-							"href": "/our-story"
-						}
-					]
-				},
-				{
-					":type": "section",
-					"id": "merchandise",
-					"items": [
-						{
-							":type": "chapter-heading",
-							"title": "Merchandise",
-							"varient": "h2",
-							"color": "softOrange"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>We're proud of our brand and our ideals so we want as many people to get to know us and our mission. Therefor we occasionally create cool merchandise that you can pick up at our HQ, if you're in time that is.</p>"
-						},
-						{
-							":type": "products",
-							"products": [
-								{
-									"title": "<p>Degrow Lab</p><p>Kombucha Tote bag</p>",
-									"details": "100% Organic cotton<br/>Glow in the dark details",
-									"whereToBuy": "Degrow Lab HQ",
-									"price": "25",
-									"picture": {
-										"alt": "Degrow Lab Tote bag",
-										"image": {
-											"id": "26cf95f4-a163-4c7a-9cb8-2697239c9c46",
-											"url": "https://ucarecdn.com/26cf95f4-a163-4c7a-9cb8-2697239c9c46/",
-											"width": 2130,
-											"height": 1420
-										}
-									}
-								},
-								{
-									"title": "<p>Degrow Lab</p><p>Zero T-Shirt</p>",
-									"picture": {
-										"alt": "Degrow Lab Zero T-Shirt",
-										"image": {
-											"id": "d5b82ae5-78ad-4116-907f-ed787ac25c98",
-											"url": "https://ucarecdn.com/d5b82ae5-78ad-4116-907f-ed787ac25c98/",
-											"width": 2130,
-											"height": 1420
-										}
-									},
-									"details": "<p>100% Organic cotton</p><p>Size: S,M,L,XL</p>",
-									"whereToBuy": "Degrow Lab HQ",
-									"price": "25"
-								},
-								{
-									"picture": {
-										"alt": "<p>Degrow Lab</p><p>Stickers</p>",
-										"image": {
-											"id": "301dfba4-fc7d-431b-a748-8be9d924b825",
-											"url": "https://ucarecdn.com/301dfba4-fc7d-431b-a748-8be9d924b825/",
-											"width": 2130,
-											"height": 1420
-										}
-									},
-									"title": "<p>Degrow Lab</p><p>Stickers</p>",
-									"details": "<p>100% Recycled Plastic</p>",
-									"whereToBuy": "Degrow Lab HQ",
-									"price": "0"
-								}
-							]
-						}
-					]
-				},
-				{
-					":type": "section",
-					"id": "newsletter",
-					"color": "softGreen",
-					"items": [
-						{
-							":type": "chapter-heading",
-							"title": "NEWSLETTER",
-							"varient": "h2"
-						},
-						{
-							":type": "newsletter"
-						}
-					]
-				}
-			],
-			"seo": {
-				"title": "DeGrowLab - About",
-				"description": "About DeGrowLab"
-			}
-		},
-		{
-			"slug": "our-story",
-			"blocks": [
-				{
-					":type": "section",
-					"gradient": [
-						"softGreen",
-						"softBlue",
-						"softPink"
-					],
-					"id": "story-test-section",
-					"items": [
-						{
-							":type": "paragraph",
-							"body": "<p>Jaz here, reminiscing on the story of Degrow lab. Quite simply it started as a shared feeling of discontentment with our ‘day jobs’, shared between me, Ciaran Raymer, and Tom Peek.</p>"
-						},
-						{
-							":type": "center-image",
-							"picture": {
-								"alt": "Flowers",
-								"image": {
-									"id": "a901b471-3e7b-48b1-828d-0f28c668de73",
-									"url": "https://ucarecdn.com/a901b471-3e7b-48b1-828d-0f28c668de73/",
-									"width": 1246,
-									"height": 651
-								}
-							}
-						},
-						{
-							":type": "article",
-							"body": "<p>All three of us were about a year out of our Sustainable Development masters, and the reality of the job market in our field didn’t quite match our ambitions/expectations. For myself, I spent most of the day behind a computer screen, not directly doing anything for environment, which is where my passions lie… and then the pandemic happened.</p><p>On the very first day of lockdowns, I purchased a SCOBY from Le Petit Heron. I then settled into the rhythm of working from home, social isolation, and all the stir-crazy desperation that accompanied it. Brewing kombucha gave me something to do, to focus on. Bottling day gave me something to look forward to in the otherwise mundaneness of being stuck at home. Fermentation was a whole new world to explore in my kitchen, and as I continued to become further obsessed brew after brew, I felt more and more disconnected with my job as a consultant. Eventually this equilibrium was punctured. I remember the exact moment; I stayed up late furiously writing the plan for degrow lab. The next day I had a PowerPoint presentation and a powerful sense of hope.</p>"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>I took this presentation to both my friends Tom and Ciaran. I’m not exactly sure how I managed to convince them to join me but convince them I did. With renewed confidence the three of us started degrow lab together, found a café to host our fledgling operations and grew the business from seed to sprout.</p>"
-						},
-						{
-							":type": "breakpoint",
-							"mobile": {
-								":type": "large-image",
-								"picture": {
-									"image": {
-										"id": "686be95e-9f5f-4ed0-addb-877a345b2bd6",
-										"url": "https://ucarecdn.com/686be95e-9f5f-4ed0-addb-877a345b2bd6/",
-										"width": 2006,
-										"height": 1380
-									},
-									"alt": "Bee Illustration"
-								},
-								"marginTop": "-10vw"
-							},
-							"desktop": {
-								":type": "large-image",
-								"picture": {
-									"alt": "Bees Illustration",
-									"image": {
-										"id": "0b25e403-d7b0-4126-9bde-9efb952498b3",
-										"url": "https://ucarecdn.com/0b25e403-d7b0-4126-9bde-9efb952498b3/",
-										"width": 748,
-										"height": 334
-									}
-								},
-								"marginTop": "-8vw"
-							}
-						},
-						{
-							":type": "article",
-							"body": "<p>This journey has been an emotional roller coaster of extreme highs and lows. Despite lockdowns, failed batches, rejection, and losing both Ciaran and Tom to other endeavors, degrow lab’s sprout has continued to grow deeper roots. I could not have started the company without both Tom and Ciaran, and I could not have continued it without the partners that have joined since.</p><p>Lilly Mengyao joined in 2021. Another friend from Uni days, Lilly and I share a passion for entrepreneurship and personal growth. Lilly also happens to be a financial wizard and has brought with her a level of professionalism and business acumen that we didn’t have before. She’s also a wonderful mix of being both critical and optimistic at the same time. “Numbers don’t lie” – Lilly.</p><p>In 2022, we were sorely missing someone with a technical and scientific background. In terms of production, I was approaching the limit of what I could manage alone. Like a techno-angle answering my prayers, incomes Gabriël Bijleveld. A friend of Tom’s through climbing, we worked with Gabriël multiple times as a handy man. One day after a climbing session, Gabriël began explaining how I could improve production by designing special tanks—classic Gabriël, he sees a problem and then obsesses on engineering a solution to it. A few weeks later I called him asked him to join.</p><p>And then we were three. Lilly reworked all our financial planning and charted us a path forward to succeed as a company. Gabriël revolutionized our production process, and together with his dad, Casper, built our little brewery. By the second half of 2022 we had refined our product and hit strides in producing it, but we were still lacking in the sales department. My technique was to frequent a place, become a regular, befriend the owner and then casually mention I had tasty kombucha. Not exactly scalable. I knew we needed a strong lead for sales, but we didn’t know anyone in our network that could fill this role. That was until, by chance, I met Tom Sifrin. Tom’s a fellow kombucha aficionado and was the single owner/operator of Beeyoutea kombucha. After meeting up we immediately hit it off, and I offered Tom any assistance he might need in his brewing operations (degrowth theory champions collaboration instead of the typical competition that defines capitalism). To my surprise and elation, Tom offered we join forces. His passion for marketing and sales merging with our ever-scaling operational knowhow. By the end of 22 we had an all-star team assembled.</p>"
-						},
-						{
-							":type": "paragraph",
-							"body": "<p>Here we are now, growing in our ability to make a product worthy of our ideals and our customers pallet.</p><p></p><p>To be continued…</p>"
-						}
-					]
-				}
-			],
-			"seo": {
-				"title": "Our Story"
-			}
-		},
-		{
-			"slug": "find-us",
-			"seo": {
-				"title": "Find Us",
-				"description": "Where to find DeGrow Lab Kombucha"
-			},
-			"blocks": [
-				{
-					":type": "section",
-					"id": "locations",
-					"items": [
-						{
-							":type": "heading",
-							"title": "You can try our craft kombucha at the following places",
-							"varient": "h1"
-						},
-						{
-							":type": "chapter-heading",
-							"title": "UTRECHT, NL",
-							"varient": "h2",
-							"color": "softBlue"
-						},
-						{
-							":type": "locations",
-							"locations": [
-								{
-									"address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
-									"link": "https://goo.gl/maps/sV9T3aCrx9DLBRn58"
-								},
-								{
-									"address": "<p>Kaffeetaria</p><p>Saffierlaan 10, </p><p>3523 RC Utrecht</p>",
-									"link": "https://goo.gl/maps/S72Q6g3FXLSWNfKv6"
-								},
-								{
-									"address": "<p>Kaffeetaria - Espressobar en Bakkerij</p><p>Croeselaan 207, </p><p>3521 BN Utrecht</p>",
-									"link": "https://goo.gl/maps/Mb6dLqpAKh3pLjVX6"
-								},
-								{
-									"address": "<p>Boulderhal Sterk</p><p>Kon. Wilhelminalaan 4b, </p><p>3527 LD Utrecht</p><p></p>",
-									"link": "https://goo.gl/maps/YJe8T2iUckikwm4z8"
-								},
-								{
-									"address": "<p>Boulderhal Sterk Spoor</p><p>Schaverijstraat 52, </p><p>3534 AS Utrecht</p>",
-									"link": "https://goo.gl/maps/PxqMTfzF7fLCxmyw5"
-								},
-								{
-									"address": "<p>Boulderhal Energiehaven</p><p>Elektronweg 10A, </p><p>3542 AC Utrecht</p>",
-									"link": "https://goo.gl/maps/8BJJdLsFUUJgst3b6"
-								},
-								{
-									"address": "<p>Boulderhal Zuidhaven</p><p>Vrieslantlaan 2, </p><p>3526 AA Utrecht</p>",
-									"link": "https://goo.gl/maps/uurR7uqCqx34qkTu7"
-								},
-								{
-									"address": "<p>Locals Utrecht</p><p>Vismarkt 2, </p><p>3511 KR Utrecht</p>",
-									"link": "https://goo.gl/maps/GbtykUr7e8UubHkw5"
-								},
-								{
-									"address": "<p>Warmoes</p><p>Vlampijpstraat 94, </p><p>3534 AR Utrecht</p>",
-									"link": "https://goo.gl/maps/ADk6c6GK7UgCTnH38"
-								},
-								{
-									"address": "<p>BUNK Hotel Utrecht</p><p>Catharijnekade 9, </p><p>3511 RT Utrecht</p>",
-									"link": "https://goo.gl/maps/3eno5nq3ZnN8acp68"
-								},
-								{
-									"address": "<p>Koffie &amp; Ik</p><p>Vleutenseweg 169, </p><p>3532 HC Utrecht</p>",
-									"link": "https://goo.gl/maps/wArmhYEGWuELW1we6"
-								},
-								{
-									"address": "<p>Landhuis in de stad</p><p>Park Oog in Al 1, </p><p>3533 HE Utrecht</p>",
-									"link": "https://goo.gl/maps/JmVnjd8c1vAoDawx9"
-								},
-								{
-									"address": "<p>Restaurant Dengh Utrecht</p><p>Enghlaan 17, </p><p>3543 BD Utrecht</p>",
-									"link": "https://goo.gl/maps/xxSRmMuni5cHXGwS8"
-								},
-								{
-									"address": "<p>Café de Zaak</p><p>Korte Minrebroederstraat 9, </p><p>3512 GG Utrecht</p>",
-									"link": "https://goo.gl/maps/3iV7R5tQxTfMqtKy8"
-								},
-								{
-									"address": "<p>De Ping Pong Club</p><p>Concordiastraat 80, </p><p>3551 EM Utrecht</p>",
-									"link": "https://goo.gl/maps/ZmfYxMchpNLcrvaJ6"
-								},
-								{
-									"address": "<p>dB&#x27;s oefenstudio&#x27;s, concertzaal &amp; muziekcafé</p><p>CAB-Rondom 100, </p><p>3534 BE Utrecht</p>",
-									"link": "https://goo.gl/maps/UPMmELwitFhCP7T18"
-								},
-								{
-									"address": "<p>De Clique</p><p>Gageldijk 3, </p><p>3566 ME Utrecht</p>"
-								},
-								{
-									"address": "<p>Ohøj Coffee Roasting</p><p>Rijnlaan 27,</p><p>3522 BB Utrecht</p>",
-									"link": "https://goo.gl/maps/C3z3fQ11cGjXyNcb9"
-								}
-							]
-						},
-						{
-							":type": "chapter-heading",
-							"title": "AMSTERDAM, NL",
-							"varient": "h2",
-							"color": "softGreen"
-						},
-						{
-							":type": "locations",
-							"locations": [
-								{
-									"address": "<p>Back to Black</p><p>Weteringstraat 48, </p><p>1017 SP Amsterdam</p>",
-									"link": "https://goo.gl/maps/sjU4wsy1kGhmDPhU6"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"slug": "test",
-			"blocks": [
-				{
-					":type": "chapter-heading",
-					"title": "This is a test page",
-					"varient": "h1",
-					"color": "softGreen"
-				}
-			]
-		},
-		{
-			"slug": "catalogue",
-			"seo": {
-				"title": "Our Catalogue",
-				"description": "degrow lab products and prices"
-			},
-			"blocks": [
-				{
-					":type": "heading",
-					"title": "Our current range",
-					"varient": "h1"
-				}
-			]
-		}
-	],
-	"footer": {
-		"title": "DEGR0W LAB"
-	},
-	"navigation": {
-		"homePath": "/",
-		"title": "DEGR0W LAB",
-		"colors": [
-			{
-				"path": "/about-us",
-				"color": "softPink"
-			},
-			{
-				"path": "/our-story",
-				"color": "softGreen"
-			},
-			{
-				"path": "/flavours/original",
-				"color": "softBlue"
-			},
-			{
-				"path": "/flavours/nabij",
-				"color": "softBlue"
-			},
-			{
-				"path": "/flavours/collaborations",
-				"color": "softPink"
-			}
-		],
-		"options": [
-			{
-				"label": "Flavours",
-				"path": "/flavours/collaborations",
-				"items": [
-					{
-						"label": "Original",
-						"path": "/flavours/original"
-					},
-					{
-						"label": "Harvest Spice",
-						"path": "/flavours/harvest-spice"
-					},
-					{
-						"label": "Nabij",
-						"path": "/flavours/nabij"
-					},
-					{
-						"label": "Orange Hibiscus",
-						"path": "/flavours/collaborations"
-					}
-				]
-			},
-			{
-				"label": "About us",
-				"path": "/about-us",
-				"items": [
-					{
-						"label": "The team",
-						"path": "/about-us"
-					},
-					{
-						"label": "Our story",
-						"path": "/our-story"
-					},
-					{
-						"label": "Merchandise",
-						"path": "/about-us#merchandise"
-					}
-				]
-			},
-			{
-				"label": "Find us",
-				"path": "/find-us",
-				"items": [
-					{
-						"label": "Where we're at",
-						"path": "/find-us"
-					},
-					{
-						"label": "Instagram",
-						"path": "https://www.instagram.com/degrowlab/",
-						"target": "blank"
-					},
-					{
-						"label": "LinkedIn",
-						"path": "https://www.linkedin.com/company/de-grow-lab",
-						"target": "blank"
-					}
-				]
-			},
-			{
-				"label": "Wholesale",
-				"path": "https://wholesale.degrowlab.org",
-				"target": "blank",
-				"items": [
-					{
-						"label": "Login",
-						"path": "https://wholesale.degrowlab.org",
-						"target": "blank"
-					}
-				]
-			}
-		]
-	},
-	"test": {
-		"test2": "<p>hello <strong>david</strong> is my <em>name</em></p>"
-	},
-	"flavours": [
-		{
-			"slug": "original",
-			"title": "Original Kombucha - A Classic, Timeless Flavor",
-			"gradient": [
-				"softBlue",
-				"softPink",
-				"softOrange"
-			],
-			"detailPage": {
-				"description": "Our Original Kombucha is a testament to the power of simplicity. By combining high-quality Sencha green tea with the rich, earthy notes of Keemun tea, we've crafted a classic and timeless taste. We use only organic ingredients and pure cane sugar to create a natural, refreshing beverage. Experience the delightful balance of our Original Kombucha, where tradition and innovation come together in perfect harmony.",
-				"ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
-				"nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
-			},
-			"picture": {
-				"alt": "Original Flavour",
-				"image": {
-					"id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
-					"url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
-					"width": 500,
-					"height": 908
-				}
-			},
-			"isCollaboration": "0",
-			"discover": {
-				"yOffset": "-20%",
-				"rotate": "30",
-				"stiffness": "0.4"
-			}
-		},
-		{
-			"slug": "2nd Harvest",
-			"title": "2nd Harvest Kombucha - Carrot Ginger ",
-			"detailPage": {
-				"description": "At the heart of our 2nd Harvest Kombucha lies a commitment to sustainability and zero waste. This unique carrot ginger blend is crafted using ginger sourced from Rozebunker's production stream, ensuring no part of the ginger is wasted. The result is a bold, invigorating flavor that not only delights your taste buds but also supports our mission to protect the environment. Sip on our 2nd Harvest Kombucha and join us on our journey towards a greener future.",
-				"ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
-				"nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
-			},
-			"picture": {
-				"alt": "Harvest Spice Flavour",
-				"image": {
-					"id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
-					"url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
-					"width": 500,
-					"height": 908
-				}
-			},
-			"isCollaboration": "0",
-			"discover": {
-				"yOffset": "20%",
-				"rotate": "-20",
-				"stiffness": "0.4"
-			}
-		},
-		{
-			"slug": "nabij",
-			"title": "Nabij Kombucha - Supporting the Bees",
-			"gradient": [
-				"softBlue",
-				"softPink",
-				"softOrange"
-			],
-			"detailPage": {
-				"description": "Nabij Kombucha is our tribute to the incredible world of bees and their vital role in our ecosystem. Infused with local wildflowers, this unique flavor not only offers a delightful, aromatic taste but also supports bee populations in our community. By choosing Nabij Kombucha, you're not only treating yourself to a delicious, healthful beverage but also contributing to the well-being of these hardworking pollinators. This is made possible thanks to our collaboration with Rozebunker and Voedselstation",
-				"ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
-				"nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
-			},
-			"picture": {
-				"alt": "Nabij Flavour",
-				"image": {
-					"id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
-					"url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
-					"width": 500,
-					"height": 908
-				}
-			},
-			"isCollaboration": "0",
-			"discover": {
-				"yOffset": "25%",
-				"rotate": "-30",
-				"stiffness": "0.6"
-			}
-		},
-		{
-			"slug": "x-declique",
-			"title": "Degrow Lab X deClique Orange Hibiscus",
-			"color": "softPink",
-			"detailPage": {
-				"description": "Our Orange Hibiscus Kombucha offers a bright, uplifting burst of citrus flavor, achieved through our commitment to zero waste. We source orange peels saved from fresh juice machines, transforming them into a flavorful, sustainable ingredient. Combined with the delicate floral notes of hibiscus, this kombucha is a refreshing and eco-friendly choice for those seeking a vibrant, guilt-free beverage.",
-				"ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
-				"nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
-			},
-			"picture": {
-				"alt": "Degrow Lab X deClique Flavour",
-				"image": {
-					"id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
-					"url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
-					"width": 500,
-					"height": 908
-				}
-			},
-			"isCollaboration": "1",
-			"discover": {
-				"yOffset": "-35%",
-				"rotate": "15",
-				"stiffness": "0.9"
-			}
-		}
-	],
-	"defaults": {
-		"seo": {
-			"title": "Degrow Lab",
-			"description": "Kombucha"
-		}
-	}
+  "pages": [
+    {
+      "seo": {
+        "title": "DEGR0W LAB - Home",
+        "description": "Home page"
+      },
+      "blocks": [
+        {
+          ":type": "paragraph",
+          "body": "<p>Degrow lab is an Utrecht- based kombucha</p><p>Microbrewery. We are obsessed with brewing</p><p>craft kombucha, while also determined to</p><p>run our company according to principles of sustainability.</p>"
+        },
+        {
+          ":type": "breakpoint",
+          "mobile": {
+            ":type": "large-image",
+            "picture": {
+              "alt": "Large Illustration Mouth",
+              "image": {
+                "id": "fb8de427-db94-4598-9fae-9a24bdb9eeaf",
+                "url": "https://ucarecdn.com/fb8de427-db94-4598-9fae-9a24bdb9eeaf/",
+                "width": 2627,
+                "height": 3550
+              }
+            },
+            "maxHeight": "330px",
+            "marginTop": "-30px"
+          },
+          "desktop": {
+            ":type": "large-image",
+            "marginBottom": "-2vw",
+            "picture": {
+              "alt": "Large Illustration",
+              "image": {
+                "id": "75c349d9-30c2-4102-a8f1-3dcacc040ad6",
+                "url": "https://ucarecdn.com/75c349d9-30c2-4102-a8f1-3dcacc040ad6/",
+                "width": 850,
+                "height": 353
+              }
+            },
+            "marginTop": "-4vw"
+          }
+        },
+        {
+          ":type": "section",
+          "color": "softGreen",
+          "items": [
+            {
+              ":type": "chapter-heading",
+              "title": "What is kombucha?",
+              "varient": "h2"
+            },
+            {
+              ":type": "center-image",
+              "size": "small",
+              "picture": {
+                "alt": "Tea Leaves",
+                "image": {
+                  "id": "0e5db5a4-8068-4bc6-ab1f-2b30dbf80943",
+                  "url": "https://ucarecdn.com/0e5db5a4-8068-4bc6-ab1f-2b30dbf80943/",
+                  "width": 571,
+                  "height": 437
+                }
+              }
+            },
+            {
+              ":type": "heading",
+              "title": "KOMBUCHA IS COMUNITY",
+              "varient": "h3"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>Quite literally kombucha is fermented tea created by a</p><p>community of yeast and bacteria cultures working</p><p>symbiotically together. The yeast metabolize sugar</p><p>creating alcohol, and the acetobacter turn that alcohol</p><p>into acid. The finished product is bubbly, non-alcoholic,</p><p>and chocked full of good stuff like B vitamins,</p><p>organic acids, and antioxidants.</p>"
+            },
+            {
+              ":type": "link",
+              "text": "I'm sold! Where to buy?",
+              "href": "/find-us"
+            }
+          ]
+        },
+        {
+          ":type": "section",
+          "items": [
+            {
+              ":type": "large-image",
+              "imageFit": "cover",
+              "marginHorizontal": "small",
+              "picture": {
+                "alt": "Flowers",
+                "image": {
+                  "id": "8ab0d025-4b6d-43fa-b62d-ad9f3639c0ee",
+                  "url": "https://ucarecdn.com/8ab0d025-4b6d-43fa-b62d-ad9f3639c0ee/",
+                  "width": 1246,
+                  "height": 651
+                }
+              }
+            },
+            {
+              ":type": "heading",
+              "title": "KOMBUCHA FOR A MORE VIBRANT COMMUNITY",
+              "varient": "h2"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>Our focus is brewing a craft product with positive environmental impacts. This means sourcing locally, collaborating with other small businesses, and selecting ingredients for their impact. For instance, our Nabij kombucha is brewed with wildflowers planted in the Dutch countryside specifically to benefit pollinators and other insects. We also work with circular ingredients, such as our orange hibiscus kombucha which uses upcycled residual streams from orange peels.</p>"
+            },
+            {
+              ":type": "link",
+              "text": "Read more",
+              "href": "/about-us"
+            },
+            {
+              ":type": "breakpoint",
+              "mobile": {
+                ":type": "center-image",
+                "picture": {
+                  "image": {
+                    "id": "b586f010-dc7e-4e92-9b35-403a72a6f500",
+                    "url": "https://ucarecdn.com/b586f010-dc7e-4e92-9b35-403a72a6f500/",
+                    "width": 6000,
+                    "height": 4000
+                  },
+                  "alt": "bottles and flowers"
+                },
+                "marginTop": "-10vw"
+              },
+              "desktop": {
+                ":type": "large-image",
+                "maxHeight": "800px",
+                "picture": {
+                  "alt": "bottles and flowers",
+                  "image": {
+                    "id": "7be56892-1e91-4b63-a125-eb7b22d94c81",
+                    "url": "https://ucarecdn.com/7be56892-1e91-4b63-a125-eb7b22d94c81/",
+                    "width": 6000,
+                    "height": 4000
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          ":type": "section",
+          "items": [
+            {
+              ":type": "chapter-heading",
+              "title": "OUR CORE VALUES",
+              "varient": "h2",
+              "color": "softOrange"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>We started Degrow lab to make an awesome local product, to make a name for ourselves, to meet our community and form bonds within it, to experiment, and to fail but try and try again. We are small, so we are taking small steps. Make kombucha with ingredients we care about, share it, and build up our capacity to make a positive impact.</p><p></p><p>Our name derives from the degrowth movement, which is about using less resources while at the same time increasing wellbeing. Pursuing prosperity over profit. The name is a reminder to us that we want to operate differently than the norm. We grow together, while respecting the limits of our planet.</p>"
+            },
+            {
+              ":type": "link",
+              "text": "Read more",
+              "href": "/story"
+            }
+          ]
+        },
+        {
+          ":type": "center-image",
+          "picture": {
+            "image": {
+              "id": "a23c02b6-ed2f-45a2-b8c1-045aab02caef",
+              "url": "https://ucarecdn.com/a23c02b6-ed2f-45a2-b8c1-045aab02caef/",
+              "width": 3067,
+              "height": 4600
+            }
+          },
+          "size": "large"
+        },
+        {
+          ":type": "section",
+          "items": [
+            {
+              ":type": "heading",
+              "title": "DISCOVER OUR FLAVOURS",
+              "varient": "h2"
+            },
+            {
+              ":type": "discover-flavours-vertical"
+            }
+          ]
+        },
+        {
+          ":type": "section",
+          "color": "softGreen",
+          "items": [
+            {
+              ":type": "chapter-heading",
+              "title": "NEWSLETTER",
+              "varient": "h2"
+            },
+            {
+              ":type": "newsletter"
+            }
+          ]
+        }
+      ],
+      "slug": "home"
+    },
+    {
+      "slug": "about-us",
+      "blocks": [
+        {
+          ":type": "section",
+          "id": "team",
+          "color": "softPink",
+          "items": [
+            {
+              ":type": "heading",
+              "title": "We’re a small team and we’re obsessed with brewing craft kombucha with impact.",
+              "varient": "h1"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>Jaz Hereford,</p><p>Gabriël Bijleveld,</p><p>Tom Sifrin &amp;</p><p>Lily Mengyao.</p>"
+            },
+            {
+              ":type": "center-image",
+              "size": "large",
+              "imageFit": "contain",
+              "maxHeight": "700px",
+              "picture": {
+                "alt": "Team photo",
+                "image": {
+                  "id": "7228243f-8fbd-4cb9-b881-47b1f3750f8b",
+                  "url": "https://ucarecdn.com/7228243f-8fbd-4cb9-b881-47b1f3750f8b/",
+                  "width": 3659,
+                  "height": 5489
+                }
+              }
+            }
+          ]
+        },
+        {
+          ":type": "section",
+          "id": "our-story",
+          "items": [
+            {
+              ":type": "chapter-heading",
+              "title": "OUR STORY",
+              "varient": "h2",
+              "color": "softPink"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>Sometimes you have to quit daydreaming (and your day job) and make those dreams a reality. For us, that&#x27;s to make kombucha with our friends, hone a craft, and make sure that it has a positve impact. </p><p></p><p>Through deterimation and the support of our community, we are living that dream! Jaz is our founder and head of product development. Our co-founders are Lilly, who manages our finances and makes sure the bills are paid; Gabriël, our technical lead and brewer; andTom who leads our sales and marketing.</p>"
+            },
+            {
+              ":type": "link",
+              "text": "Read our full story here",
+              "href": "/our-story"
+            }
+          ]
+        },
+        {
+          ":type": "section",
+          "id": "merchandise",
+          "items": [
+            {
+              ":type": "chapter-heading",
+              "title": "Merchandise",
+              "varient": "h2",
+              "color": "softOrange"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>We're proud of our brand and our ideals so we want as many people to get to know us and our mission. Therefor we occasionally create cool merchandise that you can pick up at our HQ, if you're in time that is.</p>"
+            },
+            {
+              ":type": "products",
+              "products": [
+                {
+                  "title": "<p>Degrow Lab</p><p>Kombucha Tote bag</p>",
+                  "details": "100% Organic cotton<br/>Glow in the dark details",
+                  "whereToBuy": "Degrow Lab HQ",
+                  "price": "25",
+                  "picture": {
+                    "alt": "Degrow Lab Tote bag",
+                    "image": {
+                      "id": "26cf95f4-a163-4c7a-9cb8-2697239c9c46",
+                      "url": "https://ucarecdn.com/26cf95f4-a163-4c7a-9cb8-2697239c9c46/",
+                      "width": 2130,
+                      "height": 1420
+                    }
+                  }
+                },
+                {
+                  "title": "<p>Degrow Lab</p><p>Zero T-Shirt</p>",
+                  "picture": {
+                    "alt": "Degrow Lab Zero T-Shirt",
+                    "image": {
+                      "id": "d5b82ae5-78ad-4116-907f-ed787ac25c98",
+                      "url": "https://ucarecdn.com/d5b82ae5-78ad-4116-907f-ed787ac25c98/",
+                      "width": 2130,
+                      "height": 1420
+                    }
+                  },
+                  "details": "<p>100% Organic cotton</p><p>Size: S,M,L,XL</p>",
+                  "whereToBuy": "Degrow Lab HQ",
+                  "price": "25"
+                },
+                {
+                  "picture": {
+                    "alt": "<p>Degrow Lab</p><p>Stickers</p>",
+                    "image": {
+                      "id": "301dfba4-fc7d-431b-a748-8be9d924b825",
+                      "url": "https://ucarecdn.com/301dfba4-fc7d-431b-a748-8be9d924b825/",
+                      "width": 2130,
+                      "height": 1420
+                    }
+                  },
+                  "title": "<p>Degrow Lab</p><p>Stickers</p>",
+                  "details": "<p>100% Recycled Plastic</p>",
+                  "whereToBuy": "Degrow Lab HQ",
+                  "price": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          ":type": "section",
+          "id": "newsletter",
+          "color": "softGreen",
+          "items": [
+            {
+              ":type": "chapter-heading",
+              "title": "NEWSLETTER",
+              "varient": "h2"
+            },
+            {
+              ":type": "newsletter"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "title": "DeGrowLab - About",
+        "description": "About DeGrowLab"
+      }
+    },
+    {
+      "slug": "our-story",
+      "blocks": [
+        {
+          ":type": "section",
+          "gradient": ["softGreen", "softBlue", "softPink"],
+          "id": "story-test-section",
+          "items": [
+            {
+              ":type": "paragraph",
+              "body": "<p>Jaz here, reminiscing on the story of Degrow lab. Quite simply it started as a shared feeling of discontentment with our ‘day jobs’, shared between me, Ciaran Raymer, and Tom Peek.</p>"
+            },
+            {
+              ":type": "center-image",
+              "picture": {
+                "alt": "Flowers",
+                "image": {
+                  "id": "a901b471-3e7b-48b1-828d-0f28c668de73",
+                  "url": "https://ucarecdn.com/a901b471-3e7b-48b1-828d-0f28c668de73/",
+                  "width": 1246,
+                  "height": 651
+                }
+              }
+            },
+            {
+              ":type": "article",
+              "body": "<p>All three of us were about a year out of our Sustainable Development masters, and the reality of the job market in our field didn’t quite match our ambitions/expectations. For myself, I spent most of the day behind a computer screen, not directly doing anything for environment, which is where my passions lie… and then the pandemic happened.</p><p>On the very first day of lockdowns, I purchased a SCOBY from Le Petit Heron. I then settled into the rhythm of working from home, social isolation, and all the stir-crazy desperation that accompanied it. Brewing kombucha gave me something to do, to focus on. Bottling day gave me something to look forward to in the otherwise mundaneness of being stuck at home. Fermentation was a whole new world to explore in my kitchen, and as I continued to become further obsessed brew after brew, I felt more and more disconnected with my job as a consultant. Eventually this equilibrium was punctured. I remember the exact moment; I stayed up late furiously writing the plan for degrow lab. The next day I had a PowerPoint presentation and a powerful sense of hope.</p>"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>I took this presentation to both my friends Tom and Ciaran. I’m not exactly sure how I managed to convince them to join me but convince them I did. With renewed confidence the three of us started degrow lab together, found a café to host our fledgling operations and grew the business from seed to sprout.</p>"
+            },
+            {
+              ":type": "breakpoint",
+              "mobile": {
+                ":type": "large-image",
+                "picture": {
+                  "image": {
+                    "id": "686be95e-9f5f-4ed0-addb-877a345b2bd6",
+                    "url": "https://ucarecdn.com/686be95e-9f5f-4ed0-addb-877a345b2bd6/",
+                    "width": 2006,
+                    "height": 1380
+                  },
+                  "alt": "Bee Illustration"
+                },
+                "marginTop": "-10vw"
+              },
+              "desktop": {
+                ":type": "large-image",
+                "picture": {
+                  "alt": "Bees Illustration",
+                  "image": {
+                    "id": "0b25e403-d7b0-4126-9bde-9efb952498b3",
+                    "url": "https://ucarecdn.com/0b25e403-d7b0-4126-9bde-9efb952498b3/",
+                    "width": 748,
+                    "height": 334
+                  }
+                },
+                "marginTop": "-8vw"
+              }
+            },
+            {
+              ":type": "article",
+              "body": "<p>This journey has been an emotional roller coaster of extreme highs and lows. Despite lockdowns, failed batches, rejection, and losing both Ciaran and Tom to other endeavors, degrow lab’s sprout has continued to grow deeper roots. I could not have started the company without both Tom and Ciaran, and I could not have continued it without the partners that have joined since.</p><p>Lilly Mengyao joined in 2021. Another friend from Uni days, Lilly and I share a passion for entrepreneurship and personal growth. Lilly also happens to be a financial wizard and has brought with her a level of professionalism and business acumen that we didn’t have before. She’s also a wonderful mix of being both critical and optimistic at the same time. “Numbers don’t lie” – Lilly.</p><p>In 2022, we were sorely missing someone with a technical and scientific background. In terms of production, I was approaching the limit of what I could manage alone. Like a techno-angle answering my prayers, incomes Gabriël Bijleveld. A friend of Tom’s through climbing, we worked with Gabriël multiple times as a handy man. One day after a climbing session, Gabriël began explaining how I could improve production by designing special tanks—classic Gabriël, he sees a problem and then obsesses on engineering a solution to it. A few weeks later I called him asked him to join.</p><p>And then we were three. Lilly reworked all our financial planning and charted us a path forward to succeed as a company. Gabriël revolutionized our production process, and together with his dad, Casper, built our little brewery. By the second half of 2022 we had refined our product and hit strides in producing it, but we were still lacking in the sales department. My technique was to frequent a place, become a regular, befriend the owner and then casually mention I had tasty kombucha. Not exactly scalable. I knew we needed a strong lead for sales, but we didn’t know anyone in our network that could fill this role. That was until, by chance, I met Tom Sifrin. Tom’s a fellow kombucha aficionado and was the single owner/operator of Beeyoutea kombucha. After meeting up we immediately hit it off, and I offered Tom any assistance he might need in his brewing operations (degrowth theory champions collaboration instead of the typical competition that defines capitalism). To my surprise and elation, Tom offered we join forces. His passion for marketing and sales merging with our ever-scaling operational knowhow. By the end of 22 we had an all-star team assembled.</p>"
+            },
+            {
+              ":type": "paragraph",
+              "body": "<p>Here we are now, growing in our ability to make a product worthy of our ideals and our customers pallet.</p><p></p><p>To be continued…</p>"
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "title": "Our Story"
+      }
+    },
+    {
+      "slug": "find-us",
+      "seo": {
+        "title": "Find Us",
+        "description": "Where to find DeGrow Lab Kombucha"
+      },
+      "blocks": [
+        {
+          ":type": "section",
+          "id": "locations",
+          "items": [
+            {
+              ":type": "heading",
+              "title": "You can try our craft kombucha at the following places",
+              "varient": "h1"
+            },
+            {
+              ":type": "chapter-heading",
+              "title": "UTRECHT, NL",
+              "varient": "h2",
+              "color": "softBlue"
+            },
+            {
+              ":type": "locations",
+              "locations": [
+                {
+                  "address": "<p>The Village Coffee &amp; Music</p><p>Voorstraat 44-46,</p><p>3512 AP Utrecht</p>",
+                  "link": "https://goo.gl/maps/sV9T3aCrx9DLBRn58"
+                },
+                {
+                  "address": "<p>Kaffeetaria</p><p>Saffierlaan 10, </p><p>3523 RC Utrecht</p>",
+                  "link": "https://goo.gl/maps/S72Q6g3FXLSWNfKv6"
+                },
+                {
+                  "address": "<p>Kaffeetaria - Espressobar en Bakkerij</p><p>Croeselaan 207, </p><p>3521 BN Utrecht</p>",
+                  "link": "https://goo.gl/maps/Mb6dLqpAKh3pLjVX6"
+                },
+                {
+                  "address": "<p>Boulderhal Sterk</p><p>Kon. Wilhelminalaan 4b, </p><p>3527 LD Utrecht</p><p></p>",
+                  "link": "https://goo.gl/maps/YJe8T2iUckikwm4z8"
+                },
+                {
+                  "address": "<p>Boulderhal Sterk Spoor</p><p>Schaverijstraat 52, </p><p>3534 AS Utrecht</p>",
+                  "link": "https://goo.gl/maps/PxqMTfzF7fLCxmyw5"
+                },
+                {
+                  "address": "<p>Boulderhal Energiehaven</p><p>Elektronweg 10A, </p><p>3542 AC Utrecht</p>",
+                  "link": "https://goo.gl/maps/8BJJdLsFUUJgst3b6"
+                },
+                {
+                  "address": "<p>Boulderhal Zuidhaven</p><p>Vrieslantlaan 2, </p><p>3526 AA Utrecht</p>",
+                  "link": "https://goo.gl/maps/uurR7uqCqx34qkTu7"
+                },
+                {
+                  "address": "<p>Locals Utrecht</p><p>Vismarkt 2, </p><p>3511 KR Utrecht</p>",
+                  "link": "https://goo.gl/maps/GbtykUr7e8UubHkw5"
+                },
+                {
+                  "address": "<p>Warmoes</p><p>Vlampijpstraat 94, </p><p>3534 AR Utrecht</p>",
+                  "link": "https://goo.gl/maps/ADk6c6GK7UgCTnH38"
+                },
+                {
+                  "address": "<p>BUNK Hotel Utrecht</p><p>Catharijnekade 9, </p><p>3511 RT Utrecht</p>",
+                  "link": "https://goo.gl/maps/3eno5nq3ZnN8acp68"
+                },
+                {
+                  "address": "<p>Koffie &amp; Ik</p><p>Vleutenseweg 169, </p><p>3532 HC Utrecht</p>",
+                  "link": "https://goo.gl/maps/wArmhYEGWuELW1we6"
+                },
+                {
+                  "address": "<p>Landhuis in de stad</p><p>Park Oog in Al 1, </p><p>3533 HE Utrecht</p>",
+                  "link": "https://goo.gl/maps/JmVnjd8c1vAoDawx9"
+                },
+                {
+                  "address": "<p>Restaurant Dengh Utrecht</p><p>Enghlaan 17, </p><p>3543 BD Utrecht</p>",
+                  "link": "https://goo.gl/maps/xxSRmMuni5cHXGwS8"
+                },
+                {
+                  "address": "<p>Café de Zaak</p><p>Korte Minrebroederstraat 9, </p><p>3512 GG Utrecht</p>",
+                  "link": "https://goo.gl/maps/3iV7R5tQxTfMqtKy8"
+                },
+                {
+                  "address": "<p>De Ping Pong Club</p><p>Concordiastraat 80, </p><p>3551 EM Utrecht</p>",
+                  "link": "https://goo.gl/maps/ZmfYxMchpNLcrvaJ6"
+                },
+                {
+                  "address": "<p>dB&#x27;s oefenstudio&#x27;s, concertzaal &amp; muziekcafé</p><p>CAB-Rondom 100, </p><p>3534 BE Utrecht</p>",
+                  "link": "https://goo.gl/maps/UPMmELwitFhCP7T18"
+                },
+                {
+                  "address": "<p>De Clique</p><p>Gageldijk 3, </p><p>3566 ME Utrecht</p>"
+                },
+                {
+                  "address": "<p>Ohøj Coffee Roasting</p><p>Rijnlaan 27,</p><p>3522 BB Utrecht</p>",
+                  "link": "https://goo.gl/maps/C3z3fQ11cGjXyNcb9"
+                }
+              ]
+            },
+            {
+              ":type": "chapter-heading",
+              "title": "AMSTERDAM, NL",
+              "varient": "h2",
+              "color": "softGreen"
+            },
+            {
+              ":type": "locations",
+              "locations": [
+                {
+                  "address": "<p>Back to Black</p><p>Weteringstraat 48, </p><p>1017 SP Amsterdam</p>",
+                  "link": "https://goo.gl/maps/sjU4wsy1kGhmDPhU6"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "test",
+      "blocks": [
+        {
+          ":type": "chapter-heading",
+          "title": "This is a test page",
+          "varient": "h1",
+          "color": "softGreen"
+        }
+      ]
+    },
+    {
+      "slug": "catalogue",
+      "seo": {
+        "title": "Our Catalogue",
+        "description": "degrow lab products and prices"
+      },
+      "blocks": [
+        {
+          ":type": "heading",
+          "title": "Our current range",
+          "varient": "h1"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "title": "DEGR0W LAB"
+  },
+  "navigation": {
+    "homePath": "/",
+    "title": "DEGR0W LAB",
+    "colors": [
+      {
+        "path": "/about-us",
+        "color": "softPink"
+      },
+      {
+        "path": "/our-story",
+        "color": "softGreen"
+      },
+      {
+        "path": "/flavours/original",
+        "color": "softBlue"
+      },
+      {
+        "path": "/flavours/nabij",
+        "color": "softBlue"
+      },
+      {
+        "path": "/flavours/collaborations",
+        "color": "softPink"
+      }
+    ],
+    "options": [
+      {
+        "label": "Flavours",
+        "path": "/flavours/collaborations",
+        "items": [
+          {
+            "label": "Original",
+            "path": "/flavours/original"
+          },
+          {
+            "label": "Harvest Spice",
+            "path": "/flavours/harvest-spice"
+          },
+          {
+            "label": "Nabij",
+            "path": "/flavours/nabij"
+          },
+          {
+            "label": "Orange Hibiscus",
+            "path": "/flavours/collaborations"
+          }
+        ]
+      },
+      {
+        "label": "About us",
+        "path": "/about-us",
+        "items": [
+          {
+            "label": "The team",
+            "path": "/about-us"
+          },
+          {
+            "label": "Our story",
+            "path": "/our-story"
+          },
+          {
+            "label": "Merchandise",
+            "path": "/about-us#merchandise"
+          }
+        ]
+      },
+      {
+        "label": "Find us",
+        "path": "/find-us",
+        "items": [
+          {
+            "label": "Where we're at",
+            "path": "/find-us"
+          },
+          {
+            "label": "Instagram",
+            "path": "https://www.instagram.com/degrowlab/",
+            "target": "blank"
+          },
+          {
+            "label": "LinkedIn",
+            "path": "https://www.linkedin.com/company/de-grow-lab",
+            "target": "blank"
+          }
+        ]
+      },
+      {
+        "label": "Wholesale",
+        "path": "https://wholesale.degrowlab.org",
+        "target": "blank",
+        "items": [
+          {
+            "label": "Login",
+            "path": "https://wholesale.degrowlab.org",
+            "target": "blank"
+          }
+        ]
+      }
+    ]
+  },
+  "test": {
+    "test2": "<p>hello <strong>david</strong> is my <em>name</em></p>"
+  },
+  "flavours": [
+    {
+      "slug": "original",
+      "title": "Original Kombucha - A Classic, Timeless Flavor",
+      "gradient": ["softBlue", "softPink", "softOrange"],
+      "detailPage": {
+        "description": "Our Original Kombucha is a testament to the power of simplicity. By combining high-quality Sencha green tea with the rich, earthy notes of Keemun tea, we've crafted a classic and timeless taste. We use only organic ingredients and pure cane sugar to create a natural, refreshing beverage. Experience the delightful balance of our Original Kombucha, where tradition and innovation come together in perfect harmony.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Original Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "0",
+      "discover": {
+        "yOffset": "-20%",
+        "rotate": "30",
+        "stiffness": "0.4"
+      }
+    },
+    {
+      "slug": "2nd Harvest",
+      "title": "2nd Harvest Kombucha - Carrot Ginger ",
+      "detailPage": {
+        "description": "At the heart of our 2nd Harvest Kombucha lies a commitment to sustainability and zero waste. This unique carrot ginger blend is crafted using ginger sourced from Rozebunker's production stream, ensuring no part of the ginger is wasted. The result is a bold, invigorating flavor that not only delights your taste buds but also supports our mission to protect the environment. Sip on our 2nd Harvest Kombucha and join us on our journey towards a greener future.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Harvest Spice Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "0",
+      "discover": {
+        "yOffset": "20%",
+        "rotate": "-20",
+        "stiffness": "0.4"
+      }
+    },
+    {
+      "slug": "nabij",
+      "title": "Nabij Kombucha - Supporting the Bees",
+      "gradient": ["softBlue", "softPink", "softOrange"],
+      "detailPage": {
+        "description": "Nabij Kombucha is our tribute to the incredible world of bees and their vital role in our ecosystem. Infused with local wildflowers, this unique flavor not only offers a delightful, aromatic taste but also supports bee populations in our community. By choosing Nabij Kombucha, you're not only treating yourself to a delicious, healthful beverage but also contributing to the well-being of these hardworking pollinators. This is made possible thanks to our collaboration with Rozebunker and Voedselstation",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Nabij Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "0",
+      "discover": {
+        "yOffset": "25%",
+        "rotate": "-30",
+        "stiffness": "0.6"
+      }
+    },
+    {
+      "slug": "x-declique",
+      "title": "Degrow Lab X deClique Orange Hibiscus",
+      "color": "softPink",
+      "detailPage": {
+        "description": "Our Orange Hibiscus Kombucha offers a bright, uplifting burst of citrus flavor, achieved through our commitment to zero waste. We source orange peels saved from fresh juice machines, transforming them into a flavorful, sustainable ingredient. Combined with the delicate floral notes of hibiscus, this kombucha is a refreshing and eco-friendly choice for those seeking a vibrant, guilt-free beverage.",
+        "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
+        "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
+      },
+      "picture": {
+        "alt": "Degrow Lab X deClique Flavour",
+        "image": {
+          "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
+          "url": "https://ucarecdn.com/19161a99-1cd0-42d7-99dc-3177b6a1d34c/",
+          "width": 500,
+          "height": 908
+        }
+      },
+      "isCollaboration": "1",
+      "discover": {
+        "yOffset": "-35%",
+        "rotate": "15",
+        "stiffness": "0.9"
+      }
+    }
+  ],
+  "defaults": {
+    "seo": {
+      "title": "Degrow Lab",
+      "description": "Kombucha"
+    }
+  }
 }
