@@ -17,34 +17,38 @@ export const HOME_PAGE_DATA: PageType = {
     },
     {
       type: "breakpoint",
-      mobile: {
-        type: "large-image",
-        data: {
-          alt: "large illustration",
-          objectFit: "contain",
-          src: "/images/mouth_illustration",
-          supportedTypes: ["webp", "png"],
-          width: 367, // See why this is required https://www.youtube.com/watch?v=4-d_SoCHeWE and https://nextjs.org/docs/basic-features/image-optimization
-          height: 409,
-          marginTop: "-10vw",
+      mobile: [
+        {
+          type: "large-image",
+          data: {
+            alt: "large illustration",
+            objectFit: "contain",
+            src: "/images/mouth_illustration",
+            supportedTypes: ["webp", "png"],
+            width: 367, // See why this is required https://www.youtube.com/watch?v=4-d_SoCHeWE and https://nextjs.org/docs/basic-features/image-optimization
+            height: 409,
+            marginTop: "-10vw",
+          },
         },
-      },
-      desktop: {
-        type: "large-image",
-        data: {
-          alt: "large illustration",
-          src: "/images/large_illustration",
-          supportedTypes: ["webp", "png"],
-          marginBottom: "-30px",
-          width: 703,
-          height: 355,
+      ],
+      desktop: [
+        {
+          type: "large-image",
+          data: {
+            alt: "large illustration",
+            src: "/images/large_illustration",
+            supportedTypes: ["webp", "png"],
+            marginBottom: "-30px",
+            width: 703,
+            height: 355,
+          },
         },
-      },
+      ],
     },
     {
       type: "section",
       id: "what-is-kombucha",
-      color: "softGreen",
+      color: [{ color: "softGreen" }],
       items: [
         {
           type: "chapter-heading",
@@ -236,7 +240,7 @@ export const HOME_PAGE_DATA: PageType = {
     {
       type: "section",
       id: "newsletter",
-      color: "softGreen",
+      color: [{ color: "softGreen" }],
       items: [
         {
           type: "chapter-heading",
