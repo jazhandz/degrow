@@ -14,9 +14,9 @@ storyblokInit({
 const HOME_PAGE_DATA = CONTENT.pages.find(page => page.slug === "home");
 
 const Home: NextPage = ({ story, key }: any) => {
-  const liveStory = useStoryblokState(story);
+  const liveStory = useStoryblokState(story) as any;
 
-  const blocks = story.content.body;
+  const blocks = liveStory ? liveStory.content?.body : story.content.body;
 
   console.log("page data", story, key, liveStory);
   return (
