@@ -32,10 +32,10 @@
             "picture": {
               "alt": "Large Illustration",
               "image": {
-                "id": "40582f76-2b4e-4e9d-8c34-08c44ecb0dc1",
-                "url": "https://ucarecdn.com/40582f76-2b4e-4e9d-8c34-08c44ecb0dc1/",
-                "width": 2874,
-                "height": 1964
+                "id": "75c349d9-30c2-4102-a8f1-3dcacc040ad6",
+                "url": "https://ucarecdn.com/75c349d9-30c2-4102-a8f1-3dcacc040ad6/",
+                "width": 850,
+                "height": 353
               }
             },
             "marginTop": "-4vw"
@@ -182,7 +182,7 @@
               "varient": "h2"
             },
             {
-              ":type": "discover-flavours"
+              ":type": "discover-flavours-vertical"
             }
           ]
         },
@@ -606,15 +606,11 @@
             "path": "/flavours/harvest-spice"
           },
           {
-            "label": "Tepache Sunrise",
-            "path": "/flavours/tepache-sunrise"
-          },
-          {
             "label": "Nabij",
             "path": "/flavours/nabij"
           },
           {
-            "label": "Collaborations",
+            "label": "Orange Hibiscus",
             "path": "/flavours/collaborations"
           }
         ]
@@ -677,10 +673,10 @@
   "flavours": [
     {
       "slug": "original",
-      "title": "Original",
+      "title": "Original Kombucha - A Classic, Timeless Flavor",
       "gradient": ["softBlue", "softPink", "softOrange"],
       "detailPage": {
-        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "description": "Our Original Kombucha is a testament to the power of simplicity. By combining high-quality Sencha green tea with the rich, earthy notes of Keemun tea, we've crafted a classic and timeless taste. We use only organic ingredients and pure cane sugar to create a natural, refreshing beverage. Experience the delightful balance of our Original Kombucha, where tradition and innovation come together in perfect harmony.",
         "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
         "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
       },
@@ -701,10 +697,10 @@
       }
     },
     {
-      "slug": "harvest-spice",
-      "title": "Harvest Spice",
+      "slug": "2nd Harvest",
+      "title": "2nd Harvest Kombucha - Carrot Ginger ",
       "detailPage": {
-        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "description": "At the heart of our 2nd Harvest Kombucha lies a commitment to sustainability and zero waste. This unique carrot ginger blend is crafted using ginger sourced from Rozebunker's production stream, ensuring no part of the ginger is wasted. The result is a bold, invigorating flavor that not only delights your taste buds but also supports our mission to protect the environment. Sip on our 2nd Harvest Kombucha and join us on our journey towards a greener future.",
         "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
         "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
       },
@@ -751,10 +747,10 @@
     },
     {
       "slug": "nabij",
-      "title": "Nabij",
+      "title": "Nabij Kombucha - Supporting the Bees",
       "gradient": ["softBlue", "softPink", "softOrange"],
       "detailPage": {
-        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "description": "Nabij Kombucha is our tribute to the incredible world of bees and their vital role in our ecosystem. Infused with local wildflowers, this unique flavor not only offers a delightful, aromatic taste but also supports bee populations in our community. By choosing Nabij Kombucha, you're not only treating yourself to a delicious, healthful beverage but also contributing to the well-being of these hardworking pollinators. This is made possible thanks to our collaboration with Rozebunker and Voedselstation",
         "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
         "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
       },
@@ -764,9 +760,7 @@
           "id": "19161a99-1cd0-42d7-99dc-3177b6a1d34c",
           "url": "https://ucarecdn.com/19961e91-8b81-4578-bc87-05b0c9033179/",
           "width": 500,
-          "height": 908,
-          "displayWidth": 500,
-          "displayHeight": 908
+          "height": 908
         }
       },
       "isCollaboration": "0",
@@ -778,10 +772,10 @@
     },
     {
       "slug": "x-declique",
-      "title": "Degrow Lab X deClique",
+      "title": "Degrow Lab X deClique Orange Hibiscus",
       "color": "softPink",
       "detailPage": {
-        "description": "Degrow lab is an Utrecht- based kombucha Microbrewery. We are obsessed with brewing craft kombucha, while also determined to run our company according to principles of sustainability.",
+        "description": "Our Orange Hibiscus Kombucha offers a bright, uplifting burst of citrus flavor, achieved through our commitment to zero waste. We source orange peels saved from fresh juice machines, transforming them into a flavorful, sustainable ingredient. Combined with the delicate floral notes of hibiscus, this kombucha is a refreshing and eco-friendly choice for those seeking a vibrant, guilt-free beverage.",
         "ingredients": "Kombucha** (Water, Rietsuiker*, Groene Thee*, Zwarte Thee*, Kombucha-cultuur*) Tepache** (Water, Piloncillo, Ananas, Kaneel, Kruidnagel, Spaanse peper). *Biologisch, ** lokaal uit Utrecht",
         "nutrition": "<p>Energie 98.3 Kj (23.2 kcal) Vetten &lt; 0.0g Koolhydraten 5.8g Waarvan suikers 5.8g Vezels 0.0g Eiwitten 0.0g Zout 0.0g</p><p></p><p>*Per 100 ml</p>"
       },
@@ -829,7 +823,7 @@
   ],
   "defaults": {
     "seo": {
-      "title": "DeGrowLab",
+      "title": "Degrow Lab",
       "description": "Kombucha"
     }
   }

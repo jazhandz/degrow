@@ -6,6 +6,7 @@ import { BreakpointBlock } from "./BreakpointBlock";
 import { CenterImageBlock } from "./CenterImageBlock";
 import { ChapterHeadingBlock } from "./ChapterHeadingBlock";
 import { DiscoverFlavoursBlock } from "./DiscoverFlavoursBlock";
+import { DiscoverFlavoursVerticalBlock } from "./DiscoverFlavoursVerticalBlock";
 import { FlavourBlock } from "./FlavourBlock";
 import { HeadingBlock } from "./HeadingBlock";
 import { LargeImageBlock } from "./LargeImageBlock";
@@ -67,6 +68,9 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
           }
           case "discover-flavours": {
             return <DiscoverFlavoursBlock key={itemKey} {...block} />;
+          }
+          case "discover-flavours-vertical": {
+            return <DiscoverFlavoursVerticalBlock key={itemKey} {...block} />;
           }
           case "flavour": {
             return <FlavourBlock key={itemKey} {...block} />;
