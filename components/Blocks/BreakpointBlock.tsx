@@ -6,18 +6,18 @@ import { IsDesktop } from "../Breakpoints/IsDesktop";
 
 // Block Type
 export type BreakpointBlockType = {
-  mobile: BlockType<any>;
-  desktop: BlockType<any>;
+  mobile: [BlockType<any>];
+  desktop: [BlockType<any>];
 };
 
 export function BreakpointBlock({ mobile, desktop }: BreakpointBlockType) {
   return (
     <>
       <IsMobile>
-        <Blocks data={[mobile]} />
+        <Blocks data={[mobile[0]]} />
       </IsMobile>
       <IsDesktop>
-        <Blocks data={[desktop]} />
+        <Blocks data={[desktop[0]]} />
       </IsDesktop>
     </>
   );

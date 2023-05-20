@@ -2,13 +2,11 @@ import { media } from "@/styles/media";
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
-import { Picture, PictureProps } from "../Picture";
-import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
+import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 
 export interface CenterImageBlockType {
   size?: "large" | "small";
-  alt: string;
-  picture: UploadCarePictureProps;
+  picture: StoryblokPictureProps;
   imageFit?: "contain" | "cover";
   maxHeight?: string;
 }
@@ -45,20 +43,18 @@ const CenterBlockImageStyled = styled(Container)`
 export function CenterImageBlock({
   size = "small",
   picture,
-  alt,
   imageFit = "cover",
   maxHeight = "600px",
 }: CenterImageBlockType) {
   return (
     <CenterBlockImageStyled $size={size}>
-      <UploadCarePicture
+      <StoryblokPicture
         maxHeight={maxHeight}
         objectFit={imageFit}
         resizeWidth={size === "large" ? RESIZE_WIDTH_LARGE : RESIZE_WIDTH_SMALL}
         resizeHeight={size === "large" ? RESIZE_HEIGHT_LARGE : RESIZE_HEIGHT_SMALL}
-        {...picture}
+        {...picture[0]}
         supportedTypes={["webp", "png"]}
-        alt={alt}
       />
     </CenterBlockImageStyled>
   );

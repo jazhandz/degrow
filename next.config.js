@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: "a.storyblok.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "ucarecdn.com",
+        port: "",
+      },
     ],
   },
 };

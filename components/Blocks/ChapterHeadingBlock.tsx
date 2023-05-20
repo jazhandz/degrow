@@ -7,13 +7,13 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
 import { color as colors } from "@/styles/color";
-import { ColorVarientType } from "@/types/CMS/Generic";
+import { ColorDataType } from "@/types/CMS/Generic";
 
 // Block Type
 export type ChapterHeadingBlockType = {
   title: string;
   varient: "h1" | "h2" | "h3" | "h4";
-  color?: ColorVarientType;
+  color?: [] | ColorDataType;
 };
 
 // Styling
@@ -47,7 +47,7 @@ const ColorContainerStyled = styled.div`
 
 export function ChapterHeadingBlock({ title, varient, color }: ChapterHeadingBlockType) {
   return (
-    <ColorContainerStyled $color={color !== undefined ? colors[color] : undefined}>
+    <ColorContainerStyled $color={color != undefined && color.length != 0 ? colors[color[0].color] : undefined}>
       <BorderWrapperStyled>
         <ChapterHeadingStyled as={varient}>{title}</ChapterHeadingStyled>
       </BorderWrapperStyled>
