@@ -6,7 +6,7 @@ import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 
 export interface CenterImageBlockType {
   size?: "large" | "small";
-  picture: StoryblokPictureProps;
+  picture: [StoryblokPictureProps];
   imageFit?: "contain" | "cover";
   maxHeight?: string;
 }
