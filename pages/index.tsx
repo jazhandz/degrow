@@ -3,8 +3,7 @@ import { SEO } from "@/components/SEO";
 import CONTENT from "@/cms/content.json";
 import type { NextPage } from "next";
 import React from "react";
-import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
-import { storyblokInit, apiPlugin } from "@storyblok/react";
+import { getStoryblokApi, useStoryblokState, storyblokInit, apiPlugin } from "@storyblok/react";
 
 storyblokInit({
   accessToken: "9dnLtFcg5u0FNFT4rWvQMwtt",
@@ -13,12 +12,12 @@ storyblokInit({
 
 const HOME_PAGE_DATA = CONTENT.pages.find(page => page.slug === "home");
 
-const Home: NextPage = ({ story, key }: any) => {
-  const liveStory = useStoryblokState(story) as any;
+const Home: NextPage = ({ data, key }: any) => {
+  const liveStory = useStoryblokState(data) as any;
 
-  const blocks = liveStory ? liveStory.content?.body : story.content.body;
+  const blocks = liveStory ? liveStory.content?.body : data.content.body;
 
-  console.log("page data", story, key, liveStory);
+  console.log("page data", data, key, liveStory);
   return (
     <>
       <SEO title="De Grow Lab" description="" />
@@ -43,7 +42,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      story: data ? data.story : false,
+      data: data ? data.story : false,
       key: data ? data.story.id : false,
     },
     revalidate: 3600, // revalidate every hour
