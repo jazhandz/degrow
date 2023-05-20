@@ -5,9 +5,20 @@ import { Container } from "../Container";
 import { fontSize } from "@/styles/fontSize";
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
+import StoryblokClient from "storyblok-js-client";
 
 export interface RichTextBlockType {
   body: string;
+}
+
+const Storyblok = new StoryblokClient({
+  accessToken: "YOUR_TOKEN",
+});
+
+function createMarkup(storyblokHTML: any) {
+  return {
+    __html: Storyblok.richTextResolver.render(storyblokHTML),
+  };
 }
 
 const MOBILE_FONT_SIZE = fontSize.displayMobile;
@@ -35,9 +46,5 @@ const RichTextContainer = styled(Container)`
 `;
 
 export function RichTextBlock({ body }: RichTextBlockType) {
-  return (
-    <RichTextContainer>
-      <RichText>{body}</RichText>
-    </RichTextContainer>
-  );
+  return <RichTextContainer dangerouslySetInnerHTML={createMarkup(body)}></RichTextContainer>;
 }

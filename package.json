@@ -25,6 +25,7 @@
     "react-markdown": "^8.0.0",
     "react-reveal": "^1.2.2",
     "react-transition-group": "^4.4.2",
+    "storyblok-js-client": "^5.10.5",
     "styled-components": "^5.3.3",
     "styled-normalize": "^8.0.7"
   },
