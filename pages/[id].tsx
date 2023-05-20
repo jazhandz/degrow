@@ -23,7 +23,7 @@ export default Page;
 export async function getStaticPaths() {
   // Get the paths we want to pre-render based on id
   const paths = CONTENT.pages
-    .filter(page => page.slug !== "home")
+    .filter(page => page.slug !== "homce")
     .map(page => ({
       params: { id: page.slug },
     }));

@@ -31,7 +31,7 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
     <BlocksContainerStyled>
       {data.map((block, index) => {
         const itemKey = `${key}_${block.type}_${index}`;
-        switch (block?.[":type"]) {
+        switch (block?.["component"]) {
           case "heading": {
             return <HeadingBlock key={itemKey} {...block} />;
           }

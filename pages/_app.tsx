@@ -8,6 +8,12 @@ import GlobalStyles from "@/styles/globalStyles";
 import { useRouter } from "next/router";
 import React from "react";
 import { NavigationType } from "@/types/CMS/Navigation";
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+
+storyblokInit({
+  accessToken: "9dnLtFcg5u0FNFT4rWvQMwtt",
+  use: [apiPlugin],
+});
 
 const NAVIGATION_CONTENT = CONTENT.navigation as NavigationType;
 

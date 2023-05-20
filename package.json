@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@storyblok/react": "^2.1.0",
     "@types/react-lottie": "^1.2.6",
     "@types/react-transition-group": "^4.4.4",
     "@types/styled-components": "^5.1.23",
