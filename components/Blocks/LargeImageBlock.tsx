@@ -1,14 +1,13 @@
 import { spacing } from "@/styles/spacing";
 import * as React from "react";
 import styled from "styled-components";
-import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
+import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 
 export interface LargeImageBlockType {
-  alt: string;
   marginBottom?: string;
   marginTop?: string;
   maxHeight?: string;
-  picture: UploadCarePictureProps;
+  picture: [StoryblokPictureProps];
   imageFit?: "contain" | "cover";
   marginHorizontal?: "small" | "none";
 }
@@ -63,7 +62,6 @@ export function LargeImageBlock({
   marginBottom = "0",
   marginTop = "0",
   marginHorizontal = "none",
-  alt,
   picture,
   maxHeight = "650px",
   imageFit = "contain",
@@ -75,14 +73,13 @@ export function LargeImageBlock({
       $maxHeight={maxHeight}
       $marginHorizontal={marginHorizontal}
     >
-      <UploadCarePicture
+      <StoryblokPicture
         objectFit={imageFit}
         resizeWidth={RESIZE_WIDTH}
         resizeHeight={RESIZE_HEIGHT}
-        {...picture}
+        {...picture[0]}
         maxHeight={maxHeight}
         supportedTypes={["webp", "png"]}
-        alt={alt}
       />
     </LargeBlockImageStyled>
   );

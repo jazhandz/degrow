@@ -3,13 +3,13 @@ import * as React from "react";
 import styled from "styled-components";
 import { Blocks } from "@/components/Blocks";
 import { color as colors } from "@/styles/color";
-import { ColorVarientType } from "@/types/CMS/Generic";
+import { ColorDataType } from "@/types/CMS/Generic";
 
 // Block Type
 export type SectionBlockType = {
   items: BlockType<any>[];
-  color?: ColorVarientType;
-  gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
+  color: [] | ColorDataType;
+  gradient: [] | [ColorDataType, ColorDataType, ColorDataType];
   id: string;
 };
 
@@ -29,8 +29,12 @@ export function SectionBlock({ items, color, id, gradient }: SectionBlockType) {
   return (
     <SectionStyled
       id={id}
-      $gradient={gradient !== undefined ? [colors[gradient[0]], colors[gradient[1]], colors[gradient[2]]] : undefined}
-      $color={color !== undefined ? colors[color] : undefined}
+      $gradient={
+        gradient.length !== 0
+          ? [colors[gradient[0][0].color], colors[gradient[1][0].color], colors[gradient[2][0].color]]
+          : undefined
+      }
+      $color={color.length !== 0 ? colors[color[0].color] : undefined}
     >
       <Blocks data={items} />
     </SectionStyled>
