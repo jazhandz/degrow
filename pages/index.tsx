@@ -1,23 +1,24 @@
 import { Blocks } from "@/components/Blocks";
 import { SEO } from "@/components/SEO";
-import CONTENT from "@/cms/content.json";
+// import CONTENT from "@/cms/content.json"; // STATIC DATA
 import type { NextPage } from "next";
 import React from "react";
 import { getStoryblokApi, useStoryblokState, storyblokInit, apiPlugin } from "@storyblok/react";
+import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
 
 storyblokInit({
   accessToken: "9dnLtFcg5u0FNFT4rWvQMwtt",
   use: [apiPlugin],
 });
 
-const HOME_PAGE_DATA = CONTENT.pages.find(page => page.slug === "home");
+// STATIC DATA
+// const HOME_PAGE_DATA = CONTENT.pages.find(page => page.slug === "home");
 
-const Home: NextPage = ({ data, key }: any) => {
+const Home: NextPage = ({ data }: any) => {
   const liveStory = useStoryblokState(data) as any;
 
   const blocks = liveStory ? liveStory.content?.body : data.content.body;
 
-  console.log("page data", data, key, liveStory);
   return (
     <>
       <SEO title="De Grow Lab" description="" />
@@ -26,24 +27,23 @@ const Home: NextPage = ({ data, key }: any) => {
   );
 };
 
-export default Home;
+export default withNavigationAndFooter(Home);
 
 export async function getStaticProps() {
   // home is the default slug for the homepage in Storyblok
   const slug = "home";
 
-  // load the draft version
-  const sbParams = {
-    version: "draft" as const, // or 'published'
-  };
+  const globalProps = await getStaticGlobalProps();
 
   const storyblokApi = getStoryblokApi();
-  const { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+  const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
+    version: "published" as const, // or 'published'
+  });
 
   return {
     props: {
+      ...globalProps,
       data: data ? data.story : false,
-      key: data ? data.story.id : false,
     },
     revalidate: 3600, // revalidate every hour
   };
