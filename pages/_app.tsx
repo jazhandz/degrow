@@ -27,9 +27,25 @@ export default function MyApp({ Component, pageProps }: StaticProps) {
   const fetchAPI = async () => {
     console.log("sedning");
     const storyblokApi = getStoryblokApi();
-    const response = await storyblokApi.get(`cdn/stories/global/navigation`, { version: "published" });
+    const response = await storyblokApi.get(`cdn/links/`, { version: "published" });
 
-    console.log("response:", response);
+    // console.log("navigation:", data);
+    console.log(
+      "response:",
+      Object.keys(response.data.links)
+        .filter(
+          linkKey =>
+            (response.data.links[linkKey].slug !== "global" &&
+              !response.data.links[linkKey].slug.startsWith("global/") &&
+              !response.data.links[linkKey].is_folder) ||
+            response.data.links[linkKey].slug === "home"
+        )
+        .map(linkKey => {
+          const slug = response.data.links[linkKey].slug;
+
+          return { params: { id: slug } };
+        })
+    );
   };
 
   React.useEffect(() => {

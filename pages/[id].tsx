@@ -35,18 +35,21 @@ export async function getStaticPaths() {
   const { data } = await storyblokApi.get("cdn/links/", {
     version: "published",
   });
+  console.log("navigation:", data);
 
-  const paths = [] as any[];
+  const paths = Object.keys(data.links)
+    .filter(
+      linkKey =>
+        (data.links[linkKey].slug !== "global" &&
+          !data.links[linkKey].slug.startsWith("global/") &&
+          !data.links[linkKey].is_folder) ||
+        data.links[linkKey].slug === "home"
+    )
+    .map(linkKey => {
+      const slug = data.links[linkKey].slug;
 
-  Object.keys(data.links).forEach(linkKey => {
-    if (data.links[linkKey].is_folder || data.links[linkKey].slug === "home") {
-      return;
-    }
-
-    const slug = data.links[linkKey].slug;
-
-    paths.push({ params: { id: slug } });
-  });
+      return { params: { id: slug } };
+    }) as any[];
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
