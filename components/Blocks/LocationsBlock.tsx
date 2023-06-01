@@ -44,7 +44,6 @@ const LocationDirectionsStyled = styled.a`
 `;
 
 export function LocationsBlock({ locations }: LocationsBlockType) {
-  console.log("locs", locations);
   return (
     <ContainerStyled>
       {locations.map(location => (

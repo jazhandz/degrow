@@ -40,7 +40,7 @@ const FooterHeadingStyled = styled.div`
     display: inline-block;
     flex: 1;
   }
-`
+`;
 
 const FooterContentStyled = styled.div`
   @media ${media.mobile} {
@@ -55,43 +55,44 @@ const FooterContentStyled = styled.div`
   min-height: ${MIN_HEIGHT};
   grid-template-columns: auto;
   grid-template-rows: 1fr auto;
-  grid-template-areas: 
+  grid-template-areas:
     "contact other"
     "links note";
   margin: ${spacing.l} ${spacing.m};
   grid-gap: ${spacing.l};
-    & h2{
-      font-size: ${fontSize.p};
-      font-weight: ${fontWeight.thin};
-      text-decoration: underline;
-      margin: 0;
-    }
-    & a, *{
-      line-height: 30px;
-      font-size: ${fontSize.p};
-      font-weight: ${fontWeight.thin};
-    }
+  & h2 {
+    font-size: ${fontSize.p};
+    font-weight: ${fontWeight.thin};
+    text-decoration: underline;
+    margin: 0;
+  }
+  & a,
+  * {
+    line-height: 30px;
+    font-size: ${fontSize.p};
+    font-weight: ${fontWeight.thin};
+  }
 `;
 
 const FooterGridContactStyled = styled.section`
   grid-area: contact;
-`
+`;
 
 const FooterGridOtherStyled = styled.nav`
   grid-area: other;
-`
+`;
 
 const FooterGridLinksStyled = styled.section`
   grid-area: links;
-`
+`;
 
 const FooterGridNoteStyled = styled.div`
   grid-area: note;
   display: flex;
   align-items: flex-end;
-`
+`;
 
-const LinkStyled = styled.a`
+const LinkStyled = styled(Link)`
   text-decoration: none;
   :hover {
     @media ${Constants.media.desktop} {
@@ -107,41 +108,36 @@ interface FooterProps {
 export default function FooterComponent({ data }: FooterProps) {
   return (
     <FooterStyled>
-      <FooterHeadingStyled>
-        {data.title}
-      </FooterHeadingStyled>
+      <FooterHeadingStyled>{data.title}</FooterHeadingStyled>
       <FooterContentStyled>
-        
-          <FooterGridContactStyled>
-            <h2>{data.contact.title}</h2>
+        <FooterGridContactStyled>
+          <h2>{data.contactTitle}</h2>
 
-            <RichText>{data.contact.body}</RichText>
-          </FooterGridContactStyled>
-          
-          <FooterGridOtherStyled>
-            <h2>{data.navigation.title}</h2>
-            {data.navigation.links.map((link) => (
-              <React.Fragment key={`nav_${link.path}`}>
-              <LinkStyled href={link.path}>
-                {link.label}
-              </LinkStyled>
-              <br/>
-              </React.Fragment>
-          ))}
-          </FooterGridOtherStyled>
-          <FooterGridLinksStyled>
-          {data.links.map((link) => (
+          <RichText>{data.contactBody}</RichText>
+        </FooterGridContactStyled>
+
+        <FooterGridOtherStyled>
+          <h2>{data.navigationTitle}</h2>
+          {data.navigation.map(link => (
             <React.Fragment key={`nav_${link.path}`}>
-              <LinkStyled target="blank"  href={link.path}>
+              <LinkStyled target={link.external ? "blank" : undefined} href={link.path}>
                 {link.label}
               </LinkStyled>
-              <br/>
-              </React.Fragment>
+              <br />
+            </React.Fragment>
           ))}
-          </FooterGridLinksStyled>
-          <FooterGridNoteStyled>
-          © 2023
-          </FooterGridNoteStyled>
+        </FooterGridOtherStyled>
+        <FooterGridLinksStyled>
+          {data.links.map(link => (
+            <React.Fragment key={`nav_${link.path}`}>
+              <LinkStyled target={link.external ? "blank" : undefined} href={link.path}>
+                {link.label}
+              </LinkStyled>
+              <br />
+            </React.Fragment>
+          ))}
+        </FooterGridLinksStyled>
+        <FooterGridNoteStyled>© 2023</FooterGridNoteStyled>
       </FooterContentStyled>
     </FooterStyled>
   );

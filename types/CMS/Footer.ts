@@ -1,18 +1,15 @@
 export type FooterType = {
-    "title": string,
-    homePath:string,
-    contact: {
-        title: string,
-        body: string
-    },
-    links: FooterLinkType[],
-    navigation: {
-        title: "Other",
-        links: FooterLinkType[]
-    }
-}
+  title: string;
+  homePath: string;
+  contactTitle: string;
+  contactBody: string;
+  links: FooterLinkType[];
+  navigation: FooterLinkType[];
+  navigationTitle: string;
+};
 
 export type FooterLinkType = {
-    label: string;
-    path: string;
-}
+  label: string;
+  path: string;
+  external: boolean;
+};

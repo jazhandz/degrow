@@ -35,7 +35,6 @@ export async function getStaticPaths() {
   const { data } = await storyblokApi.get("cdn/links/", {
     version: "published",
   });
-  console.log("navigation:", data);
 
   const paths = Object.keys(data.links)
     .filter(

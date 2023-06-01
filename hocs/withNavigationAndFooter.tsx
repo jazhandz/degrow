@@ -1,3 +1,4 @@
+import Footer from "@/layout/Footer";
 import Navigation from "@/layout/Navigation";
 import { getStoryblokApi } from "@storyblok/react";
 import { useRouter } from "next/router";
@@ -14,7 +15,7 @@ const withNavigationAndFooter = (Component: any) => {
         router.asPath.startsWith(colorItem.path)
       )?.color?.[0]?.color ?? undefined;
 
-    console.log("hocdata", props, router.asPath, NAVIGATION_COLOR);
+    const FOOTER_DATA = props.props.footerData;
 
     return (
       <>
@@ -22,6 +23,7 @@ const withNavigationAndFooter = (Component: any) => {
         <main>
           <Component {...props} />
         </main>
+        <Footer data={FOOTER_DATA} />
       </>
     );
   };
@@ -31,13 +33,18 @@ const withNavigationAndFooter = (Component: any) => {
 export async function getStaticGlobalProps() {
   const storyblokApi = getStoryblokApi();
 
-  const data = await storyblokApi.get(`cdn/stories/global/navigation`, {
+  const navData = await storyblokApi.get(`cdn/stories/global/navigation`, {
+    version: "published" as const, // or 'published'
+  });
+
+  const footerData = await storyblokApi.get(`cdn/stories/global/footer`, {
     version: "published" as const, // or 'published'
   });
 
   return {
     props: {
-      navigationData: data ? data.data.story.content.global?.[0] : false,
+      navigationData: navData ? navData.data.story.content.global?.[0] : false,
+      footerData: footerData ? footerData.data.story.content.global?.[0] : false,
     },
     revalidate: 3600, // revalidate every hour
   };
