@@ -8,7 +8,7 @@ import { ColorDataType } from "@/types/CMS/Generic";
 // Block Type
 export type SectionBlockType = {
   items: BlockType<any>[];
-  color: [] | ColorDataType;
+  color: [] | [ColorDataType];
   gradient: [] | [ColorDataType, ColorDataType, ColorDataType];
   id: string;
 };
@@ -31,7 +31,7 @@ export function SectionBlock({ items, color, id, gradient }: SectionBlockType) {
       id={id}
       $gradient={
         gradient.length !== 0
-          ? [colors[gradient[0][0].color], colors[gradient[1][0].color], colors[gradient[2][0].color]]
+          ? [colors[gradient[0].color], colors[gradient[1].color], colors[gradient[2].color]]
           : undefined
       }
       $color={color.length !== 0 ? colors[color[0].color] : undefined}

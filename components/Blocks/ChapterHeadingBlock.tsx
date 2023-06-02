@@ -13,7 +13,7 @@ import { ColorDataType } from "@/types/CMS/Generic";
 export type ChapterHeadingBlockType = {
   title: string;
   varient: "h1" | "h2" | "h3" | "h4";
-  color?: [] | ColorDataType;
+  color?: [] | [ColorDataType];
 };
 
 // Styling

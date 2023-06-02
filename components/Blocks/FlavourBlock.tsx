@@ -1,6 +1,5 @@
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
-import { FlavourType } from "@/types/CMS/Flavours";
 import * as React from "react";
 import styled from "styled-components";
 import { IsDesktop } from "../Breakpoints/IsDesktop";
@@ -15,13 +14,20 @@ import { fontSize } from "@/styles/fontSize";
 import { RichText } from "../RichText";
 import { ColorVarientType } from "@/types/CMS/Generic";
 import { color as colors } from "@/styles/color";
-import { UploadCarePicture } from "../UploadCarePicture";
+import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
+import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 
-export interface FlavourBlockType extends FlavourType {
+export interface FlavourBlockType {
   headingVarient?: "h1" | "h2";
   color?: ColorVarientType;
   gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
   listItem?: boolean;
+  title: string;
+  description: string;
+  ingredients: StoryBlokRichText;
+  nutrition: StoryBlokRichText;
+  isCollaboration: boolean;
+  picture: [StoryblokPictureProps];
 }
 
 const PRODUCT_DESKTOP_PRODUCT_1_WIDTH = "210px";
@@ -62,11 +68,11 @@ const FlavourProductContainerStyled = styled(Container)`
     margin-bottom: ${spacing.m};
     & div {
       &:first-child img {
-        transform: translateY(${PRODUCT_MOBILE_OFFSET_1}%) rotate(${PRODUCT_MOBILE_ROTATE_1}deg);
+        /* transform: translateY(${PRODUCT_MOBILE_OFFSET_1}%) rotate(${PRODUCT_MOBILE_ROTATE_1}deg); */
         width: ${PRODUCT_MOBILE_PRODUCT_1_WIDTH};
       }
       &:last-child img {
-        transform: translateY(${PRODUCT_MOBILE_OFFSET_2}%) rotate(${PRODUCT_MOBILE_ROTATE_2}deg);
+        /* transform: translateY(${PRODUCT_MOBILE_OFFSET_2}%) rotate(${PRODUCT_MOBILE_ROTATE_2}deg); */
         width: ${PRODUCT_MOBILE_PRODUCT_2_WIDTH};
       }
       & img {
@@ -152,7 +158,9 @@ const FlavourStyled = styled.div`
 
 export function FlavourBlock({
   title,
-  detailPage: { titleMobilePicture, titleDesktopPicture, ingredients, nutrition, description },
+  description,
+  ingredients,
+  nutrition,
   picture,
   color,
   gradient,
@@ -170,24 +178,14 @@ export function FlavourBlock({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {titleMobilePicture && titleDesktopPicture ? (
+        {false ? (
           <>
-            <IsMobile>
-              <UploadCarePicture
-                {...titleMobilePicture}
-                resizeWidth={250}
-                resizeHeight={600}
-                supportedTypes={["webp", "png"]}
-              />
+            {/* <IsMobile>
+              <StoryblokPicture {...picture} resizeWidth={250} resizeHeight={600} supportedTypes={["webp", "png"]} />
             </IsMobile>
             <IsDesktop>
-              <UploadCarePicture
-                {...titleDesktopPicture}
-                resizeWidth={250}
-                resizeHeight={600}
-                supportedTypes={["webp", "png"]}
-              />
-            </IsDesktop>
+              <StoryblokPicture {...picture} resizeWidth={250} resizeHeight={600} supportedTypes={["webp", "png"]} />
+            </IsDesktop> */}
           </>
         ) : (
           <HeadingBlock title={title} varient="h1" />
@@ -201,7 +199,13 @@ export function FlavourBlock({
           whileInView={{ opacity: 0.9, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)` }}
           viewport={{ once: true }}
         >
-          <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} />
+          <StoryblokPicture
+            {...picture[0]}
+            resizeWidth={250}
+            resizeHeight={500}
+            objectFit={"contain"}
+            supportedTypes={["webp", "png"]}
+          />
         </ProductLeftContainerStyled>
         <ProductRightContainerStyled
           transition={{ ...ANIMATION_TRANSITION, delay: 0.1 }}
@@ -209,7 +213,13 @@ export function FlavourBlock({
           whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg)` }}
           viewport={{ once: true }}
         >
-          <UploadCarePicture {...picture} supportedTypes={["webp", "png"]} />
+          <StoryblokPicture
+            {...picture[0]}
+            resizeWidth={250}
+            resizeHeight={500}
+            objectFit={"contain"}
+            supportedTypes={["webp", "png"]}
+          />
         </ProductRightContainerStyled>
       </FlavourProductContainerStyled>
       <RichTextBlock body={description} />

@@ -1,8 +1,9 @@
 import { parseStoryblokRichText } from "@/functions/parse-storyblok-richtext";
+import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
 import * as React from "react";
 
 interface RichTextProps {
-  children: string;
+  children: StoryBlokRichText;
 }
 
 export function RichText({ children }: RichTextProps) {

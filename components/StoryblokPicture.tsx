@@ -44,6 +44,8 @@ export function StoryblokPicture({
   };
 
   const isComplete = image?.filename && dimensions?.height && dimensions?.width;
+
+  // If square images only, this could be the cause!!
   const formatResize = `${resizeWidth}x${resizeHeight}`;
   return (
     <PictureStyled $objectFit={objectFit} $maxHeight={maxHeight}>

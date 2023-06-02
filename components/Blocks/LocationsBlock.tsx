@@ -2,12 +2,14 @@ import { fontSize } from "@/styles/fontSize";
 import { fontWeight } from "@/styles/fontWeight";
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
+import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
 import styled from "styled-components";
 import { Container } from "../Container";
 import { RichText } from "../RichText";
 
 type LocationType = {
-  address: string;
+  uid: string;
+  address: StoryBlokRichText;
   link: string;
 };
 
@@ -47,7 +49,7 @@ export function LocationsBlock({ locations }: LocationsBlockType) {
   return (
     <ContainerStyled>
       {locations.map(location => (
-        <LocationStyled key={location.address}>
+        <LocationStyled key={location.uid}>
           <RichText>{location.address}</RichText>
           <LocationDirectionsStyled target="blank" href={location.link}>
             Directions

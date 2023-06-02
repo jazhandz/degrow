@@ -4,10 +4,14 @@ import CONTENT from "@/cms/content.json";
 import { FlavourType } from "@/types/CMS/Flavours";
 import type { GetServerSideProps, NextPage } from "next";
 import React from "react";
+import { getStoryblokApi } from "@storyblok/react";
+import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
 
 const FLAVOURS = CONTENT.flavours;
 
 const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType }) => {
+  console.log("dataaaaaAA:", data);
+
   return (
     <>
       <SEO title="De Grow Lab" description="" />
@@ -15,23 +19,23 @@ const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType
         key={data.title}
         data={[
           {
-            ":type": "section",
-            color: data.color,
+            component: "section",
+            color: data.color ?? [],
             gradient: data.gradient,
             items: [
               {
-                ":type": "flavour",
                 ...data,
-                gradient: undefined, // Used in section
-                color: undefined, // Used in section
+                component: "flavour",
+                gradient: [], // Used in section
+                color: [], // Used in section
               },
               {
-                ":type": "heading",
+                component: "heading",
                 title: `DISCOVER OUR OTHER FLAVOURS`,
                 varient: "h2",
               },
               {
-                ":type": "discover-flavours",
+                component: "discover-flavours",
               },
             ],
           },
@@ -41,14 +45,23 @@ const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType
   );
 };
 
-export default Flavours;
+export default withNavigationAndFooter(Flavours);
 
 // This function gets called at build time
 export async function getStaticPaths() {
-  // Get the paths we want to pre-render based on id
-  const paths = FLAVOURS.map(flavour => ({
-    params: { id: flavour.slug },
-  }));
+  const storyblokApi = getStoryblokApi();
+
+  const { data } = await storyblokApi.get("cdn/links/", {
+    version: "published",
+  });
+
+  const paths = Object.keys(data.links)
+    .filter(linkKey => data.links[linkKey].slug.startsWith("flavours/"))
+    .map(linkKey => {
+      const slug = data.links[linkKey].slug.replace("flavours/", "");
+
+      return { params: { id: slug } };
+    }) as any[];
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
@@ -59,6 +72,12 @@ export const getStaticProps: GetServerSideProps<{ data: FlavourType }> = async c
   const { params } = context;
   const id = params?.id;
 
-  const data = FLAVOURS.find(flavour => flavour.slug === id) as FlavourType; // This is fine to cast, id is taken care of in static path and returns 404 otherwise
-  return { props: { data: data } };
+  const globalProps = await getStaticGlobalProps();
+
+  const storyblokApi = getStoryblokApi();
+  const { data } = await storyblokApi.get(`cdn/stories/flavours/${id}`, {
+    version: "published" as const,
+  });
+
+  return { props: { ...globalProps, data: data.story.content } };
 };

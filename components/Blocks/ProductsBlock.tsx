@@ -1,12 +1,14 @@
 import { fontSize } from "@/styles/fontSize";
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
+import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../Container";
 import { Hr } from "../HR";
 import { Picture, PictureProps } from "../Picture";
 import { RichText } from "../RichText";
+import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
 
 export interface ProductsBlockType extends PictureProps {
@@ -14,9 +16,9 @@ export interface ProductsBlockType extends PictureProps {
 }
 
 interface ProductType {
-  picture: UploadCarePictureProps;
-  title: string;
-  details: string;
+  picture: [StoryblokPictureProps];
+  title: StoryBlokRichText;
+  details: StoryBlokRichText;
   whereToBuy: string;
   price: string;
 }
@@ -102,10 +104,10 @@ export function ProductsBlock({ products }: ProductsBlockType) {
   return (
     <ProductsBlockImageStyled maxWidth={["1024px", "1024px"]}>
       {products.map((product, index) => (
-        <React.Fragment key={product.title}>
+        <React.Fragment key={product.uid}>
           <ProductContainerStyled as="article">
-            <UploadCarePicture
-              {...product.picture}
+            <StoryblokPicture
+              {...product.picture[0]}
               supportedTypes={["webp", "png"]}
               resizeWidth={RESIZE_WIDTH}
               resizeHeight={RESIZE_HEIGHT}
