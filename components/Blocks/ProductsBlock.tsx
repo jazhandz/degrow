@@ -16,6 +16,7 @@ export interface ProductsBlockType extends PictureProps {
 }
 
 interface ProductType {
+  uid: string;
   picture: [StoryblokPictureProps];
   title: StoryBlokRichText;
   details: StoryBlokRichText;

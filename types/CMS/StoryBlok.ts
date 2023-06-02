@@ -1,4 +1,1 @@
-export type StoryBlokRichText = {
-  type: "doc";
-  content: object[];
-};
+export type StoryBlokRichText = any;

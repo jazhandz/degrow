@@ -5,9 +5,10 @@ import { Container } from "../Container";
 import { fontSize } from "@/styles/fontSize";
 import { media } from "@/styles/media";
 import { spacing } from "@/styles/spacing";
+import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
 
 export interface ArticleBlockType {
-  body: string;
+  body: StoryBlokRichText;
 }
 
 const MOBILE_FONT_SIZE = fontSize.articleMobile;

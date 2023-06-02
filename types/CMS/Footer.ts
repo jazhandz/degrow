@@ -1,8 +1,10 @@
+import { StoryBlokRichText } from "./StoryBlok";
+
 export type FooterType = {
   title: string;
   homePath: string;
   contactTitle: string;
-  contactBody: string;
+  contactBody: StoryBlokRichText;
   links: FooterLinkType[];
   navigation: FooterLinkType[];
   navigationTitle: string;

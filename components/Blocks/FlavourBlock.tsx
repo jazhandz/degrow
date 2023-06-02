@@ -28,6 +28,8 @@ export interface FlavourBlockType {
   nutrition: StoryBlokRichText;
   isCollaboration: boolean;
   picture: [StoryblokPictureProps];
+  headerMobilePicture: [] | [StoryblokPictureProps];
+  headerDesktopPicture: [] | [StoryblokPictureProps];
 }
 
 const PRODUCT_DESKTOP_PRODUCT_1_WIDTH = "210px";
@@ -165,6 +167,8 @@ export function FlavourBlock({
   color,
   gradient,
   listItem,
+  headerMobilePicture,
+  headerDesktopPicture,
 }: FlavourBlockType) {
   return (
     <FlavourStyled
@@ -178,14 +182,24 @@ export function FlavourBlock({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {false ? (
+        {headerMobilePicture[0] && headerDesktopPicture[0] ? (
           <>
-            {/* <IsMobile>
-              <StoryblokPicture {...picture} resizeWidth={250} resizeHeight={600} supportedTypes={["webp", "png"]} />
+            <IsMobile>
+              <StoryblokPicture
+                {...headerMobilePicture[0]}
+                resizeWidth={250}
+                resizeHeight={600}
+                supportedTypes={["webp", "png"]}
+              />
             </IsMobile>
             <IsDesktop>
-              <StoryblokPicture {...picture} resizeWidth={250} resizeHeight={600} supportedTypes={["webp", "png"]} />
-            </IsDesktop> */}
+              <StoryblokPicture
+                {...headerDesktopPicture[0]}
+                resizeWidth={250}
+                resizeHeight={600}
+                supportedTypes={["webp", "png"]}
+              />
+            </IsDesktop>
           </>
         ) : (
           <HeadingBlock title={title} varient="h1" />

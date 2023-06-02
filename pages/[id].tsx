@@ -40,7 +40,9 @@ export async function getStaticPaths() {
     .filter(
       linkKey =>
         (data.links[linkKey].slug !== "global" &&
+          data.links[linkKey].slug !== "flavours" &&
           !data.links[linkKey].slug.startsWith("global/") &&
+          !data.links[linkKey].slug.startsWith("flavours/") &&
           !data.links[linkKey].is_folder) ||
         data.links[linkKey].slug === "home"
     )
