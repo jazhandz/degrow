@@ -7,6 +7,7 @@ import React from "react";
 import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
 import { getStoryblokApi } from "@storyblok/react";
 import { StaticDataType } from "@/components/Blocks/Blocks";
+import { getDiscoverFlavours } from "@/functions/data/get-discover-flavours";
 
 const FLAVOURS = CONTENT.flavours;
 
@@ -46,6 +47,7 @@ export default withNavigationAndFooter(Flavours);
 
 export const getStaticProps: GetServerSideProps<{ data: any; staticData: StaticDataType }> = async () => {
   const globalProps = await getStaticGlobalProps();
+  const discoverFlavours = await getDiscoverFlavours();
 
   const storyblokApi = getStoryblokApi();
   const { data } = await storyblokApi.get(`cdn/stories`, {
@@ -53,13 +55,15 @@ export const getStaticProps: GetServerSideProps<{ data: any; staticData: StaticD
     starts_with: "flavours/",
   });
 
+  console.log("data", data);
+
   return {
     props: {
       ...globalProps,
-      data: data.stories.map((item: any) =>
-        ({ ...item.content, slug: item.slug }.filter((item: any) => item.isCollaboration === true))
-      ),
-      staticData: { discoverFlavours: undefined },
+      data: data.stories
+        .map((item: any) => ({ ...item.content, slug: item.slug }))
+        .filter((item: any) => item.isCollaboration === true),
+      staticData: { discoverFlavours },
     },
   };
 };
