@@ -242,9 +242,7 @@ export function FlavourBlock({
       </FlavourProductContainerStyled>
       <RichTextBlock body={description} />
       <LinkBlock href={`/find-us`} text="Where to buy?" />
-      <Container>
-        <Hr />
-      </Container>
+      <Hr />
       <ProductDetailsStyled>
         <ProductDataLabelStyled>
           <ProductDetailTypeStyled>Ingrediënten</ProductDetailTypeStyled>
@@ -259,11 +257,7 @@ export function FlavourBlock({
           </ProductDetailDataStyled>
         </ProductDataLabelStyled>
       </ProductDetailsStyled>
-      {!listItem && (
-        <Container>
-          <Hr />
-        </Container>
-      )}
+      {!listItem && <Hr />}
     </FlavourStyled>
   );
 }

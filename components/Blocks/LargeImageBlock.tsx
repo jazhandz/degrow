@@ -6,7 +6,7 @@ import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 export interface LargeImageBlockType {
   marginBottom?: string;
   marginTop?: string;
-  maxHeight?: number;
+  maxHeight?: string;
   picture: [StoryblokPictureProps];
   imageFit?: "contain" | "cover";
   marginHorizontal?: "small" | "none";
@@ -63,14 +63,15 @@ export function LargeImageBlock({
   marginTop = "0",
   marginHorizontal = "none",
   picture,
-  maxHeight = 650,
+  maxHeight = "650px",
   imageFit = "contain",
 }: LargeImageBlockType) {
+  console.log("image horiza", marginHorizontal);
   return (
     <LargeBlockImageStyled
       $marginBottom={marginBottom}
       $marginTop={marginTop}
-      $maxHeight={`${maxHeight}px`}
+      $maxHeight={`${maxHeight}`}
       $marginHorizontal={marginHorizontal}
     >
       <StoryblokPicture
@@ -78,7 +79,7 @@ export function LargeImageBlock({
         resizeWidth={RESIZE_WIDTH}
         resizeHeight={RESIZE_HEIGHT}
         {...picture[0]}
-        maxHeight={`${maxHeight}px`}
+        maxHeight={`${maxHeight}`}
         supportedTypes={["webp", "png"]}
       />
     </LargeBlockImageStyled>

@@ -22,6 +22,7 @@ const ContainerStyled = styled(Container)`
   padding: 0 0;
   margin-top: 0px;
   margin-bottom: 0px;
+  text-align: center;
 `;
 
 const LocationStyled = styled.span`
