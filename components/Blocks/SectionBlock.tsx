@@ -36,7 +36,7 @@ export function SectionBlock({ items, color, id, gradient, staticData }: Section
           ? [colors[gradient[0].color], colors[gradient[1].color], colors[gradient[2].color]]
           : undefined
       }
-      $color={color.length !== 0 ? colors[color[0].color] : undefined}
+      $color={color !== undefined && color.length !== 0 ? colors[color[0].color] : undefined}
     >
       <Blocks data={items} staticData={staticData} />
     </SectionStyled>

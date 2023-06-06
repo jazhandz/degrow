@@ -6,20 +6,19 @@ import type { GetServerSideProps, NextPage } from "next";
 import React from "react";
 import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
-import { getFlavours } from "@/functions/data/get-flavours";
 import { StaticDataType } from "@/components/Blocks/Blocks";
 import { getDiscoverFlavours } from "@/functions/data/get-discover-flavours";
 
 const FLAVOURS = CONTENT.flavours;
 
-const Flavours: NextPage<{ data: FlavourType }> = ({
+const Flavours: NextPage<{ data: { story: { content: FlavourType } }; staticData: StaticDataType }> = ({
   data,
   staticData,
 }: {
   data: { story: { content: FlavourType } };
   staticData: StaticDataType;
 }) => {
-  const liveStory = useStoryblokState(data) as any;
+  const liveStory = useStoryblokState(data as any) as any;
 
   const flavour = liveStory ? liveStory.story?.content : data.story.content;
 

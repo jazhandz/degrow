@@ -8,5 +8,11 @@ export async function getDiscoverFlavours() {
     resolve_relations: "flavour-discover-item.flavour",
   });
 
-  return data as DiscoverFlavoursBlockType;
+  return data as {
+    story: {
+      content: {
+        global: [DiscoverFlavoursBlockType];
+      };
+    };
+  };
 }

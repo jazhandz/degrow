@@ -16,21 +16,21 @@ storyblokInit({
   use: [apiPlugin],
 });
 
-const Page: NextPage<{ data: PageType; staticData: StaticDataType }> = ({
+const Page: NextPage<{ data: { content: { body: PageType } }; staticData: StaticDataType }> = ({
   data,
   staticData,
 }: {
-  data: PageType;
+  data: { content: { body: PageType } };
   staticData: StaticDataType;
 }) => {
-  const liveStory = useStoryblokState(data) as any;
+  const liveStory = useStoryblokState(data as any) as any;
 
   const blocks = liveStory ? liveStory.content?.body : data.content.body;
 
   return (
     <>
       {/* <SEO title={data?.seo?.title} description={data?.seo?.description} /> */}
-      <Blocks key={data.id} staticData={staticData} data={blocks} />
+      <Blocks key={blocks.id} staticData={staticData} data={blocks} />
     </>
   );
 };
@@ -65,7 +65,7 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export const getStaticProps: GetServerSideProps<{ data: PageType; staticData: StaticDataType }> = async context => {
+export const getStaticProps: GetServerSideProps<{ data: any; staticData: StaticDataType }> = async context => {
   const { params } = context;
   const id = params?.id;
 

@@ -8,7 +8,7 @@ export const HOME_PAGE_DATA: PageType = {
   },
   blocks: [
     {
-      type: "paragraph",
+      component: "paragraph",
       body: `Degrow lab is an Utrecht- based kombucha
                 Microbrewery. We are obsessed with brewing
                 craft kombucha, while also determined to
@@ -16,10 +16,10 @@ export const HOME_PAGE_DATA: PageType = {
                 of sustainability.`,
     },
     {
-      type: "breakpoint",
+      component: "breakpoint",
       mobile: [
         {
-          type: "large-image",
+          component: "large-image",
           data: {
             alt: "large illustration",
             objectFit: "contain",
@@ -33,7 +33,7 @@ export const HOME_PAGE_DATA: PageType = {
       ],
       desktop: [
         {
-          type: "large-image",
+          component: "large-image",
           data: {
             alt: "large illustration",
             src: "/images/large_illustration",
@@ -46,17 +46,17 @@ export const HOME_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "what-is-kombucha",
       color: [{ color: "softGreen" }],
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           title: `What is kombucha?`,
           varient: "h2",
         },
         {
-          type: "center-image",
+          component: "center-image",
           alt: "large illustration",
           src: "/images/tea_leaves",
           supportedTypes: ["webp", "png"],
@@ -65,12 +65,12 @@ export const HOME_PAGE_DATA: PageType = {
           height: 437,
         },
         {
-          type: "heading",
+          component: "heading",
           title: `KOMBUCHA IS COMUNITY`,
           varient: "h3",
         },
         {
-          type: "paragraph",
+          component: "paragraph",
           body: `Quite literally kombucha is fermented tea created by a
                             community of yeast and bacteria cultures working
                             symbiotically together. The yeast metabolize sugar
@@ -80,18 +80,18 @@ export const HOME_PAGE_DATA: PageType = {
                             organic acids, and antioxidants.`,
         },
         {
-          type: "link",
+          component: "link",
           text: "I'm sold! Where to buy?",
           href: "/shop",
         },
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "community",
       items: [
         {
-          type: "large-image",
+          component: "large-image",
           alt: "large illustration",
           src: "/images/flowers",
           supportedTypes: ["webp", "jpg"],
@@ -99,24 +99,24 @@ export const HOME_PAGE_DATA: PageType = {
           height: 651,
         },
         {
-          type: "heading",
+          component: "heading",
           title: `KOMBUCHA FOR A MORE VIBRANT COMMUNITY`,
           varient: "h2",
         },
         {
-          type: "paragraph",
+          component: "paragraph",
           body: `Our focus is brewing a craft product with positive environmental impacts. This means sourcing locally, collaborating with other small businesses, and selecting ingredients for their impact. For instance, our Nabij kombucha is brewed with wildflowers planted in the Dutch countryside specifically to benefit pollinators and other insects. We also work with circular ingredients, such as our orange hibiscus kombucha which uses upcycled residual streams from orange peels.`,
         },
         {
-          type: "link",
+          component: "link",
           text: "Read more",
           href: "/about",
         },
         {
-          type: "breakpoint",
+          component: "breakpoint",
           data: {
             mobile: {
-              type: "large-image",
+              component: "large-image",
               alt: "large illustration",
               objectFit: "contain",
               src: "/images/bee_illustration",
@@ -126,7 +126,7 @@ export const HOME_PAGE_DATA: PageType = {
               height: 1380,
             },
             desktop: {
-              type: "large-image",
+              component: "large-image",
               alt: "large illustration",
               src: "/images/bees_illustration",
               supportedTypes: ["webp", "png"],
@@ -139,18 +139,18 @@ export const HOME_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "we-are-a-local-brewery",
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           title: `WE ARE A LOCAL BREWERY`,
           varient: "h2",
           color: "softPink",
         },
 
         {
-          type: "center-image",
+          component: "center-image",
           alt: "large illustration",
           src: "/images/working_tanks",
           supportedTypes: ["webp", "jpg"],
@@ -158,19 +158,19 @@ export const HOME_PAGE_DATA: PageType = {
           height: 493,
         },
         {
-          type: "paragraph",
+          component: "paragraph",
           body: `<p>We are an Utrecht-based kombucha nanobrewery. We are incredibly grateful for our community that has enabled us to grow this far. From café owners that have given us a chance, to the people drinking our kombucha, and everyone in between. We wouldn’t be here today without them.</p>`,
         },
         {
-          type: "link",
+          component: "link",
           text: "Read more",
           href: "/about",
         },
         {
-          type: "breakpoint",
+          component: "breakpoint",
           data: {
             mobile: {
-              type: "center-image",
+              component: "center-image",
               size: "small",
               alt: "large illustration",
               src: "/images/rain_illustration",
@@ -179,7 +179,7 @@ export const HOME_PAGE_DATA: PageType = {
               height: 1388,
             },
             desktop: {
-              type: "large-image",
+              component: "large-image",
               alt: "large illustration",
               src: "/images/plant_hands_illustration",
               supportedTypes: ["webp", "png"],
@@ -191,11 +191,11 @@ export const HOME_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "core-values",
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           data: {
             title: `OUR CORE VALUES`,
             varient: "h2",
@@ -203,7 +203,7 @@ export const HOME_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: `<p>We started Degrow lab to make an awesome local product,
                             to make a name for ourselves, to meet our community and
@@ -221,7 +221,7 @@ export const HOME_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "link",
+          component: "link",
           data: {
             text: "Read more",
             href: "/about",
@@ -230,20 +230,20 @@ export const HOME_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "heading",
+      component: "heading",
       title: `DISCOVER OUR FLAVOURS`,
       varient: "h2",
     },
     {
-      type: "discover-flavours",
+      component: "discover-flavours",
     },
     {
-      type: "section",
+      component: "section",
       id: "newsletter",
       color: [{ color: "softGreen" }],
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           data: {
             title: "NEWSLETTER",
           },

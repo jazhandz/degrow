@@ -8,22 +8,22 @@ export const FIND_US_PAGE_DATA: PageType = {
   },
   blocks: [
     {
-      type: "section",
+      component: "section",
       id: "team",
       items: [
         {
-          type: "heading",
+          component: "heading",
           title: "You can try our craft kombucha at the following places",
           varient: "h1",
         },
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           title: "UTRECHT, NL",
           varient: "h2",
           color: "softBlue",
         },
         {
-          type: "locations",
+          component: "locations",
           locations: [
             {
               address: "The Village Coffee & Music<br/>Voorstraat 44-46,<br/>3512 AP Utrecht",
@@ -52,13 +52,13 @@ export const FIND_US_PAGE_DATA: PageType = {
           ],
         },
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           title: "AMSTERDAM, NL",
           varient: "h2",
           color: "softGreen",
         },
         {
-          type: "locations",
+          component: "locations",
           locations: [
             {
               address: "The Village Coffee & Music<br/>Voorstraat 44-46,<br/>3512 AP Utrecht",

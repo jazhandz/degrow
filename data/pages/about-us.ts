@@ -8,25 +8,25 @@ export const ABOUT_PAGE_DATA: PageType = {
   },
   blocks: [
     {
-      type: "section",
+      component: "section",
       id: "team",
       color: [{ color: "softPink" }],
       items: [
         {
-          type: "heading",
+          component: "heading",
           data: {
             title: "We’re a small team and we’re obsessed with brewing craft kombucha with impact.",
             varient: "h1",
           },
         },
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: "Jaz Hereford,<br/>Gabriël Bijleveld,<br/>Tom Sifrin &<br/>Lily Mengyao.",
           },
         },
         {
-          type: "center-image",
+          component: "center-image",
           data: {
             src: "/images/team_photo",
             alt: "team photo",
@@ -40,11 +40,11 @@ export const ABOUT_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "our-story",
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           data: {
             title: "OUR STORY",
             varient: "h2",
@@ -52,13 +52,13 @@ export const ABOUT_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: "We are four friends making kombucha to the best of our ability. Jaz is the founder and head brewer, Lilly leads our finances and makes sure the bills are paid, Gabriël is our technical lead and assists with brewing, and Tom leads our sales and marketing.",
           },
         },
         {
-          type: "link",
+          component: "link",
           data: {
             text: "Read our full story here",
             href: "/our-story",
@@ -67,11 +67,11 @@ export const ABOUT_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "merchandise",
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           data: {
             title: "MERCHANDISE",
             varient: "h2",
@@ -79,13 +79,13 @@ export const ABOUT_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: "We’re proud of our brand and our ideals so we want as many people to get to know us and our mission. Therefor we occasionally create cool merchandise that you can pick up at our HQ, if you’re in time that is.",
           },
         },
         {
-          type: "products",
+          component: "products",
           products: [
             {
               picture: {
@@ -137,12 +137,12 @@ export const ABOUT_PAGE_DATA: PageType = {
       ],
     },
     {
-      type: "section",
+      component: "section",
       id: "newsletter",
       color: [{ color: "softGreen" }],
       items: [
         {
-          type: "chapter-heading",
+          component: "chapter-heading",
           data: {
             title: "NEWSLETTER",
           },

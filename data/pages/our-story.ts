@@ -8,18 +8,18 @@ export const OUR_STORY_PAGE_DATA: PageType = {
   },
   blocks: [
     {
-      type: "section",
+      component: "section",
       id: "team",
-      gradient: ["softGreen", "softBlue", "softPink"],
+      gradient: [{ color: "softGreen" }, { color: "softBlue" }, { color: "softPink" }],
       items: [
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: "Jaz here, reminiscing on the story of Degrow lab. Quite simply it started as a shared feeling of discontentment with our ‘day jobs’, shared between me, Ciaran Raymer, and Tom Peek.",
           },
         },
         {
-          type: "center-image",
+          component: "center-image",
           data: {
             alt: "large illustration",
             src: "/images/flowers",
@@ -29,7 +29,7 @@ export const OUR_STORY_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "article",
+          component: "article",
           data: {
             body: `
               <p>All three of us were about a year out of our Sustainable Development masters, and the reality of the job market in our field didn’t quite match our ambitions/expectations. For myself, I spent most of the day behind a computer screen, not directly doing anything for environment, which is where my passions lie… and then the pandemic happened.</p>
@@ -37,16 +37,16 @@ export const OUR_STORY_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: "I took this presentation to both my friends Tom and Ciaran. I’m not exactly sure how I managed to convince them to join me but convince them I did. With renewed confidence the three of us started degrow lab together, found a café to host our fledgling operations and grew the business from seed to sprout.",
           },
         },
         {
-          type: "breakpoint",
+          component: "breakpoint",
           data: {
             mobile: {
-              type: "large-image",
+              component: "large-image",
               data: {
                 alt: "large illustration",
                 objectFit: "contain",
@@ -58,7 +58,7 @@ export const OUR_STORY_PAGE_DATA: PageType = {
               },
             },
             desktop: {
-              type: "large-image",
+              component: "large-image",
               data: {
                 alt: "large illustration",
                 src: "/images/bees_illustration",
@@ -71,7 +71,7 @@ export const OUR_STORY_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "article",
+          component: "article",
           data: {
             body: `
               <p>This journey has been an emotional roller coaster of extreme highs and lows. Despite lockdowns, failed batches, rejection, and losing both Ciaran and Tom to other endeavors, degrow lab’s sprout has continued to grow deeper roots. I could not have started the company without both Tom and Ciaran, and I could not have continued it without the partners that have joined since.</p>
@@ -81,7 +81,7 @@ export const OUR_STORY_PAGE_DATA: PageType = {
           },
         },
         {
-          type: "rich-text",
+          component: "rich-text",
           data: {
             body: `Here we are now, growing in our ability to make a product worthy of our ideals and our customers pallet.<br/><br/>To be continued…<br/><br/>`,
           },

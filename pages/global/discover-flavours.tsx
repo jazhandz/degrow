@@ -22,7 +22,6 @@ const DiscoverFlavours: NextPage<{ staticData: any }> = ({
     <>
       <SEO title="De Grow Lab" description="" />
       <Blocks
-        // @ts-ignore
         staticData={{ discoverFlavours: flavourDataBlock } as StaticDataType}
         data={[
           {
