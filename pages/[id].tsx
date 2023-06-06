@@ -43,16 +43,13 @@ export async function getStaticPaths() {
 
   const { data } = await storyblokApi.get("cdn/links/", {
     version: "published",
+    per_page: 100,
   });
 
   const paths = Object.keys(data.links)
     .filter(
       linkKey =>
-        (data.links[linkKey].slug !== "global" &&
-          data.links[linkKey].slug !== "flavours" &&
-          !data.links[linkKey].slug.startsWith("global/") &&
-          !data.links[linkKey].slug.startsWith("flavours/") &&
-          !data.links[linkKey].is_folder) ||
+        (!data.links[linkKey].slug.includes("/") && !data.links[linkKey].is_folder) ||
         data.links[linkKey].slug === "home"
     )
     .map(linkKey => {
@@ -76,6 +73,7 @@ export const getStaticProps: GetServerSideProps<{ data: any; staticData: StaticD
   const storyblokApi = getStoryblokApi();
   const { data } = await storyblokApi.get(`cdn/stories/${id}`, {
     version: "published" as const,
+    resolve_relations: "products.products",
   });
 
   return { props: { ...globalProps, data: data.story, staticData: { discoverFlavours } } };

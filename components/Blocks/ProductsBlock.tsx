@@ -12,7 +12,7 @@ import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 import { UploadCarePicture, UploadCarePictureProps } from "../UploadCarePicture";
 
 export interface ProductsBlockType extends PictureProps {
-  products: ProductType[];
+  products: [{ content: ProductType; id: string }];
 }
 
 interface ProductType {
@@ -102,37 +102,42 @@ const ProductContainerStyled = styled(Container)`
 `;
 
 export function ProductsBlock({ products }: ProductsBlockType) {
+  console.log("products:", products);
   return (
     <ProductsBlockImageStyled maxWidth={["1024px", "1024px"]}>
       {products.map((product, index) => (
-        <React.Fragment key={product.uid}>
+        <React.Fragment key={product.id}>
           <ProductContainerStyled as="article">
             <StoryblokPicture
-              {...product.picture[0]}
+              {...product.content.picture?.[0]}
               supportedTypes={["webp", "png"]}
               resizeWidth={RESIZE_WIDTH}
               resizeHeight={RESIZE_HEIGHT}
             />
-            {/* <Picture {...product.picture} /> */}
+            {/* <Picture {...product.content.picture} /> */}
             <ProductInfoRowStyled>
               <ProductInfoStyled as="h3">
-                <RichText>{product.title}</RichText>
+                <RichText>{product.content.title}</RichText>
               </ProductInfoStyled>
               <ProductInfoStyled>
                 <ProductInfoTypeStyled>Where to buy:</ProductInfoTypeStyled>
-                <ProductInfoDataStyled>{product.whereToBuy}</ProductInfoDataStyled>
+                <ProductInfoDataStyled>
+                  <RichText>{product.content.whereToBuy}</RichText>
+                </ProductInfoDataStyled>
               </ProductInfoStyled>
             </ProductInfoRowStyled>
             <ProductInfoRowStyled>
               <ProductInfoStyled>
                 <ProductInfoTypeStyled>Details:</ProductInfoTypeStyled>
                 <ProductInfoDataStyled>
-                  <RichText>{product.details}</RichText>
+                  <RichText>{product.content.details}</RichText>
                 </ProductInfoDataStyled>
               </ProductInfoStyled>
               <ProductInfoStyled>
-                {parseInt(product.price) > 0 ? "€" : ""}
-                <data value={product.price}>{parseInt(product.price) > 0 ? product.price : "Free"}</data>
+                {parseInt(product.content.price) > 0 ? "€" : ""}
+                <data value={product.content.price}>
+                  {parseInt(product.content.price) > 0 ? product.content.price : "Free"}
+                </data>
               </ProductInfoStyled>
             </ProductInfoRowStyled>
           </ProductContainerStyled>

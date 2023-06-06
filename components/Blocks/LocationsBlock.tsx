@@ -10,7 +10,7 @@ import { RichText } from "../RichText";
 type LocationType = {
   uid: string;
   address: StoryBlokRichText;
-  link: string;
+  link?: string;
 };
 
 export type LocationsBlockType = {
@@ -51,9 +51,11 @@ export function LocationsBlock({ locations }: LocationsBlockType) {
       {locations.map(location => (
         <LocationStyled key={location.uid}>
           <RichText>{location.address}</RichText>
-          <LocationDirectionsStyled target="blank" href={location.link}>
-            Directions
-          </LocationDirectionsStyled>
+          {location.link && (
+            <LocationDirectionsStyled target="blank" href={location.link}>
+              Directions
+            </LocationDirectionsStyled>
+          )}
         </LocationStyled>
       ))}
     </ContainerStyled>
