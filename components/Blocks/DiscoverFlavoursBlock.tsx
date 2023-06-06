@@ -25,8 +25,8 @@ export type DiscoverFlavoursBlockType = {
 
 const FLAVOURS = CONTENT.flavours;
 
-const CAN_RESIZE_WIDTH = 280;
-const CAN_RESIZE_HEIGHT = 600;
+const CAN_RESIZE_WIDTH = 260;
+const CAN_RESIZE_HEIGHT = 520;
 
 const DESKTOP_FLAVOUR_WIDTH = "280px";
 const MOBILE_FLAVOUR_WIDTH = "200px";
