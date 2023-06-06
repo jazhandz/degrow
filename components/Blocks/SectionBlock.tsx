@@ -4,13 +4,15 @@ import styled from "styled-components";
 import { Blocks } from "@/components/Blocks";
 import { color as colors } from "@/styles/color";
 import { ColorDataType } from "@/types/CMS/Generic";
+import { StaticDataType } from "./Blocks";
 
 // Block Type
 export type SectionBlockType = {
   items: BlockType<any>[];
-  color: [] | [ColorDataType];
-  gradient: [] | [ColorDataType, ColorDataType, ColorDataType];
+  color?: [] | [ColorDataType];
+  gradient?: [] | [ColorDataType, ColorDataType, ColorDataType];
   id: string;
+  staticData: StaticDataType;
 };
 
 const SectionStyled = styled.div`
@@ -25,18 +27,18 @@ const SectionStyled = styled.div`
   display: inline-block; // Prevents collapsing margin outside parent
 `;
 
-export function SectionBlock({ items, color, id, gradient }: SectionBlockType) {
+export function SectionBlock({ items, color, id, gradient, staticData }: SectionBlockType) {
   return (
     <SectionStyled
       id={id}
       $gradient={
-        gradient.length !== 0
+        gradient !== undefined && gradient.length !== 0
           ? [colors[gradient[0].color], colors[gradient[1].color], colors[gradient[2].color]]
           : undefined
       }
       $color={color.length !== 0 ? colors[color[0].color] : undefined}
     >
-      <Blocks data={items} />
+      <Blocks data={items} staticData={staticData} />
     </SectionStyled>
   );
 }

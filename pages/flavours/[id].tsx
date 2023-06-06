@@ -4,27 +4,41 @@ import CONTENT from "@/cms/content.json";
 import { FlavourType } from "@/types/CMS/Flavours";
 import type { GetServerSideProps, NextPage } from "next";
 import React from "react";
-import { getStoryblokApi } from "@storyblok/react";
+import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
+import { getFlavours } from "@/functions/data/get-flavours";
+import { StaticDataType } from "@/components/Blocks/Blocks";
+import { getDiscoverFlavours } from "@/functions/data/get-discover-flavours";
 
 const FLAVOURS = CONTENT.flavours;
 
-const Flavours: NextPage<{ data: FlavourType }> = ({ data }: { data: FlavourType }) => {
+const Flavours: NextPage<{ data: FlavourType }> = ({
+  data,
+  staticData,
+}: {
+  data: { story: { content: FlavourType } };
+  staticData: StaticDataType;
+}) => {
+  const liveStory = useStoryblokState(data) as any;
+
+  const flavour = liveStory ? liveStory.story?.content : data.story.content;
+
   console.log("dataaaaaAA:", data);
 
   return (
     <>
       <SEO title="De Grow Lab" description="" />
       <Blocks
-        key={data.title}
+        key={flavour.title}
+        staticData={staticData}
         data={[
           {
             component: "section",
-            color: data.color ?? [],
-            gradient: data.gradient,
+            color: flavour.color ?? [],
+            gradient: flavour.gradient,
             items: [
               {
-                ...data,
+                ...flavour,
                 component: "flavour",
                 gradient: [], // Used in section
                 color: [], // Used in section
@@ -68,16 +82,17 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export const getStaticProps: GetServerSideProps<{ data: FlavourType }> = async context => {
+export const getStaticProps: GetServerSideProps<{ data: FlavourType; staticData: StaticDataType }> = async context => {
   const { params } = context;
   const id = params?.id;
 
   const globalProps = await getStaticGlobalProps();
+  const discoverFlavours = await getDiscoverFlavours();
 
   const storyblokApi = getStoryblokApi();
   const { data } = await storyblokApi.get(`cdn/stories/flavours/${id}`, {
     version: "published" as const,
   });
 
-  return { props: { ...globalProps, data: data.story.content } };
+  return { props: { ...globalProps, data: data, staticData: { discoverFlavours } } };
 };

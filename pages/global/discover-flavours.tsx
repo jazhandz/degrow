@@ -1,36 +1,40 @@
 import { Blocks } from "@/components/Blocks";
 import { SEO } from "@/components/SEO";
-// import CONTENT from "@/cms/content.json"; // STATIC DATA
 import type { NextPage } from "next";
 import React from "react";
-import { getStoryblokApi, useStoryblokState, storyblokInit, apiPlugin } from "@storyblok/react";
 import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
+import { getStoryblokApi, ISbStoryData, useStoryblokState } from "@storyblok/react";
+import { StaticDataType } from "@/components/Blocks/Blocks";
 import { getDiscoverFlavours } from "@/functions/data/get-discover-flavours";
 
-storyblokInit({
-  accessToken: "9dnLtFcg5u0FNFT4rWvQMwtt",
-  use: [apiPlugin],
-});
+const DiscoverFlavours: NextPage<{ staticData: any }> = ({
+  staticData,
+}: {
+  staticData: { discoverFlavours: ISbStoryData };
+}) => {
+  const liveStory = useStoryblokState(staticData.discoverFlavours) as any;
 
-// STATIC DATA
-// const HOME_PAGE_DATA = CONTENT.pages.find(page => page.slug === "home");
+  const flavourDataBlock = liveStory ? liveStory : staticData.discoverFlavours;
 
-const Home: NextPage = ({ data, staticData }: any) => {
-  const liveStory = useStoryblokState(data) as any;
-
-  console.log("staticData", staticData);
-
-  const blocks = liveStory ? liveStory.content?.body : data.content.body;
+  console.log("blocks global render: ", flavourDataBlock, liveStory);
 
   return (
     <>
       <SEO title="De Grow Lab" description="" />
-      <Blocks key="home" staticData={staticData} data={blocks ?? []} />
+      <Blocks
+        // @ts-ignore
+        staticData={{ discoverFlavours: flavourDataBlock } as StaticDataType}
+        data={[
+          {
+            component: "discover-flavours",
+          },
+        ]}
+      />
     </>
   );
 };
 
-export default withNavigationAndFooter(Home);
+export default withNavigationAndFooter(DiscoverFlavours);
 
 export async function getStaticProps() {
   // home is the default slug for the homepage in Storyblok

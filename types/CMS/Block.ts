@@ -30,7 +30,7 @@ export type BlockTypeOptions =
   | FlavourBlockType;
 
 export type BlockType<T = BlockTypeOptions> = {
-  type:
+  component:
     | "heading"
     | "large-image"
     | "center-image"

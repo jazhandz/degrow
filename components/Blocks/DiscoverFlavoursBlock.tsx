@@ -4,9 +4,23 @@ import { InfiniteScrollLoop } from "../InfiniteScrollLoop";
 import CONTENT from "@/cms/content.json";
 import { media } from "@/styles/media";
 import { UploadCarePicture } from "../UploadCarePicture";
+import { FlavourType } from "@/types/CMS/Flavours";
+import { FlavourBlockType } from "./FlavourBlock";
+import { StoryblokPicture } from "../StoryblokPicture";
+
+type DiscoverFlavourItemType = {
+  flavour: { content: FlavourBlockType; slug: string };
+  rotate: `${number}`;
+  stiffness: `${number}`;
+  yOffset: `${number}`;
+};
+
+export type DiscoverFlavoursStaticDataType = {
+  items: DiscoverFlavourItemType[];
+};
 
 export type DiscoverFlavoursBlockType = {
-  // empty
+  discoverFlavours: DiscoverFlavoursStaticDataType;
 };
 
 const FLAVOURS = CONTENT.flavours;
@@ -53,34 +67,32 @@ const DiscoverFlavoursStyled = styled.div`
 const DiscoverFlavourClickContainerStyled = styled(Link)`
   display: block;
   transform: ${({ $yOffset, $rotate }: { $yOffset: string; $rotate: number }) =>
-    `rotate(${$rotate}deg) translateY(${$yOffset}) scale(100%)`};
+    `rotate(${$rotate}deg) translateY(${$yOffset}%) scale(100%)`};
   transition: transform 0.5s ease;
   @media ${media.desktop} {
     &:hover {
       transform: ${({ $yOffset, $rotate }: { $yOffset: string; $rotate: number }) =>
-        `rotate(${$rotate}deg) translateY(${$yOffset}) scale(110%)`};
+        `rotate(${$rotate}deg) translateY(${$yOffset}%) scale(110%)`};
     }
   }
 `;
 
-export function DiscoverFlavoursBlock() {
+export function DiscoverFlavoursBlock({ discoverFlavours }: DiscoverFlavoursBlockType) {
+  console.log("fladdd", discoverFlavours);
   return (
     <InfiniteScrollLoop height={DESKTOP_FLAVOUR_SCROLL_HEIGHT}>
       {(isScrolling: -1 | 0 | 1) => {
-        return FLAVOURS.filter(flavour => flavour.isCollaboration !== "1").map(flavour => (
-          <DiscoverFlavoursStyled key={flavour.title}>
+        return discoverFlavours.items.map(item => (
+          <DiscoverFlavoursStyled key={item.flavour.content.title}>
             <DiscoverFlavourClickContainerStyled
-              href={`/flavours/${flavour.slug}`}
-              $yOffset={flavour.discover.yOffset}
-              $rotate={
-                parseInt(flavour.discover.rotate) +
-                isScrolling * (MAX_ROTATE_MOVEMENT * parseFloat(flavour.discover.stiffness))
-              }
+              href={`/flavours/${item.flavour.slug}`}
+              $yOffset={item.yOffset}
+              $rotate={parseInt(item.rotate) + isScrolling * (MAX_ROTATE_MOVEMENT * (parseFloat(item.stiffness) / 10))}
             >
-              <UploadCarePicture
+              <StoryblokPicture
                 resizeWidth={CAN_RESIZE_WIDTH}
                 resizeHeight={CAN_RESIZE_HEIGHT}
-                {...flavour.picture}
+                {...item.flavour.content.picture[0]}
                 supportedTypes={["webp", "png"]}
               />
             </DiscoverFlavourClickContainerStyled>

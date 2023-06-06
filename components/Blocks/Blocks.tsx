@@ -1,11 +1,12 @@
 import { BlockType } from "@/types/CMS/Block";
+import { FlavourType } from "@/types/CMS/Flavours";
 import * as React from "react";
 import styled from "styled-components";
 import { ArticleBlock } from "./ArticleBlock";
 import { BreakpointBlock } from "./BreakpointBlock";
 import { CenterImageBlock } from "./CenterImageBlock";
 import { ChapterHeadingBlock } from "./ChapterHeadingBlock";
-import { DiscoverFlavoursBlock } from "./DiscoverFlavoursBlock";
+import { DiscoverFlavoursBlock, DiscoverFlavoursBlockType } from "./DiscoverFlavoursBlock";
 import { DiscoverFlavoursVerticalBlock } from "./DiscoverFlavoursVerticalBlock";
 import { FlavourBlock } from "./FlavourBlock";
 import { HeadingBlock } from "./HeadingBlock";
@@ -20,14 +21,26 @@ import { SectionBlock } from "./SectionBlock";
 interface BlocksProps {
   data: Array<BlockType<any>>;
   key?: string;
+  staticData: StaticDataType;
 }
+
+export type StaticDataType = {
+  discoverFlavours?: {
+    story: {
+      content: {
+        global: [DiscoverFlavoursBlockType];
+      };
+    };
+  };
+};
 
 const BlocksContainerStyled = styled.div`
   width: 100%;
   margin: 0 auto;
 `;
 
-export default function BlocksComponent({ data, key }: BlocksProps) {
+export default function BlocksComponent({ data, key, staticData }: BlocksProps) {
+  console.log("blocks static:", staticData);
   return (
     <BlocksContainerStyled>
       {data.map((block, index) => {
@@ -46,13 +59,13 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
             return <ChapterHeadingBlock key={itemKey} {...block} />;
           }
           case "breakpoint": {
-            return <BreakpointBlock key={itemKey} {...block} />;
+            return <BreakpointBlock key={itemKey} {...block} staticData={staticData} />;
           }
           case "paragraph": {
             return <RichTextBlock key={itemKey} {...block} />;
           }
           case "section": {
-            return <SectionBlock key={itemKey} {...block} />;
+            return <SectionBlock key={itemKey} {...block} staticData={staticData} />;
           }
           case "link": {
             return <LinkBlock key={itemKey} {...block} />;
@@ -67,10 +80,26 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
             return <ProductsBlock key={itemKey} {...block} />;
           }
           case "discover-flavours": {
-            return <DiscoverFlavoursBlock key={itemKey} {...block} />;
+            return staticData.discoverFlavours === undefined ? (
+              <>Static Data not available</>
+            ) : (
+              <DiscoverFlavoursBlock
+                key={itemKey}
+                {...block}
+                discoverFlavours={staticData.discoverFlavours.story.content.global[0]}
+              />
+            );
           }
           case "discover-flavours-vertical": {
-            return <DiscoverFlavoursVerticalBlock key={itemKey} {...block} />;
+            return staticData.discoverFlavours === undefined ? (
+              <>Static Data not available</>
+            ) : (
+              <DiscoverFlavoursVerticalBlock
+                key={itemKey}
+                {...block}
+                discoverFlavours={staticData.discoverFlavours.story.content.global[0]}
+              />
+            );
           }
           case "flavour": {
             return <FlavourBlock key={itemKey} {...block} />;
@@ -79,7 +108,7 @@ export default function BlocksComponent({ data, key }: BlocksProps) {
             return <NewsletterBlock key={itemKey} {...block} />;
           }
           default: {
-            console.log("block", block);
+            console.log("unknown block", block);
             return <>Unknown block</>;
           }
         }

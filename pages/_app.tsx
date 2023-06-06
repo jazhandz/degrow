@@ -16,10 +16,13 @@ export default function MyApp({ Component, pageProps }: StaticProps) {
   const fetchAPI = async () => {
     console.log("sedning");
     const storyblokApi = getStoryblokApi();
-    const response = await storyblokApi.get(`cdn/stories/flavours/original`, { version: "published" });
+    const response = await storyblokApi.get(`cdn/stories/global/discover-flavours`, {
+      version: "published",
+      resolve_relations: "flavour-discover-item.flavour",
+    });
 
     // console.log("navigation:", data);
-    console.log("response:", response);
+    console.log("response:", response.data.story.content.global[0]);
   };
 
   React.useEffect(() => {

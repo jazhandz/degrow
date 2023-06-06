@@ -12,15 +12,15 @@ import { RichTextBlock } from "./RichTextBlock";
 import { motion } from "framer-motion";
 import { fontSize } from "@/styles/fontSize";
 import { RichText } from "../RichText";
-import { ColorVarientType } from "@/types/CMS/Generic";
+import { ColorDataType } from "@/types/CMS/Generic";
 import { color as colors } from "@/styles/color";
 import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
 import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
 
 export interface FlavourBlockType {
   headingVarient?: "h1" | "h2";
-  color?: ColorVarientType;
-  gradient?: [ColorVarientType, ColorVarientType, ColorVarientType];
+  color?: [ColorDataType];
+  gradient?: [ColorDataType, ColorDataType, ColorDataType];
   listItem?: boolean;
   title: string;
   description: string;
@@ -172,8 +172,12 @@ export function FlavourBlock({
 }: FlavourBlockType) {
   return (
     <FlavourStyled
-      $gradient={gradient !== undefined ? [colors[gradient[0]], colors[gradient[1]], colors[gradient[2]]] : undefined}
-      $color={color !== undefined ? colors[color] : undefined}
+      $gradient={
+        gradient !== undefined && gradient.length > 0
+          ? [colors[gradient[0].color], colors[gradient[1].color], colors[gradient[2].color]]
+          : undefined
+      }
+      $color={color !== undefined && color.length > 0 ? colors[color[0].color] : undefined}
     >
       <TitleContainerStyled
         as={motion.div}

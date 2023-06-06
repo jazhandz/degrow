@@ -8,13 +8,21 @@ import type { GetServerSideProps, NextPage } from "next";
 import React from "react";
 import { getStoryblokApi, useStoryblokState, storyblokInit, apiPlugin } from "@storyblok/react";
 import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
+import { StaticDataType } from "@/components/Blocks/Blocks";
+import { getDiscoverFlavours } from "@/functions/data/get-discover-flavours";
 
 storyblokInit({
   accessToken: "9dnLtFcg5u0FNFT4rWvQMwtt",
   use: [apiPlugin],
 });
 
-const Page: NextPage<{ data: PageType }> = ({ data }: any) => {
+const Page: NextPage<{ data: PageType; staticData: StaticDataType }> = ({
+  data,
+  staticData,
+}: {
+  data: PageType;
+  staticData: StaticDataType;
+}) => {
   const liveStory = useStoryblokState(data) as any;
 
   const blocks = liveStory ? liveStory.content?.body : data.content.body;
@@ -22,7 +30,7 @@ const Page: NextPage<{ data: PageType }> = ({ data }: any) => {
   return (
     <>
       {/* <SEO title={data?.seo?.title} description={data?.seo?.description} /> */}
-      <Blocks key={data.id} data={blocks} />
+      <Blocks key={data.id} staticData={staticData} data={blocks} />
     </>
   );
 };
@@ -57,16 +65,17 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export const getStaticProps: GetServerSideProps<{ data: PageType }> = async context => {
+export const getStaticProps: GetServerSideProps<{ data: PageType; staticData: StaticDataType }> = async context => {
   const { params } = context;
   const id = params?.id;
 
   const globalProps = await getStaticGlobalProps();
+  const discoverFlavours = await getDiscoverFlavours();
 
   const storyblokApi = getStoryblokApi();
   const { data } = await storyblokApi.get(`cdn/stories/${id}`, {
     version: "published" as const,
   });
 
-  return { props: { ...globalProps, data: data.story } };
+  return { props: { ...globalProps, data: data.story, staticData: { discoverFlavours } } };
 };
