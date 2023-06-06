@@ -22,7 +22,7 @@ const Flavours: NextPage<{ data: FlavourType[]; staticData: StaticDataType }> = 
 
   return (
     <>
-      <SEO title="De Grow Lab" description="" />
+      <SEO title="DeGrow Lab - Collaborations" description="" />
       <Blocks
         staticData={staticData}
         data={[

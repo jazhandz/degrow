@@ -1,6 +1,5 @@
 import { Blocks } from "@/components/Blocks";
 import { SEO } from "@/components/SEO";
-import CONTENT from "@/cms/content.json";
 import { FlavourType } from "@/types/CMS/Flavours";
 import type { GetServerSideProps, NextPage } from "next";
 import React from "react";
@@ -8,8 +7,7 @@ import { getStoryblokApi, useStoryblokState } from "@storyblok/react";
 import withNavigationAndFooter, { getStaticGlobalProps } from "@/hocs/withNavigationAndFooter";
 import { StaticDataType } from "@/components/Blocks/Blocks";
 import { getDiscoverFlavours } from "@/functions/data/get-discover-flavours";
-
-const FLAVOURS = CONTENT.flavours;
+import { parseStoryblokRichText } from "@/functions/parse-storyblok-richtext";
 
 const Flavours: NextPage<{ data: { story: { content: FlavourType } }; staticData: StaticDataType }> = ({
   data,
@@ -20,13 +18,12 @@ const Flavours: NextPage<{ data: { story: { content: FlavourType } }; staticData
 }) => {
   const liveStory = useStoryblokState(data as any) as any;
 
-  const flavour = liveStory ? liveStory.story?.content : data.story.content;
-
-  console.log("dataaaaaAA:", data);
+  const flavour = liveStory.story?.content;
+  const cleanSeoDesciption = parseStoryblokRichText(flavour.description).__html.replace(/<\/?[^>]+(>|$)/g, "");
 
   return (
     <>
-      <SEO title="De Grow Lab" description="" />
+      <SEO title={`DeGrow Lab - ${flavour.title}`} description={cleanSeoDesciption} />
       <Blocks
         key={flavour.title}
         staticData={staticData}

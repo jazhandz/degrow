@@ -18,13 +18,12 @@ storyblokInit({
 const Home: NextPage = ({ data, staticData }: any) => {
   const liveStory = useStoryblokState(data) as any;
 
-  console.log("staticData", staticData);
-
-  const blocks = liveStory ? liveStory.content?.body : data.content.body;
+  const blocks = liveStory.content?.body;
+  const seo = liveStory.content?.seo[0];
 
   return (
     <>
-      <SEO title="De Grow Lab" description="" />
+      <SEO title={seo.title} description={seo.description} />
       <Blocks key="home" staticData={staticData} data={blocks ?? []} />
     </>
   );

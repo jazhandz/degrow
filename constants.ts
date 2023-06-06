@@ -68,11 +68,7 @@ export const Constants = {
     tablet: `(min-width: ${SCREEN_SIZES.tablet}) and (max-width: ${SCREEN_SIZES.laptop})`,
     desktop: `(min-width: ${SCREEN_SIZES.tablet})`,
   },
-  metaData: {
-    author: "David Vann",
-    title: "DeGrowLab",
-    description: "React developer",
-  },
+  language: "en-us",
   style: {
     htmlBackgroundColor: `#F3F5F7`,
     htmlBodyColor: Theme.palette.white,

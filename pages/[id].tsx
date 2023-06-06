@@ -25,11 +25,12 @@ const Page: NextPage<{ data: { content: { body: PageType } }; staticData: Static
 }) => {
   const liveStory = useStoryblokState(data as any) as any;
 
-  const blocks = liveStory ? liveStory.content?.body : data.content.body;
+  const blocks = liveStory.content?.body;
+  const seo = liveStory.content?.seo[0];
 
   return (
     <>
-      {/* <SEO title={data?.seo?.title} description={data?.seo?.description} /> */}
+      <SEO title={seo.title} description={seo.description} />
       <Blocks key={blocks.id} staticData={staticData} data={blocks} />
     </>
   );
