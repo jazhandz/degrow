@@ -9,7 +9,7 @@ import { Hr } from "../HR";
 import { HeadingBlock } from "./HeadingBlock";
 import { LinkBlock } from "./LinkBlock";
 import { RichTextBlock } from "./RichTextBlock";
-import { motion } from "framer-motion";
+import { easeInOut, motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { fontSize } from "@/styles/fontSize";
 import { RichText } from "../RichText";
 import { ColorDataType } from "@/types/CMS/Generic";
@@ -32,22 +32,29 @@ export interface FlavourBlockType {
   headerDesktopPicture: [] | [StoryblokPictureProps];
 }
 
+const CONTAINER_DESKTOP_OVERFLOW = "-80px";
+const CONTAINER_MOBILE_OVERFLOW = "-60px";
+
 const PRODUCT_DESKTOP_PRODUCT_1_WIDTH = "210px";
 const PRODUCT_DESKTOP_PRODUCT_2_WIDTH = "250px";
-const PRODUCT_DESKTOP_PADDING = "70px";
+const PRODUCT_DESKTOP_PADDING = "100px";
 const PRODUCT_DESKTOP_OFFSET_1 = -7.5;
 const PRODUCT_DESKTOP_OFFSET_2 = 7.5;
-const PRODUCT_DESKTOP_ROTATE_1 = 12;
-const PRODUCT_DESKTOP_ROTATE_2 = -12;
+const PRODUCT_DESKTOP_ROTATE_1 = 24;
+const PRODUCT_DESKTOP_ROTATE_2 = -24;
 const PRODUCT_DESKTOP_BETWEEN_MARGIN = spacing.xl;
 
 const PRODUCT_INTRO_OFFSET_X = 50;
+const PRODUCT_1_OFFSET_X = 0;
+const PRODUCT_2_OFFSET_X = 0;
+const PRODUCT_1_SCALE = 0.8;
+const PRODUCT_2_SCALE = 1;
 
 const PRODUCT_MOBILE_PRODUCT_1_WIDTH = "150px";
 const PRODUCT_MOBILE_PRODUCT_2_WIDTH = "200px";
-const PRODUCT_MOBILE_PADDING = "50px";
-const PRODUCT_MOBILE_OFFSET_1 = -12;
-const PRODUCT_MOBILE_OFFSET_2 = 12;
+const PRODUCT_MOBILE_PADDING = "80px";
+const PRODUCT_MOBILE_OFFSET_1 = -24;
+const PRODUCT_MOBILE_OFFSET_2 = 24;
 const PRODUCT_MOBILE_ROTATE_1 = 6;
 const PRODUCT_MOBILE_ROTATE_2 = -6;
 const PRODUCT_MOBILE_BETWEEN_MARGIN = spacing.s;
@@ -67,14 +74,15 @@ const FlavourProductContainerStyled = styled(Container)`
   justify-content: center;
   @media ${media.mobile} {
     padding: ${PRODUCT_MOBILE_PADDING} 0;
-    margin-bottom: ${spacing.m};
+    margin-top: ${CONTAINER_MOBILE_OVERFLOW};
+    margin-bottom: calc(${CONTAINER_MOBILE_OVERFLOW});
     & div {
       &:first-child img {
-        /* transform: translateY(${PRODUCT_MOBILE_OFFSET_1}%) rotate(${PRODUCT_MOBILE_ROTATE_1}deg); */
+        /* transform: translateY(${PRODUCT_MOBILE_OFFSET_1}%); */
         width: ${PRODUCT_MOBILE_PRODUCT_1_WIDTH};
       }
       &:last-child img {
-        /* transform: translateY(${PRODUCT_MOBILE_OFFSET_2}%) rotate(${PRODUCT_MOBILE_ROTATE_2}deg); */
+        /* transform: translateY(${PRODUCT_MOBILE_OFFSET_2}%); */
         width: ${PRODUCT_MOBILE_PRODUCT_2_WIDTH};
       }
       & img {
@@ -84,14 +92,13 @@ const FlavourProductContainerStyled = styled(Container)`
   }
   @media ${media.desktop} {
     padding: ${PRODUCT_DESKTOP_PADDING} 0;
-    margin-bottom: ${spacing.l};
+    margin-top: ${CONTAINER_DESKTOP_OVERFLOW};
+    margin-bottom: calc(${CONTAINER_DESKTOP_OVERFLOW});
     & div {
       &:first-child img {
-        transform: translateY(${PRODUCT_DESKTOP_OFFSET_1}%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg);
         width: ${PRODUCT_DESKTOP_PRODUCT_1_WIDTH};
       }
       &:last-child img {
-        transform: translateY(${PRODUCT_DESKTOP_OFFSET_2}%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg);
         width: ${PRODUCT_DESKTOP_PRODUCT_2_WIDTH};
       }
       & img {
@@ -170,8 +177,21 @@ export function FlavourBlock({
   headerMobilePicture,
   headerDesktopPicture,
 }: FlavourBlockType) {
+  const ref = React.useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+  const y1 = useTransform(scrollYProgress, [0, 1], [-60, 60], { ease: easeInOut });
+  const y2 = useTransform(scrollYProgress, [0, 1], [-80, 80], { ease: easeInOut });
+
+  const r1 = useTransform(scrollYProgress, [0, 1], [-7, 7], { ease: easeInOut });
+  const r2 = useTransform(scrollYProgress, [0, 1], [7, -7], { ease: easeInOut });
+
   return (
     <FlavourStyled
+      ref={ref}
       $gradient={
         gradient !== undefined && gradient.length > 0
           ? [colors[gradient[0].color], colors[gradient[1].color], colors[gradient[2].color]]
@@ -211,33 +231,49 @@ export function FlavourBlock({
       </TitleContainerStyled>
 
       <FlavourProductContainerStyled>
-        <ProductLeftContainerStyled
-          transition={{ ...ANIMATION_TRANSITION, delay: 0 }}
-          initial={{ opacity: 0, transform: `translateX(-${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)` }}
-          whileInView={{ opacity: 0.9, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)` }}
-          viewport={{ once: true }}
-        >
-          <StoryblokPicture
-            {...picture[0]}
-            resizeWidth={250}
-            resizeHeight={500}
-            objectFit={"contain"}
-            supportedTypes={["webp", "png"]}
-          />
+        <ProductLeftContainerStyled style={{ y: y1, x: 0, rotate: r1 }}>
+          <motion.div
+            transition={{ ...ANIMATION_TRANSITION, delay: 0 }}
+            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              transform: `scale(${PRODUCT_1_SCALE}) translateX(-${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)`,
+            }}
+            whileInView={{
+              opacity: 0.9,
+              transform: `scale(${PRODUCT_1_SCALE}) translateX(${PRODUCT_1_OFFSET_X}%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)`,
+            }}
+          >
+            <StoryblokPicture
+              {...picture[0]}
+              resizeWidth={250}
+              resizeHeight={500}
+              objectFit={"contain"}
+              supportedTypes={["webp", "png"]}
+            />
+          </motion.div>
         </ProductLeftContainerStyled>
-        <ProductRightContainerStyled
-          transition={{ ...ANIMATION_TRANSITION, delay: 0.1 }}
-          initial={{ opacity: 0, transform: `translateX(${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)` }}
-          whileInView={{ opacity: 1, transform: `translateX(0%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg)` }}
-          viewport={{ once: true }}
-        >
-          <StoryblokPicture
-            {...picture[0]}
-            resizeWidth={250}
-            resizeHeight={500}
-            objectFit={"contain"}
-            supportedTypes={["webp", "png"]}
-          />
+        <ProductRightContainerStyled style={{ y: y2, x: 0, rotate: r2 }}>
+          <motion.div
+            transition={{ ...ANIMATION_TRANSITION, delay: 0.1 }}
+            initial={{
+              opacity: 0,
+              transform: `scale(${PRODUCT_2_SCALE}) translateX(${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)`,
+            }}
+            whileInView={{
+              opacity: 1,
+              transform: `scale(${PRODUCT_2_SCALE}) translateX(${PRODUCT_2_OFFSET_X}%) rotate(${PRODUCT_DESKTOP_ROTATE_2}deg)`,
+            }}
+            viewport={{ once: true }}
+          >
+            <StoryblokPicture
+              {...picture[0]}
+              resizeWidth={250}
+              resizeHeight={500}
+              objectFit={"contain"}
+              supportedTypes={["webp", "png"]}
+            />
+          </motion.div>
         </ProductRightContainerStyled>
       </FlavourProductContainerStyled>
       <RichTextBlock body={description} />
