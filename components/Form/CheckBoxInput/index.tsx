@@ -50,6 +50,7 @@ export function CheckBoxInput({
     <CheckBoxInputStyled data-testid={CheckBoxInput.testID}>
       <CheckBoxInputContainerStyled>
         <CheckBoxInputComponent
+          error={errorMessage ? true : false}
           id={inputProps.name}
           checked={inputProps.value}
           onChange={handleOnCheckboxChange}
@@ -64,11 +65,6 @@ export function CheckBoxInput({
           )}
         </ParagraphStyled>
       </CheckBoxInputContainerStyled>
-      {compact === false || note !== undefined || typeof errorMessage === "string" ? (
-        <InputNoteComponent htmlFor={inputProps.name} color={!errorMessage ? undefined : color.red}>
-          {!errorMessage ? note : errorMessage}
-        </InputNoteComponent>
-      ) : null}
     </CheckBoxInputStyled>
   );
 }

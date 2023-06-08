@@ -40,7 +40,6 @@ const BlocksContainerStyled = styled.div`
 `;
 
 export default function BlocksComponent({ data, key, staticData }: BlocksProps) {
-  console.log("blocks static:", staticData);
   return (
     <BlocksContainerStyled>
       {data.map((block, index) => {

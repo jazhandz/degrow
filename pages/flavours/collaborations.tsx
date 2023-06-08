@@ -55,8 +55,6 @@ export const getStaticProps: GetServerSideProps<{ data: any; staticData: StaticD
     starts_with: "flavours/",
   });
 
-  console.log("data", data);
-
   return {
     props: {
       ...globalProps,

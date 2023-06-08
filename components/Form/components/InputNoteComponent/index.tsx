@@ -15,12 +15,13 @@ interface InputNoteProps extends React.HTMLAttributes<HTMLParagraphElement> {
 const InputNoteStyled = styled.p(
   ({ color }: Pick<InputNoteProps, "color">) => `
     font-family: ${fontFamily.primary};
-    font-size: ${fontSize.p};
+    font-size: ${fontSize.small};
     color: ${color ?? colorStyle.greyDark1};
-    line-height: 21px;
-    min-height: 21px;
+    line-height: 10px;
+    text-align: left;
+    min-height: 10px;
     font-weight: ${fontWeight.regular};
-    margin: ${spacing.xs} 0px ${spacing.s} 0px;
+    margin: -${spacing.m} 0px ${spacing.s} 0px;
   `
 );
 

@@ -78,7 +78,6 @@ const DiscoverFlavourClickContainerStyled = styled(Link)`
 `;
 
 export function DiscoverFlavoursBlock({ discoverFlavours }: DiscoverFlavoursBlockType) {
-  console.log("fladdd", discoverFlavours);
   return (
     <InfiniteScrollLoop height={DESKTOP_FLAVOUR_SCROLL_HEIGHT}>
       {(isScrolling: -1 | 0 | 1) => {

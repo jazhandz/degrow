@@ -16,8 +16,6 @@ const DiscoverFlavours: NextPage<{ staticData: any }> = ({
 
   const flavourDataBlock = liveStory ? liveStory : staticData.discoverFlavours;
 
-  console.log("blocks global render: ", flavourDataBlock, liveStory);
-
   return (
     <>
       <SEO title="De Grow Lab" description="" />

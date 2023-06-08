@@ -13,21 +13,21 @@ interface StaticProps extends AppProps {
 }
 
 export default function MyApp({ Component, pageProps }: StaticProps) {
-  const fetchAPI = async () => {
-    console.log("sedning");
-    const storyblokApi = getStoryblokApi();
-    const response = await storyblokApi.get(`cdn/stories`, {
-      version: "published" as const,
-      starts_with: "flavours/",
-    });
+  // const fetchAPI = async () => {
+  //   console.log("sedning");
+  //   const storyblokApi = getStoryblokApi();
+  //   const response = await storyblokApi.get(`cdn/stories`, {
+  //     version: "published" as const,
+  //     starts_with: "flavours/",
+  //   });
 
-    // console.log("navigation:", data);
-    console.log("response:", response);
-  };
+  //   // console.log("navigation:", data);
+  //   console.log("response:", response);
+  // };
 
-  React.useEffect(() => {
-    fetchAPI();
-  }, []);
+  // React.useEffect(() => {
+  //   fetchAPI();
+  // }, []);
 
   return (
     <>

@@ -8,10 +8,11 @@ import styled from "styled-components";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   appendElement?: React.ReactElement;
+  error: boolean;
 }
 
 const InputContainerStyled = styled.div`
-  border-bottom: solid ${color.black} 1px;
+  border-bottom: solid ${({ $error }: { $error: boolean }) => ($error ? color.red : color.black)} 1px;
   width: 100%;
   display: flex;
   overflow: hidden;
@@ -33,9 +34,9 @@ const InputStyled = styled.input`
   }
 `;
 
-const TextInputComponent = React.forwardRef(({ appendElement, ...props }: InputProps, ref: any) => {
+const TextInputComponent = React.forwardRef(({ appendElement, error, ...props }: InputProps, ref: any) => {
   return (
-    <InputContainerStyled>
+    <InputContainerStyled $error={error}>
       <InputStyled ref={ref} {...props}></InputStyled>
       {appendElement}
     </InputContainerStyled>

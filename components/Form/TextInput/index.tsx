@@ -25,7 +25,12 @@ export function TextInput({ input: { type = "text", ...inputProps }, note, compa
 
   return (
     <TextInputStyled data-testid={TextInput.testID}>
-      <TextInputComponent {...inputProps} {...props} type={type}></TextInputComponent>
+      <TextInputComponent
+        {...inputProps}
+        {...props}
+        error={errorMessage ? true : false}
+        type={type}
+      ></TextInputComponent>
       {compact === false || note !== undefined || typeof errorMessage === "string" ? (
         <InputNoteComponent htmlFor={inputProps.name} color={!errorMessage ? undefined : color.red}>
           {!errorMessage ? note : errorMessage}

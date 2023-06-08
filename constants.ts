@@ -68,6 +68,9 @@ export const Constants = {
     tablet: `(min-width: ${SCREEN_SIZES.tablet}) and (max-width: ${SCREEN_SIZES.laptop})`,
     desktop: `(min-width: ${SCREEN_SIZES.tablet})`,
   },
+  mailchimp: {
+    url: "https://netlify.us21.list-manage.com/subscribe/post-json?u=6071379d92db4128d1a3f704a&amp;id=0f7dd44e1c&amp;f_id=004d5ae1f0&c=?",
+  },
   language: "en-us",
   style: {
     htmlBackgroundColor: `#F3F5F7`,

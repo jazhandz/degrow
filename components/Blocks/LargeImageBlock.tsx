@@ -66,7 +66,6 @@ export function LargeImageBlock({
   maxHeight = "650px",
   imageFit = "contain",
 }: LargeImageBlockType) {
-  console.log("image horiza", marginHorizontal);
   return (
     <LargeBlockImageStyled
       $marginBottom={marginBottom}
