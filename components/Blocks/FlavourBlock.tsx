@@ -72,6 +72,9 @@ const FlavourProductContainerStyled = styled(Container)`
   overflow: hidden;
   display: flex;
   justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
   @media ${media.mobile} {
     padding: ${PRODUCT_MOBILE_PADDING} 0;
     margin-top: ${CONTAINER_MOBILE_OVERFLOW};
