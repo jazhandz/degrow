@@ -16,6 +16,7 @@ import { ColorDataType } from "@/types/CMS/Generic";
 import { color as colors } from "@/styles/color";
 import { StoryBlokRichText } from "@/types/CMS/StoryBlok";
 import { StoryblokPicture, StoryblokPictureProps } from "../StoryblokPicture";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 export interface FlavourBlockType {
   headingVarient?: "h1" | "h2";
@@ -37,7 +38,7 @@ const CONTAINER_MOBILE_OVERFLOW = "-60px";
 
 const PRODUCT_DESKTOP_PRODUCT_1_WIDTH = "210px";
 const PRODUCT_DESKTOP_PRODUCT_2_WIDTH = "250px";
-const PRODUCT_DESKTOP_PADDING = "100px";
+const PRODUCT_DESKTOP_PADDING = "120px";
 const PRODUCT_DESKTOP_OFFSET_1 = -7.5;
 const PRODUCT_DESKTOP_OFFSET_2 = 7.5;
 const PRODUCT_DESKTOP_ROTATE_1 = 24;
@@ -45,8 +46,8 @@ const PRODUCT_DESKTOP_ROTATE_2 = -24;
 const PRODUCT_DESKTOP_BETWEEN_MARGIN = spacing.xl;
 
 const PRODUCT_INTRO_OFFSET_X = 50;
-const PRODUCT_1_OFFSET_X = 0;
-const PRODUCT_2_OFFSET_X = 0;
+const PRODUCT_1_OFFSET_X = 5;
+const PRODUCT_2_OFFSET_X = -5;
 const PRODUCT_1_SCALE = 0.8;
 const PRODUCT_2_SCALE = 1;
 
@@ -66,7 +67,9 @@ const DETAILS_MAX_WIDTH = "275px";
 
 const ANIMATION_TRANSITION = { duration: 1.5, type: "spring" };
 
-const TitleContainerStyled = styled(Container)``;
+const TitleContainerStyled = styled(Container)`
+  max-height: 300px;
+`;
 
 const FlavourProductContainerStyled = styled(Container)`
   overflow: hidden;
@@ -180,14 +183,15 @@ export function FlavourBlock({
   headerMobilePicture,
   headerDesktopPicture,
 }: FlavourBlockType) {
+  const isMobile = useIsMobile();
   const ref = React.useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end end"],
   });
-  const y1 = useTransform(scrollYProgress, [0, 1], [-60, 60], { ease: easeInOut });
-  const y2 = useTransform(scrollYProgress, [0, 1], [-80, 80], { ease: easeInOut });
+  const y1 = useTransform(scrollYProgress, [0, 1], [-50, 60], { ease: easeInOut });
+  const y2 = useTransform(scrollYProgress, [0, 1], [-70, 80], { ease: easeInOut });
 
   const r1 = useTransform(scrollYProgress, [0, 1], [-7, 7], { ease: easeInOut });
   const r2 = useTransform(scrollYProgress, [0, 1], [7, -7], { ease: easeInOut });
@@ -211,22 +215,25 @@ export function FlavourBlock({
       >
         {headerMobilePicture[0] && headerDesktopPicture[0] ? (
           <>
-            <IsMobile>
+            {isMobile ? (
               <StoryblokPicture
                 {...headerMobilePicture[0]}
-                resizeWidth={250}
-                resizeHeight={600}
+                resizeWidth={600}
+                resizeHeight={0}
+                objectFit="contain"
                 supportedTypes={["webp", "png"]}
               />
-            </IsMobile>
-            <IsDesktop>
-              <StoryblokPicture
-                {...headerDesktopPicture[0]}
-                resizeWidth={250}
-                resizeHeight={600}
-                supportedTypes={["webp", "png"]}
-              />
-            </IsDesktop>
+            ) : (
+              <>
+                <StoryblokPicture
+                  {...headerDesktopPicture[0]}
+                  resizeWidth={600}
+                  resizeHeight={0}
+                  objectFit="contain"
+                  supportedTypes={["webp", "png"]}
+                />
+              </>
+            )}
           </>
         ) : (
           <HeadingBlock title={title} varient="h1" />
