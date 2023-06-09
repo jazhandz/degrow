@@ -169,7 +169,9 @@ const FlavourStyled = styled.div`
       : ""}
   display: inline-block;
   width: 100%;
-  padding: 0 ${spacing.m};
+  hr {
+    margin: 0 ${spacing.m};
+  }
 `;
 
 export function FlavourBlock({
