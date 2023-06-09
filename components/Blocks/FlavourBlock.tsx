@@ -169,6 +169,7 @@ const FlavourStyled = styled.div`
       : ""}
   display: inline-block;
   width: 100%;
+  padding: 0 ${spacing.m};
 `;
 
 export function FlavourBlock({
@@ -190,10 +191,10 @@ export function FlavourBlock({
     target: ref,
     offset: ["start end", "end end"],
   });
-  const y1 = useTransform(scrollYProgress, [0, 1], [-50, 60], { ease: easeInOut });
+  const y1 = useTransform(scrollYProgress, [0, 1], [-40, 40], { ease: easeInOut });
   const y2 = useTransform(scrollYProgress, [0, 1], [-70, 80], { ease: easeInOut });
 
-  const r1 = useTransform(scrollYProgress, [0, 1], [-7, 7], { ease: easeInOut });
+  const r1 = useTransform(scrollYProgress, [0, 1], [-5, 5], { ease: easeInOut });
   const r2 = useTransform(scrollYProgress, [0, 1], [7, -7], { ease: easeInOut });
 
   return (
@@ -250,7 +251,7 @@ export function FlavourBlock({
               transform: `scale(${PRODUCT_1_SCALE}) translateX(-${PRODUCT_INTRO_OFFSET_X}%) rotate(0deg)`,
             }}
             whileInView={{
-              opacity: 0.9,
+              opacity: 0.8,
               transform: `scale(${PRODUCT_1_SCALE}) translateX(${PRODUCT_1_OFFSET_X}%) rotate(${PRODUCT_DESKTOP_ROTATE_1}deg)`,
             }}
           >
