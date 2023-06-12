@@ -28,6 +28,8 @@ const Page: NextPage<{ data: { content: { body: PageType } }; staticData: Static
   const blocks = liveStory.content?.body;
   const seo = liveStory.content?.seo[0];
 
+  console.log("blocks", blocks);
+
   return (
     <>
       <SEO title={seo.title} description={seo.description} />

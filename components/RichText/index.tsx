@@ -7,5 +7,5 @@ interface RichTextProps {
 }
 
 export function RichText({ children }: RichTextProps) {
-  return <span dangerouslySetInnerHTML={parseStoryblokRichText(children)}></span>;
+  return <div dangerouslySetInnerHTML={parseStoryblokRichText(children)}></div>;
 }
