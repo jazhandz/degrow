@@ -389,7 +389,11 @@ export default function NavigationComponent({ data, backgroundColor }: Navigatio
             >
               {data.options.map(option => (
                 <NavMainItem key={`nav_${option.path}`}>
-                  <Link href={option.path} target={option.target} onClick={isOpen ? handleOnToggleMenu : undefined}>
+                  <Link
+                    href={option.path}
+                    target={option.target ?? "self"}
+                    onClick={isOpen ? handleOnToggleMenu : undefined}
+                  >
                     {option.label}
                   </Link>
                   {option.items && (
@@ -397,7 +401,7 @@ export default function NavigationComponent({ data, backgroundColor }: Navigatio
                       {option.items.map(subOption => (
                         <NavSubItemStyled key={`subNav_${option.label}_${subOption.label}`}>
                           <Link
-                            target={subOption.target}
+                            target={subOption.target ?? "self"}
                             href={subOption.path}
                             onClick={isOpen ? handleOnToggleMenu : undefined}
                           >

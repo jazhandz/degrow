@@ -8,7 +8,7 @@ export interface LinkProps extends React.RefAttributes<HTMLAnchorElement> {
   children: string;
   href: string;
   size?: "large" | "small";
-  target?: "blank";
+  target?: "blank" | "self";
 }
 
 const MOBILE_FONT_SIZE = fontSize.linkMobile;

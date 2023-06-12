@@ -120,7 +120,7 @@ export default function FooterComponent({ data }: FooterProps) {
           <h2>{data.navigationTitle}</h2>
           {data.navigation.map(link => (
             <React.Fragment key={`nav_${link.path}`}>
-              <LinkStyled target={link.external ? "blank" : undefined} href={link.path}>
+              <LinkStyled target={link.external ? "blank" : "self"} href={link.path}>
                 {link.label}
               </LinkStyled>
               <br />
@@ -130,7 +130,7 @@ export default function FooterComponent({ data }: FooterProps) {
         <FooterGridLinksStyled>
           {data.links.map(link => (
             <React.Fragment key={`nav_${link.path}`}>
-              <LinkStyled target={link.external ? "blank" : undefined} href={link.path}>
+              <LinkStyled target={link.external ? "blank" : "self"} href={link.path}>
                 {link.label}
               </LinkStyled>
               <br />

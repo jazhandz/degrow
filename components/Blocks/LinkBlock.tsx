@@ -18,7 +18,7 @@ const LinkContainer = styled(Container)`
 export function LinkBlock({ text, href, external }: LinkBlockType) {
   return (
     <LinkContainer>
-      <Link href={href} size="large" target={external ? "blank" : undefined}>
+      <Link href={href} size="large" target={external ? "blank" : "self"}>
         {text}
       </Link>
     </LinkContainer>
