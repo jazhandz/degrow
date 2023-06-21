@@ -33,11 +33,15 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-            rel="stylesheet"
-          />
-          <style></style>
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+          <meta name="theme-color" content="#121229"></meta>
+          <link rel="manifest" href="/site.webmanifest"></link>
+          <meta name="mobile-web-app-capable" content="yes"></meta>
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="white"></meta>
+          <meta name="apple-touch-fullscreen" content="yes"></meta>
         </Head>
         <body>
           <Main />

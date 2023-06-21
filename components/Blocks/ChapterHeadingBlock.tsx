@@ -30,6 +30,7 @@ const ChapterHeadingStyled = styled(Container)`
   margin: ${spacing.m} 0;
   min-width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   text-overflow: ellipsis;
 `;
 
