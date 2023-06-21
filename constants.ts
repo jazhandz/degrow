@@ -69,7 +69,7 @@ export const Constants = {
     desktop: `(min-width: ${SCREEN_SIZES.tablet})`,
   },
   mailchimp: {
-    url: "https://netlify.us21.list-manage.com/subscribe/post-json?u=6071379d92db4128d1a3f704a&amp;id=0f7dd44e1c&amp;f_id=004d5ae1f0&c=?",
+    url: "https://degrowlab.us21.list-manage.com/subscribe/post?u=eefb7133bae66bdab17068d9f&amp;id=020119e48d&amp;f_id=00a658e1f0",
   },
   language: "en-us",
   style: {
