@@ -1,3 +1,4 @@
+import { color } from "@/styles/color";
 import { fontSize } from "@/styles/fontSize";
 import { media } from "@/styles/media";
 import * as React from "react";
@@ -17,6 +18,7 @@ const SubmitStyled = styled.input`
   text-decoration: underline;
   cursor: pointer;
   font-weight: 600;
+  color: ${color.black};
   @media ${media.mobile} {
     font-size: ${MOBILE_FONT_SIZE};
   }
