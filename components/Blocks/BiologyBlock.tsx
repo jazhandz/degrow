@@ -66,7 +66,8 @@ const IMAGE_LIST = [
     src: "circle_4",
     width: 300,
     height: 300,
-    offsetRight: -10,
+    offsetRight: 1,
+    translateX: 30,
     offsetY: -5,
     distanceY: 20,
     blurStart: 13,
@@ -79,7 +80,8 @@ const IMAGE_LIST = [
     src: "circle_1",
     width: 300,
     height: 300,
-    offsetLeft: -10,
+    offsetLeft: 1,
+    translateX: -30,
     offsetY: 0,
     distanceY: 30,
     blurStart: 13,
@@ -214,6 +216,8 @@ const BiologyContainerStyled = styled.div`
   position: relative;
   margin-top: -50px;
   margin-bottom: ${spacing.l};
+  /* overflow-x: hidden;
+  overflow-y: visible; */
 `;
 
 const MotionContainerStyled = styled(motion.div)`
@@ -245,6 +249,7 @@ type AnimatedImageType = {
   src: string;
   width: number;
   height: number;
+  translateX?: number;
   offsetLeft?: number;
   offsetRight?: number;
   offsetY: number;
@@ -274,6 +279,7 @@ function AnimatedImage({ image, progress }: { image: AnimatedImageType; progress
         ...(image.offsetRight ? { right: `${image.offsetRight}%` } : {}),
         width: `${image.width}px`,
         scale: image.scale,
+        x: `${image.translateX}%`,
       }}
     >
       <motion.div

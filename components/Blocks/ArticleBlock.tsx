@@ -16,6 +16,7 @@ const DESKTOP_FONT_SIZE = fontSize.articleDesktop;
 
 const ArticleContainer = styled(Container)`
   margin: ${spacing.m} auto;
+  max-width: 900px;
   p {
     text-align: left;
     min-height: ${MOBILE_FONT_SIZE};

@@ -9,7 +9,7 @@ import { Hr } from "../HR";
 import { HeadingBlock } from "./HeadingBlock";
 import { LinkBlock } from "./LinkBlock";
 import { RichTextBlock } from "./RichTextBlock";
-import { easeInOut, motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { easeInOut, motion, MotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 import { fontSize } from "@/styles/fontSize";
 import { RichText } from "../RichText";
 import { ColorDataType } from "@/types/CMS/Generic";
@@ -193,11 +193,15 @@ export function FlavourBlock({
     target: ref,
     offset: ["start end", "end end"],
   });
-  const y1 = useTransform(scrollYProgress, [0, 1], [-40, 40], { ease: easeInOut });
-  const y2 = useTransform(scrollYProgress, [0, 1], [-70, 80], { ease: easeInOut });
+  const smoothProgress = useSpring(scrollYProgress, {
+    damping: 20,
+    stiffness: 40,
+  });
+  const y1 = useTransform(smoothProgress, [0, 1], [-40, 40], { ease: easeInOut });
+  const y2 = useTransform(smoothProgress, [0, 1], [-70, 80], { ease: easeInOut });
 
-  const r1 = useTransform(scrollYProgress, [0, 1], [-5, 5], { ease: easeInOut });
-  const r2 = useTransform(scrollYProgress, [0, 1], [7, -7], { ease: easeInOut });
+  const r1 = useTransform(smoothProgress, [0, 1], [-5, 5], { ease: easeInOut });
+  const r2 = useTransform(smoothProgress, [0, 1], [7, -7], { ease: easeInOut });
 
   return (
     <FlavourStyled
