@@ -3,6 +3,7 @@ import { FlavourType } from "@/types/CMS/Flavours";
 import * as React from "react";
 import styled from "styled-components";
 import { ArticleBlock } from "./ArticleBlock";
+import { BiologyBlock } from "./BiologyBlock";
 import { BreakpointBlock } from "./BreakpointBlock";
 import { CenterImageBlock } from "./CenterImageBlock";
 import { ChapterHeadingBlock } from "./ChapterHeadingBlock";
@@ -105,6 +106,9 @@ export default function BlocksComponent({ data, key, staticData }: BlocksProps) 
           }
           case "newsletter": {
             return <NewsletterBlock key={itemKey} {...block} />;
+          }
+          case "biology": {
+            return <BiologyBlock key={itemKey} {...block} />;
           }
           default: {
             console.log("unknown block", block);

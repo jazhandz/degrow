@@ -44,5 +44,6 @@ export type BlockType<T = BlockTypeOptions> = {
     | "products"
     | "discover-flavours"
     | "discover-flavours-vertical"
-    | "flavour";
+    | "flavour"
+    | "biology";
 } & T;

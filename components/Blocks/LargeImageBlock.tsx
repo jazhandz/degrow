@@ -12,7 +12,7 @@ export interface LargeImageBlockType {
   marginHorizontal?: "small" | "none";
 }
 
-const RESIZE_WIDTH = "1200";
+const RESIZE_WIDTH = "1600";
 const RESIZE_HEIGHT = "800";
 
 const LargeBlockImageStyled = styled.div`

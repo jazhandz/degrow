@@ -17,8 +17,6 @@ export interface PictureProps {
 
 const PictureStyled = styled.picture`
   & img {
-    width: 100%;
-    height: auto;
     object-fit: ${({ $objectFit }: { $objectFit: "cover" | "contain" }) => $objectFit};
   }
 `;
